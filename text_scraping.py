@@ -4,6 +4,7 @@ import sys
 import pytesseract
 from tqdm import tqdm
 from PIL import Image
+from corpus_alignment_tool import create_editor
 
 # Configure Tesseract path
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -56,8 +57,4 @@ if __name__ == "__main__":
     english_text = [sentence_splitter(page) for page in english_text]
     cajun_french_text = [sentence_splitter(page) for page in cajun_french_text]
 
-    for page in cajun_french_text:
-        print("{")
-        for sentence in page:
-            print(f"    [{sentence}]")
-        print("}")
+    create_editor(english_text, cajun_french_text)
