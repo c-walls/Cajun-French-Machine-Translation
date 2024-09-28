@@ -1,12 +1,14 @@
 import re
 import json
+import datetime
+import translators as ts
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 
-## TODO: ensure extracted text is of same lengths / checks for invalid lines
-## TODO: close window after submit
-## TODO: add write to file functionality
-## TODO: add translation tool tip on key press
+## TODO: add page length errors to array and display all together
+## TODO: add load from CSV functionality
+## TODO: add the option to append to an existing JSON file
 
 dummy_eng_text = [
     ['She turned to me and said, “What’s wrong with you, Jim Soileau?',
@@ -43,6 +45,7 @@ dummy_cajun_text = [
     'C’est pour ça je veux vous dire, mes amis, i n-a pas personne dans le monde entier qu’a doit eu plus de la misère que moi durant l’eau haute de °27.']
 ]
 
+
 def load_text(text_widget, text):
     text_widget.delete("1.0", tk.END)
     for i, page in enumerate(text):
@@ -50,13 +53,16 @@ def load_text(text_widget, text):
         for line in page:
             text_widget.insert(tk.END, line + "\n\n")
 
+
 def extract_text(text_widget):
     text = text_widget.get("1.0", tk.END)
     text = re.sub(r'\n_{2,}.*_{2,}\n\n\n', '', text, count=1)
     pages = re.split(r'\n_{2,}.*_{2,}\n\n\n', text)
-    pages = [page.split('\n\n') for page in pages]
+    pages = [re.split(r'\n+', page.strip()) for page in pages]
+    pages = [[line.strip() for line in page] for page in pages]
     
     return pages
+
 
 def collect_metadata(total_lines, segmentation_index):
     # Create popup window for user input
@@ -83,6 +89,7 @@ def collect_metadata(total_lines, segmentation_index):
     def on_submit():
         metadata["file_name"] = file_name_entry.get()
         metadata["source"] = source_entry.get()
+        metadata["last_modified"] = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S")
         metadata["total_lines"] = total_lines
         metadata["segmentation_details"] = segmentation_entry.get("1.0", tk.END).strip()
         metadata["segmentation_index"] = segmentation_index
@@ -98,9 +105,15 @@ def collect_metadata(total_lines, segmentation_index):
 
     return metadata
 
+
 def save_to_json(english_widget, cajun_french_widget):
     english_text = extract_text(english_widget)
     cajun_french_text = extract_text(cajun_french_widget)
+
+    for i, (eng_page, cajun_page) in enumerate(zip(english_text, cajun_french_text)):
+        if len(eng_page) != len(cajun_page):
+            messagebox.showerror("Error", f"Page {i+1} has different number of lines in English and Cajun French text\n\nEnglish: {len(eng_page)} lines\nCajun French: {len(cajun_page)} lines")
+            return
 
     total_lines = sum(len(page) for page in english_text)
     flattened_data = []
@@ -123,7 +136,42 @@ def save_to_json(english_widget, cajun_french_widget):
         "data": flattened_data
     }
 
-    print(json.dumps(data, indent=4, ensure_ascii=False))
+    output_file = 'Data\\' + metadata['file_name']+ '.json'
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+
+    return True
+
+class TranslationManager:
+    def __init__(self, root):
+        self.root = root
+        self.translations = {}
+
+    def translate_selection(self):
+        widget = self.root.focus_get()
+        widget_name = widget.winfo_name()
+        selection = widget.tag_ranges(tk.SEL)
+        if not selection:
+            for label in self.translations.values():
+                label.destroy()
+            self.translations.clear()
+            return
+        elif widget_name in self.translations.keys():
+            self.translations[widget_name].destroy()
+
+        start, end = selection
+        text = widget.get(start, end)
+        translation = ""
+        bounding_box = widget.bbox(end)
+
+        if widget_name == 'english_widget':
+            translation = ts.translate_text(text, translator='google', to_language='fr', from_language='en')
+        elif widget_name == 'cajun_widget':
+            translation = ts.translate_text(text, translator='google', to_language='en', from_language='fr')
+
+        label = tk.Label(self.root, text=translation, bg="#ffffe0", relief="solid", borderwidth=0.5, padx=5, pady=5, font=("Helvetica", 12, "bold"), wraplength=(widget.winfo_width() - 85))
+        label.place(x=widget.winfo_rootx() + 75, y=bounding_box[1] + 10)
+        self.translations[widget_name] = label
 
 def create_editor():
     root = tk.Tk()
@@ -140,9 +188,9 @@ def create_editor():
     frame.rowconfigure(1, weight=0)
 
     # Create side-by-side text widgets
-    english_widget = tk.Text(frame, wrap="word")
+    english_widget = tk.Text(frame, wrap="word", name="english_widget", font=("Verdana", 11), padx=10, bg="#f6f5f6")
     english_widget.grid(column=0, row=0, sticky=(tk.N, tk.W, tk.E, tk.S), padx=(0, 10))
-    cajun_widget = tk.Text(frame, wrap="word")
+    cajun_widget = tk.Text(frame, wrap="word", name="cajun_widget", font=("Verdana", 11), padx=10, bg="#f6f5f6")
     cajun_widget.grid(column=1, row=0, sticky=(tk.N, tk.W, tk.E, tk.S), padx=(0, 10))
 
     # Load text into text widgets
@@ -159,11 +207,14 @@ def create_editor():
 
     # Create save button
     button_frame = ttk.Frame(frame)
-    button_frame.grid(column=0, row=1, columnspan=2, pady=(5, 5))
-    save_button = tk.Button(button_frame, text="Save", command=lambda: save_to_json(english_widget, cajun_widget), padx=20, pady=5)
+    button_frame.grid(column=0, row=1, columnspan=2, pady=(8, 8))
+    save_button = tk.Button(button_frame, text="Save", font=("Verdana", 11, "bold"), bg="#e3e3e3", relief="ridge", padx=30, pady=5, command=lambda: (save_to_json(english_widget, cajun_widget) and root.destroy()))
     save_button.pack()
 
+    translation_manager = TranslationManager(root)
+    root.bind("<Control-Shift-Z>", lambda event: translation_manager.translate_selection())
     root.mainloop()
+
 
 if __name__ == "__main__":
     create_editor()

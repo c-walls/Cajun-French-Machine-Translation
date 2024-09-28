@@ -31,15 +31,15 @@ def process_images(input_folder):
     return english_text, cajun_french_text
 
 def sentence_splitter(text):
-    text = re.sub(r"<><page-start><>.*?\n", "", text)
-    text = re.sub(r"\d{0,3}\s*<><page-end><>", "", text)
-    text = text.replace('\n\n', '||')
-    text = re.sub(r'\|\|.{0,2}$', '', text)
-    text = text.lstrip('\n')
-    text = text.replace('\n', ' ')
-    text = re.sub(r'\s+([».!?])', r'\1', text)
-    text = re.sub(r'«\s+', '«', text)
-    text = re.split(r"(?<=[».!?])\s*(?=[—«A-ZÇÀÉ])|(?<=[».!?])\|\|(?=[—«A-ZÇÀÉ])", text)
+    text = re.sub(r"<><page-start><>\s*.*?\n+", "", text) # Remove page start markers and the first line of text (chapter title headers)
+    text = re.sub(r"\n+\d{0,3}.{0,2}\s*<><page-end><>", "", text)  # Remove page end markers and page numbers + up to 2 stray characters
+    text = re.sub(r'\n+.{0,2}\s*$', '', text)  # trailing whitespace + up to 2 stray characters
+    text = text.strip().replace('\n', ' ')  # strip any remaining whitespace and replace newlines with spaces
+    text = re.sub(r'\s+([».!?])', r'\1', text)  # Remove any spaces before punctuation marks or closing French quotes
+    text = re.sub(r'«\s+', '«', text)  # Remove any spaces after opening French quotes
+    text = re.sub(r"'", '’', text)  # Replace straight single quotes with curly single quotes (for better string processing)
+    text = re.sub(r'(?<=\s)’', '‘', text)  # Replace closing apostrophes with opening ones if preceded by a space
+    text = re.split(r"(?<=[»”.!?])\s*(?=[—«“A-ZÇÀÉ])", text)  # Split text into sentences based on punctuation and capitalized words or specific characters
     return text
 
 if __name__ == "__main__":
@@ -53,10 +53,10 @@ if __name__ == "__main__":
     input_folder = sys.argv[1]
     english_text, cajun_french_text = process_images(input_folder)
 
-    english_text = [sentence_splitter(text) for text in english_text]
-    cajun_french_text = [sentence_splitter(text) for text in cajun_french_text]
+    english_text = [sentence_splitter(page) for page in english_text]
+    cajun_french_text = [sentence_splitter(page) for page in cajun_french_text]
 
-    for page in english_text:
+    for page in cajun_french_text:
         print("{")
         for sentence in page:
             print(f"    [{sentence}]")
