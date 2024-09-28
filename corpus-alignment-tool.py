@@ -1,6 +1,12 @@
 import re
+import json
 import tkinter as tk
 from tkinter import ttk
+
+## TODO: ensure extracted text is of same lengths / checks for invalid lines
+## TODO: close window after submit
+## TODO: add write to file functionality
+## TODO: add translation tool tip on key press
 
 dummy_eng_text = [
     ['She turned to me and said, “What’s wrong with you, Jim Soileau?',
@@ -44,13 +50,80 @@ def load_text(text_widget, text):
         for line in page:
             text_widget.insert(tk.END, line + "\n\n")
 
-def save_text(text_widget):
+def extract_text(text_widget):
     text = text_widget.get("1.0", tk.END)
     text = re.sub(r'\n_{2,}.*_{2,}\n\n\n', '', text, count=1)
     pages = re.split(r'\n_{2,}.*_{2,}\n\n\n', text)
     pages = [page.split('\n\n') for page in pages]
     
     return pages
+
+def collect_metadata(total_lines, segmentation_index):
+    # Create popup window for user input
+    metadata_window = tk.Toplevel()
+    metadata_window.title("Enter Metadata")
+    metadata_window.geometry("+550+400")
+    metadata_window.columnconfigure(0, weight=1)
+    metadata_window.columnconfigure(1, weight=1)
+
+    # Create label and entry for each field
+    tk.Label(metadata_window, text="File Name:").grid(row=0, column=0, padx=(20, 5), pady=5, sticky=tk.E)
+    tk.Label(metadata_window, text="Source:").grid(row=1, column=0, padx=(20, 5), pady=5, sticky=tk.E)
+    tk.Label(metadata_window, text="Segmentation Details:").grid(row=2, column=0, padx=(20, 5), pady=5, sticky=(tk.N, tk.E))
+    file_name_entry = tk.Entry(metadata_window, width=50)
+    source_entry = tk.Entry(metadata_window, width=50)
+    segmentation_entry = tk.Text(metadata_window, width=50, height=4)
+
+    # Place each entry in the grid
+    file_name_entry.grid(row=0, column=1, padx=(0, 20), sticky="ew")
+    source_entry.grid(row=1, column=1, padx=(0, 20), sticky="ew")
+    segmentation_entry.grid(row=2, column=1, padx=(0, 20), pady=5, sticky="ew")
+
+    metadata = {}
+    def on_submit():
+        metadata["file_name"] = file_name_entry.get()
+        metadata["source"] = source_entry.get()
+        metadata["total_lines"] = total_lines
+        metadata["segmentation_details"] = segmentation_entry.get("1.0", tk.END).strip()
+        metadata["segmentation_index"] = segmentation_index
+
+        metadata_window.destroy()
+    
+    # Create submit button
+    submit_button = tk.Button(metadata_window, text="Submit", command=on_submit)
+    submit_button.grid(row=3, column=1, pady=10)
+
+    metadata_window.grab_set()
+    metadata_window.wait_window()
+
+    return metadata
+
+def save_to_json(english_widget, cajun_french_widget):
+    english_text = extract_text(english_widget)
+    cajun_french_text = extract_text(cajun_french_widget)
+
+    total_lines = sum(len(page) for page in english_text)
+    flattened_data = []
+    segmentation_index = {}
+
+    for i, (eng_page, cajun_page) in enumerate(zip(english_text, cajun_french_text)):
+        page_length = len(eng_page)
+        segmentation_index[i] = str(page_length) + " lines"
+
+        for eng_line, cajun_line in zip(eng_page, cajun_page):
+            flattened_data.append({
+                "English": eng_line,
+                "Cajun French": cajun_line
+            })
+
+    metadata = collect_metadata(total_lines, segmentation_index)
+
+    data = {
+        "metadata": metadata,
+        "data": flattened_data
+    }
+
+    print(json.dumps(data, indent=4, ensure_ascii=False))
 
 def create_editor():
     root = tk.Tk()
@@ -64,24 +137,31 @@ def create_editor():
     frame.columnconfigure(0, weight=1)
     frame.columnconfigure(1, weight=1)
     frame.rowconfigure(0, weight=1)
+    frame.rowconfigure(1, weight=0)
 
     # Create side-by-side text widgets
-    text1 = tk.Text(frame, wrap="word")
-    text1.grid(column=0, row=0, sticky=(tk.N, tk.W, tk.E, tk.S), padx=(0, 10))
-    text2 = tk.Text(frame, wrap="word")
-    text2.grid(column=1, row=0, sticky=(tk.N, tk.W, tk.E, tk.S), padx=(0, 10))
+    english_widget = tk.Text(frame, wrap="word")
+    english_widget.grid(column=0, row=0, sticky=(tk.N, tk.W, tk.E, tk.S), padx=(0, 10))
+    cajun_widget = tk.Text(frame, wrap="word")
+    cajun_widget.grid(column=1, row=0, sticky=(tk.N, tk.W, tk.E, tk.S), padx=(0, 10))
 
     # Load text into text widgets
-    load_text(text1, dummy_eng_text)
-    load_text(text2, dummy_cajun_text)
+    load_text(english_widget, dummy_eng_text)
+    load_text(cajun_widget, dummy_cajun_text)
 
     # Create scrollbars
-    scrollbar1 = ttk.Scrollbar(frame, orient="vertical", command=text1.yview)
+    scrollbar1 = ttk.Scrollbar(frame, orient="vertical", command=english_widget.yview)
     scrollbar1.grid(column=0, row=0, sticky=(tk.N, tk.S, tk.E))
-    text1["yscrollcommand"] = scrollbar1.set
-    scrollbar2 = ttk.Scrollbar(frame, orient="vertical", command=text2.yview)
+    english_widget["yscrollcommand"] = scrollbar1.set
+    scrollbar2 = ttk.Scrollbar(frame, orient="vertical", command=cajun_widget.yview)
     scrollbar2.grid(column=1, row=0, sticky=(tk.N, tk.S, tk.E))
-    text2["yscrollcommand"] = scrollbar2.set
+    cajun_widget["yscrollcommand"] = scrollbar2.set
+
+    # Create save button
+    button_frame = ttk.Frame(frame)
+    button_frame.grid(column=0, row=1, columnspan=2, pady=(5, 5))
+    save_button = tk.Button(button_frame, text="Save", command=lambda: save_to_json(english_widget, cajun_widget), padx=20, pady=5)
+    save_button.pack()
 
     root.mainloop()
 
