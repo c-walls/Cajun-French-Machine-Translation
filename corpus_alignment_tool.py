@@ -10,6 +10,7 @@ import sys
 
 json_file = None
 
+## TODO: add translation bar to the bottom with a french character bank
 ## TODO: add page length errors to array and display all together
 ## TODO: add the option to append to an existing JSON file
 
