@@ -1,3 +1,4 @@
+import os
 import re
 import json
 import datetime
@@ -5,9 +6,11 @@ import translators as ts
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+import sys
+
+json_file = None
 
 ## TODO: add page length errors to array and display all together
-## TODO: add load from CSV functionality
 ## TODO: add the option to append to an existing JSON file
 
 
@@ -30,6 +33,8 @@ def extract_text(text_widget):
 
 
 def collect_metadata(total_lines, segmentation_index):
+    global json_file
+    
     # Create popup window for user input
     metadata_window = tk.Toplevel()
     metadata_window.title("Enter Metadata")
@@ -49,6 +54,15 @@ def collect_metadata(total_lines, segmentation_index):
     file_name_entry.grid(row=0, column=1, padx=(0, 20), sticky="ew")
     source_entry.grid(row=1, column=1, padx=(0, 20), sticky="ew")
     segmentation_entry.grid(row=2, column=1, padx=(0, 20), pady=5, sticky="ew")
+
+    # Load metadata from JSON file if json_file is defined
+    if json_file:
+        with open(json_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        metadata = data.get('metadata', {})
+        file_name_entry.insert(0, metadata.get("file_name", ""))
+        source_entry.insert(0, metadata.get("source", ""))
+        segmentation_entry.insert(tk.END, metadata.get("segmentation_details", ""))
 
     metadata = {}
     def on_submit():
@@ -85,8 +99,7 @@ def save_to_json(english_widget, cajun_french_widget):
     segmentation_index = {}
 
     for i, (eng_page, cajun_page) in enumerate(zip(english_text, cajun_french_text)):
-        page_length = len(eng_page)
-        segmentation_index[i] = str(page_length) + " lines"
+        segmentation_index[f'Page {str(i+1)}'] = len(eng_page)
 
         for eng_line, cajun_line in zip(eng_page, cajun_page):
             flattened_data.append({
@@ -101,9 +114,15 @@ def save_to_json(english_widget, cajun_french_widget):
         "data": flattened_data
     }
 
-    output_file = 'Data\\' + metadata['file_name']+ '.json'
+    # Create output directory and file path
+    output_dir = r'Data'
+    os.makedirs(output_dir, exist_ok=True)
+    output_file = os.path.join(output_dir, metadata['file_name'] + '.json')
+
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
+
+    messagebox.showinfo("Success", f"Data saved to {output_file}")
 
     return True
 
@@ -181,5 +200,40 @@ def create_editor(english_text, cajun_french_text):
     root.mainloop()
 
 
+def load_from_json(json_file):
+    with open(json_file, 'r', encoding='utf-8') as f:
+        file = json.load(f)
+    data = file.get('data', [])
+
+    english_text = [item['English'] for item in data]
+    cajun_french_text = [item['Cajun French'] for item in data]
+    segmentation_index = file.get('metadata', {}).get('segmentation_index', {})
+
+    english_text = reconstruct_pages(english_text, segmentation_index)
+    cajun_french_text = reconstruct_pages(cajun_french_text, segmentation_index)
+
+    return english_text, cajun_french_text
+
+
+def reconstruct_pages(data, segmentation_index):
+    pages = []
+    start = 0
+    for length in segmentation_index.values():
+        pages.append(data[start:start+length])
+        start += length
+    return pages
+
+
 if __name__ == "__main__":
-    create_editor()
+    if len(sys.argv) == 2 and sys.argv[1].endswith('.json'):
+        json_file = sys.argv[1]
+        
+        if not os.path.exists(json_file):
+            print(f"Error: The file {json_file} does not exist.")
+        else:
+            print(f"Loading data from {json_file}")
+
+        english_text, cajun_french_text = load_from_json(json_file)
+        create_editor(english_text, cajun_french_text)
+    else:
+        print("\nCLI Usage: python corpus_alignment_tool.py <path_to_json_file>\nOtherwise import and call create_editor(english_text, cajun_french_text) in python\n")

@@ -1,0 +1,578 @@
+{
+    "metadata": {
+        "file_name": "valcour_lyrics_1",
+        "source": "Allons Boire un Coup: A Collection of Cajun and Creole Drinking Songs (Valcour 2006)",
+        "last_modified": "10-02-2024 23:28:48",
+        "total_lines": 138,
+        "segmentation_details": "13 Songs: Allons Boire un Coup, Whiskey C'est Mon Ami, Mon Bon Vieux Mari, La Bouteille a Ruiné Ma Vie, La Valse du Bambocheur, Si J’aurias des Ailes, Drunkard’s Dream, La Table Ronde, Pine Grove Blues, La Jog a Plombeau, Blues de Saoulard, Quand J’étais Vaillante, Parlez-Nous à Boire",
+        "segmentation_index": {
+            "Page 1": 12,
+            "Page 2": 6,
+            "Page 3": 20,
+            "Page 4": 13,
+            "Page 5": 19,
+            "Page 6": 12,
+            "Page 7": 7,
+            "Page 8": 6,
+            "Page 9": 11,
+            "Page 10": 10,
+            "Page 11": 5,
+            "Page 12": 12,
+            "Page 13": 5
+        }
+    },
+    "data": [
+        {
+            "English": "Let’s go have a drink",
+            "Cajun French": "Allons boire un coup"
+        },
+        {
+            "English": "Oh, my friends",
+            "Cajun French": "Oh, mes amis"
+        },
+        {
+            "English": "Let’s all go have a drink",
+            "Cajun French": "Allons tous boire un coup"
+        },
+        {
+            "English": "Twenty–five cents for a half quart",
+            "Cajun French": "Vingt-cinq sous la demi"
+        },
+        {
+            "English": "Fifty cents for a quart",
+            "Cajun French": "Cinquante sous le quart"
+        },
+        {
+            "English": "One dollar fifty pays for a half gallon",
+            "Cajun French": "Un piaster et demi paye le demi-gallon"
+        },
+        {
+            "English": "Oh, my dear friends",
+            "Cajun French": "Oh mes amis, chers"
+        },
+        {
+            "English": "It costs nothing at all",
+            "Cajun French": "Ça coute rien du tout"
+        },
+        {
+            "English": "Oh, I don’t care",
+            "Cajun French": "Oh, moi, je m’en fou pas mal"
+        },
+        {
+            "English": "let’s go drink anyway",
+            "Cajun French": "allons boire un ‘tit coup quand même"
+        },
+        {
+            "English": "Pass me the jug",
+            "Cajun French": "Passes-moi la jogue"
+        },
+        {
+            "English": "let’s go have a little drink before we die!",
+            "Cajun French": "allons boire un ‘tit drink avant de mourir!"
+        },
+        {
+            "English": "Last night I went to the dance to see all my friends",
+            "Cajun French": "Hier au soir mon j’ai été au bal c’était pour voir tous mes camarades."
+        },
+        {
+            "English": "When I got there, I sat at the bar and I ordered a bottle of whiskey",
+            "Cajun French": "Quand j’suis arrive, je m’ai mis à la bar, J’ai ordonné une bouteille de whiskey."
+        },
+        {
+            "English": "Whiskey is my friend",
+            "Cajun French": "Whiskey c’est mon ami."
+        },
+        {
+            "English": "I’m going to drink almost all of my life",
+            "Cajun French": "J’vas boire ca proche toute ma vie"
+        },
+        {
+            "English": "And my wife is always telling me to stop",
+            "Cajun French": "Et ma femme m’a toujours dit de plus boire ce bon vieux whiskey."
+        },
+        {
+            "English": "It makes my head spin ‘round like a top",
+            "Cajun French": "Ça fait ma tête tourner comme une toupie"
+        },
+        {
+            "English": "Where have you gone my good old husband?",
+            "Cajun French": "Ayoù ‘ce-que t’es parti, ouais, mon bon vieux mari?"
+        },
+        {
+            "English": "Where have you gone, the one who calls me “love”",
+            "Cajun French": "Ayoù ‘ce-que t’es parti, qui m’appelle amour?"
+        },
+        {
+            "English": "Where have you gone my good old husband, who is the best drinker in the land?",
+            "Cajun French": "Ayoù ‘ce-que t’es parti, ouais, mon bon vieux mari, qui est le meilleur buveur du pays?"
+        },
+        {
+            "English": "Well dear, I’m gone to the bar. I’m going to get drunk.",
+            "Cajun French": "Mais chère, j’suis parti au bar. Mon, j’vas me saouler."
+        },
+        {
+            "English": "But when will you return, my good old husband?",
+            "Cajun French": "Mais quand tu vas revenir, ouais, mon bon vieux mari?"
+        },
+        {
+            "English": "But when will you return, the one who calls me “love”",
+            "Cajun French": "Mais quand tu vas revenir, qui m’appelle amour?"
+        },
+        {
+            "English": "But when will you return, my good old husband, who is the best drinker in the land?",
+            "Cajun French": "Mais quand tu vas revenir, ouais, mon bon vieux mari, qui est le meilleur buveur du pays?"
+        },
+        {
+            "English": "Oh, I don’t know. Tomorrow... Some other day, maybe...",
+            "Cajun French": "Oh, mais, je n’connais pas! Demain. Un autre jour peut-être..."
+        },
+        {
+            "English": "What do you want me to cook you, my good old husband?",
+            "Cajun French": "Quoi c’est tu veux que je te cuis, ouais, mon bon vieux mari?"
+        },
+        {
+            "English": "What do you want me to cook you, the one who calls me “love”",
+            "Cajun French": "Quoi c’est tu veux je te cuis qui m’appelle amour?"
+        },
+        {
+            "English": "What do you want me to cook you, my good old husband, who is the best drinker in the land?",
+            "Cajun French": "Quoi c’est tu veux je te cuis, ouais, mon bon vieux mari, qui est le meilleur buveur du pays?"
+        },
+        {
+            "English": "Uh... let me see. 5 dozen eggs, a half gallon of couche couche, and two pounds of pain perdu.",
+            "Cajun French": "Uh... Laisses-mon voir: cinque douzaines d’oufs, un demi-gallon de couche couche, et deux livres du pain perdu."
+        },
+        {
+            "English": "But that will kill you, my good old husband?",
+            "Cajun French": "Mais ça, ça va te tuer, ouais, mon bon vieux mari."
+        },
+        {
+            "English": "But that will kill you, the one who calls me “love”",
+            "Cajun French": "Et ça ça, va te tuer, ouais, qui m’appelle amour."
+        },
+        {
+            "English": "But that will kill you, my good old husband, who is the best drinker in the land?",
+            "Cajun French": "Mais ça, ça va te tuer, ouais, mon bon vieux mari, qui est le meilleur buveur du pays."
+        },
+        {
+            "English": "Ha! I don’t care. I’m going to die anyway!",
+            "Cajun French": "Ha! moi, je m’en fou pas mal, moi j’vas mourir quand même"
+        },
+        {
+            "English": "Where do you want me to bury you, my good old husband?",
+            "Cajun French": "Ayoù tu veux que je t’enterre, ouais, mon bon vieux mari?"
+        },
+        {
+            "English": "Where do you want me to bury you, the one who calls me “love”",
+            "Cajun French": "Ayoù tu veux que je t’enterre qui m’appelle amour?"
+        },
+        {
+            "English": "Where do you want me to bury you, who is the best drinker in the land?",
+            "Cajun French": "Ayoù tu veux que je t’enterre, ouais, mon bon vieux mari, qui est le meilleur buveur du pays?"
+        },
+        {
+            "English": "Bury me in the corner of the yard and every now and then pass me a little bottle of whiskey to drink with the old devil.",
+            "Cajun French": "Mais enterres-mon dans le coin de la court et de temps en temps passes-moi une ‘tite bouteille de whiskey pour boire avec le vieux diable."
+        },
+        {
+            "English": "The Bottle has ruined my life.",
+            "Cajun French": "La bouteille a ruiné ma vie."
+        },
+        {
+            "English": "It is the bottle that has ruined my life.",
+            "Cajun French": "C’est la bouteille qu’a ruiné ma vie."
+        },
+        {
+            "English": "Every night when it would get dark, I’d go hunting along the Vermillion River",
+            "Cajun French": "Et tous les soirs quand ça faisait noir, j’allais à la chasse au longue du bayou Vermillon"
+        },
+        {
+            "English": "I killed some big fat raccoons",
+            "Cajun French": "J’ai tué de grands gros chaouis"
+        },
+        {
+            "English": "I’d make some big coon soups",
+            "Cajun French": "J’ai fait de bons bouillies de chaoui"
+        },
+        {
+            "English": "And I’d make some good gumbos with rabbits from the woods",
+            "Cajun French": "Et mon, j’ai cuit de bons gumbos avec des lapins de bois"
+        },
+        {
+            "English": "Every night my wife would start crying while she was looking after the kids",
+            "Cajun French": "Tous les soirs quand ma femme se pose des larmes après soigner mes petits enfants"
+        },
+        {
+            "English": "She’d get my neighbor, and she’d go with him to the bar",
+            "Cajun French": "Ça ramasse mon voisin et ça va au bar"
+        },
+        {
+            "English": "They’d have fun dancing and courting",
+            "Cajun French": "Pour S’amuser, danser, courtiser"
+        },
+        {
+            "English": "It’s the bottle that is ruining my life",
+            "Cajun French": "C’est la bouteille qu’est après ruiner me vie"
+        },
+        {
+            "English": "My neighbor she tells me I’m good for nothing",
+            "Cajun French": "Ma voisine elle m’a dit mon j’suis un bon à rien"
+        },
+        {
+            "English": "Her husband says he should kill me",
+            "Cajun French": "Son mari m’a dit qu’il m’aurait tuer"
+        },
+        {
+            "English": "I’d go drink a fifth of whiskey",
+            "Cajun French": "J’allais boire un fifth du whiskey."
+        },
+        {
+            "English": "Hey, since the age of fourteen, I’ve rambled from road to road",
+            "Cajun French": "Hey, yaille, depuis l’âge de quatorze ans, j’après rouler manche à manche"
+        },
+        {
+            "English": "Rambling with my bottle in hand and trying to find another like you,",
+            "Cajun French": "Après rouler avec ma bouteille dans la main pour essayer d’en trouver une autre comme toi"
+        },
+        {
+            "English": "You’re the only one my heart desires",
+            "Cajun French": "T’es la seule mon couer désire"
+        },
+        {
+            "English": "Hey Baby, each time I leave my house, pop and mom start crying",
+            "Cajun French": "Hey, bébé, Chaque fois je pars de la maison, pop et mom se mettent à pleurer"
+        },
+        {
+            "English": "They follow me to the gate of the yard saying “You’re good for nothing”",
+            "Cajun French": "Ça me suit jusqu’à la porte du cour en disant, “Toi t’es un bon à rien”"
+        },
+        {
+            "English": "Don’t do that and come back and join us.",
+            "Cajun French": "Fait pas ça, viens, donc nous rejoindre"
+        },
+        {
+            "English": "Oh, I always said to my old pop and to my dear old mom, “I know I’m a good for nothing”",
+            "Cajun French": "Oh,ye yaille, mais moi j’ai toujours dit à mon vieux pop et à ma chère vieille bonne maman, “Moi, je connais j’suis un bon à rien”"
+        },
+        {
+            "English": "I’m good for nothing for myself",
+            "Cajun French": "J’suis un bon à rien pour moi-même"
+        },
+        {
+            "English": "I never did anything for anybody",
+            "Cajun French": "J’ai jamais fait rien pour personne"
+        },
+        {
+            "English": "Hey Baby, Today, no matter where I go, they point their fingers at me, dear",
+            "Cajun French": "Hey Bébé, Aujourd’hui N’importe ayoù moi j’peux passer, Ça me pointe au doigt, chère"
+        },
+        {
+            "English": "Saying, “Look there, at the good for nothing, the drunken rambler\"",
+            "Cajun French": "En disant, “Gardez-là le bon à rien, le rouleur et bambocheur”"
+        },
+        {
+            "English": "Hey, dear, Today I’m condemned to ramble",
+            "Cajun French": "Hey, chère, Aujourd’hui J’suis condamné à rouler"
+        },
+        {
+            "English": "My wheelbarrow on my six-inch plank",
+            "Cajun French": "Ma bourouette sur ma planche de six pouces"
+        },
+        {
+            "English": "Ninety-nine years, that’s the limit for a good for nothing.",
+            "Cajun French": "Quatre-vingt dix neuf ans, c’est la limite d’un bon a rien"
+        },
+        {
+            "English": "That’s the rest of my life so far from the one I love",
+            "Cajun French": "Ça c’est le restant de ma vie aussi loin de cette la moi j’aime"
+        },
+        {
+            "English": "When I was little I cried for my potato",
+            "Cajun French": "Et quand j’étais petit moi je braillais pour des patates"
+        },
+        {
+            "English": "And when I got older, I’d cry for my bottle",
+            "Cajun French": "Et quand moi j’suis devenu moyen, Moi, je braillais pour ma bouteille"
+        },
+        {
+            "English": "Now I’m grown and I’m crying for the little widows",
+            "Cajun French": "Asteur, moi j’suis grand j’après brailler pour les ‘tites veuves"
+        },
+        {
+            "English": "I’d be so happy to have one and bring her back to my house.",
+            "Cajun French": "Je serais content d’avoir une et de l’amener à ma maison."
+        },
+        {
+            "English": "No matter where I go, It’s not good enough for me",
+            "Cajun French": "N’importe ayoù moi je m’en vas mais ça me convient pas"
+        },
+        {
+            "English": "Oh, if I had wings like all the swallows",
+            "Cajun French": "Oh si j’aurias des ailes comme toutes les hirondelles"
+        },
+        {
+            "English": "I would go put myself near you, beautiful",
+            "Cajun French": "J’irais me reposer Auprès de toi la belle"
+        },
+        {
+            "English": "I’d tell you of my pains, and then of my love",
+            "Cajun French": "Te raconter mes peines et ensuite mes amitiés"
+        },
+        {
+            "English": "Let’s go to the bar to drink and laugh heartily and to have a good time",
+            "Cajun French": "Allons à la cantine pour boire et bien rire et bien se divertir"
+        },
+        {
+            "English": "Our friends and us",
+            "Cajun French": "Nous et nos amis"
+        },
+        {
+            "English": "Speak to us about drinking not about marrying",
+            "Cajun French": "Parlez-nous à boire et pas de marriage"
+        },
+        {
+            "English": "When a person gets married he’s there all lonely",
+            "Cajun French": "Quand on se marrie on est là après s’ennuyer"
+        },
+        {
+            "English": "Always regretting the pretty times past",
+            "Cajun French": "Toujours en regrettant nos jolis temps passés"
+        },
+        {
+            "English": "When I see her dear face near mine, It makes me tremble",
+            "Cajun French": "Quand je vois ta chère figure auprès de la miene, Ça me fait frémir"
+        },
+        {
+            "English": "She wears lilies and lace in her beautiful curly hair",
+            "Cajun French": "Elle porte des lis et de la dentelle dans ses beaux cheveux boucles"
+        },
+        {
+            "English": "To seem the most beautiful to the young married ones.",
+            "Cajun French": "Pour paraître la plus belle aux yeux des marriés"
+        },
+        {
+            "English": "I arrived last night at the house",
+            "Cajun French": "J’ai arrive hier au soir à la maison"
+        },
+        {
+            "English": "I knocked and cried, but I had no response",
+            "Cajun French": "J’ai cogné, j’ai crié, j’ai eu pas de réponse"
+        },
+        {
+            "English": "I knew at that moment that you weren’t there",
+            "Cajun French": "J’ai connu au moment t’étais pas là"
+        },
+        {
+            "English": "So what hope and what future can I have?",
+            "Cajun French": "Quel espoir et quel avenir mais moi je peux avoir"
+        },
+        {
+            "English": "A drunk, a rambler, and a gambler, that’s all I was before I met you",
+            "Cajun French": "Bambocheur, trainailleur et gros gambleur, c’est tout que j’ai été jusqu’à te rejoindre"
+        },
+        {
+            "English": "I promise I won’t do that anymore",
+            "Cajun French": "Je promets, chère ‘tite fille, de plus faire ça"
+        },
+        {
+            "English": "It’s so hard knowing you’re not around",
+            "Cajun French": "C’est si dur de connais que t’es pas là"
+        },
+        {
+            "English": "Oh, make three rounds around the round table",
+            "Cajun French": "Oh, fais trois tours de la table ronde."
+        },
+        {
+            "English": "Let’s seek and we’ll amuse ourselves like friends",
+            "Cajun French": "Allons chercher et de quoi de nous se divertir mais comme un camarade"
+        },
+        {
+            "English": "One of the biggest drunks of all of us was in bed sick",
+            "Cajun French": "Un de nos plus grands de nous ivrognes était au lit malade"
+        },
+        {
+            "English": "He went to bed under a table covered with glasses",
+            "Cajun French": "Et lui, il était coucher en bas d’un table de verres"
+        },
+        {
+            "English": "And every now and then he’d have a dripped drop dripped to him",
+            "Cajun French": "Et tous les temps en temps il gouttait une goutte degouttée degouttée"
+        },
+        {
+            "English": "Yes, a dripped drop to satisfy him",
+            "Cajun French": "Ouais, une goutte degouttée c’est pour le satisfaire"
+        },
+        {
+            "English": "What do you wanna know?",
+            "Cajun French": "Quoi tu veux savoir?"
+        },
+        {
+            "English": "Where did you go last night?",
+            "Cajun French": "Ayoù t’as passé hier au soir?"
+        },
+        {
+            "English": "I went to get drunk",
+            "Cajun French": "J’suis parti me saouler."
+        },
+        {
+            "English": "I already said– I went to get drunk",
+            "Cajun French": "Je t’ai déja dit, je suis parti me saouler"
+        },
+        {
+            "English": "You came in this morning and your robe was all ripped",
+            "Cajun French": "T’es arrive à ce matin, et ta robe a été toute dechirée!"
+        },
+        {
+            "English": "That hurts me!",
+            "Cajun French": "Ça fait de la peine pour moi!"
+        },
+        {
+            "English": "But I told you, it’s none of your business",
+            "Cajun French": "Mais je t’ai dit, c’est pas tes affaires!"
+        },
+        {
+            "English": "What do you want?",
+            "Cajun French": "Quoi tu veux?"
+        },
+        {
+            "English": "With whom did you sleep last night?",
+            "Cajun French": "Avec qui t’as couché hier au soir?"
+        },
+        {
+            "English": "You’ll never know.",
+            "Cajun French": "Tu ne sauras jamais."
+        },
+        {
+            "English": "Oh, no, no, I don’t want to hear what you have to say, there!",
+            "Cajun French": "Oh, no, no, j’veux pas entendre ce que t’as à dire, là!"
+        },
+        {
+            "English": "Me, I rambled in the roads",
+            "Cajun French": "Mon, j’ai roulé dans les chemins"
+        },
+        {
+            "English": "With a quart in my pocket, and a corked jug in my hand",
+            "Cajun French": "Avec un quart dans la poche et une jogue à plombeau"
+        },
+        {
+            "English": "Me, I thought",
+            "Cajun French": "Mon, j’ai jonglé"
+        },
+        {
+            "English": "Me, I cried",
+            "Cajun French": "Moi jai pleuré"
+        },
+        {
+            "English": "Your dad was mad",
+            "Cajun French": "Ton papa a ete fâché"
+        },
+        {
+            "English": "He told you that you have to grow up more",
+            "Cajun French": "Il t’as dit qu’il fallait qu’tu grandisses"
+        },
+        {
+            "English": "Your mom was mad, she would call me a drunk",
+            "Cajun French": "Ta maman a été fâchée, ça m’a appelé un bambocheur"
+        },
+        {
+            "English": "We still had some trouble, thanks to your dad",
+            "Cajun French": "On a été du mal encore, tu peux remercier à ton papa"
+        },
+        {
+            "English": "We had to separate, you can thank your mom",
+            "Cajun French": "On a eu pour separer, tu peux remercier à ta maman"
+        },
+        {
+            "English": "I go around from one bar to another",
+            "Cajun French": "J’ai bamboché d’un bar a l’autre"
+        },
+        {
+            "English": "When the blues take me, I’m gone away",
+            "Cajun French": "Quand les blues me prend, Mon, j’suis gone"
+        },
+        {
+            "English": "I’m off to get drunk and I’m gone to the house to see my dear little girl",
+            "Cajun French": "Mon, j’suis parti me saouler et j’suis gone de la maison pour rejoindre ma chère ‘tite fille"
+        },
+        {
+            "English": "When I get to the house, my little girl starts arguing",
+            "Cajun French": "Quand mon, j’arrive à la maison, ma ‘tite femme après quereller"
+        },
+        {
+            "English": "I ask her “Why are you arguing with me?”",
+            "Cajun French": "Mon je la demande, “Pourquoi tu querelles?”"
+        },
+        {
+            "English": "She answers, “It’s for this that I’m always arguing because I see you’re always gone.”",
+            "Cajun French": "Elle me reponde, “Mon neg, c’est pour ça je querelle parce que je te vois tout les temps parti”"
+        },
+        {
+            "English": "When I was a noble youth, I noticed my mistress",
+            "Cajun French": "Quand mon j’étais vaillante, j’aperçoive ma maitresse"
+        },
+        {
+            "English": "If I would be near her, I’d make love to her",
+            "Cajun French": "Si je serais près d’elle je lui ferais l’amour"
+        },
+        {
+            "English": "I’m in my hut, blessing my sorrows",
+            "Cajun French": "Je suis dans ma chaumière à bénir mon chagrin."
+        },
+        {
+            "English": "“Oh, sorrow,” said she, “don’t let it get to you.”",
+            "Cajun French": "“O, du chagrin”, a dit-elle, “ne prenez-en pas un tas”"
+        },
+        {
+            "English": "You have other mistresses far prettier than I.",
+            "Cajun French": "Vous avez des maitresses bien plus jolies que moi"
+        },
+        {
+            "English": "Go see them, go away from me.",
+            "Cajun French": "Allez-vous en les voir, retirez-vous de moi.”"
+        },
+        {
+            "English": "Sometimes I do go away, just to do it.",
+            "Cajun French": "“Des fois je me retire juste pour me retirer"
+        },
+        {
+            "English": "You’re not so beautiful, and you have your vanities.",
+            "Cajun French": "Toi, tu n’es pas si belle, et tu as des vanités"
+        },
+        {
+            "English": "I prefer my bottle to you in your beauties.",
+            "Cajun French": "J’estime mieux ma bouteille que toi dans tes beautés.”"
+        },
+        {
+            "English": "Let’s go drink, dear friends, let’s abandon love.",
+            "Cajun French": "Buvons, chers camamrades, abandonnons l’amour"
+        },
+        {
+            "English": "Let’s abandon the girls, we won’t visit them any more.",
+            "Cajun French": "Abandonnons les filles, nous les fréquenterons plus"
+        },
+        {
+            "English": "It’s worth the troubles they often don’t have.",
+            "Cajun French": "Ça vaut les difficultés souvent elles ne les ont pas."
+        },
+        {
+            "English": "If you marry a pretty girl, you’re in big trouble, and someone’s going to steal her.",
+            "Cajun French": "Si que tu te maries avec une jolie fille t’es dans le grand danger, et ça va te la voler."
+        },
+        {
+            "English": "If you marry an ugly girl, you’re in big trouble, and you have to life your life with her.",
+            "Cajun French": "Si que tu te maries avec une villaine fille t’es dans le grand danger, et faudra tu vies ta vie avec."
+        },
+        {
+            "English": "If you marry a poor girl, you’re in big trouble, and you’ll have to work all your life.",
+            "Cajun French": "Si que tu te maries avec une fille bien pauvre t’es dans le grand danger, et faudra tu travailler toute ta vie."
+        },
+        {
+            "English": "If you marry a rich girl, you’re in big trouble, and you’re going to be reproached.",
+            "Cajun French": "Si que tu te maries avec une fille qui a de quoi t’es dans le grand danger, et tu vas attraper les grands reproches."
+        },
+        {
+            "English": "“You famous good-for-nothing, you wasted all my wealth”",
+            "Cajun French": "“Fameux toi grand bon à rien toi t’as tout gaspillé mon bien”"
+        }
+    ]
+}
