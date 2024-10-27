@@ -78,13 +78,13 @@ def parse_text_entries(entry_string):
 
 def save_to_file(entry_array, file_path):
     # Read the existing JSON file
-    with open(file_path, 'r', encoding='cp1252') as json_file:
+    with open(file_path, 'r', encoding='utf-8') as json_file:
         json_data = json.load(json_file)
 
     # Handle partial first entry
     if json_data['Data'] and entry_array[0][0] == '@':
         last_key = list(json_data['Data'].keys())[-1]
-        full_entry = json_data['Data'][last_key]['Full Entry'] + entry_array[0][1:]
+        full_entry = json_data['Data'][last_key]['Full Entry'] + " " + entry_array[0][1:].strip()
         
         _, entry_dict = parse_text_entries(full_entry)
         json_data['Data'][last_key] = entry_dict
@@ -128,7 +128,7 @@ def save_to_file(entry_array, file_path):
 
     # Write the updated JSON back to the file
     json_data['LastModified'] = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S")
-    with open(file_path, 'w', encoding='cp1252') as json_file:
+    with open(file_path, 'w', encoding='utf-8') as json_file:
         json.dump(json_data, json_file, ensure_ascii=False, indent=4)
 
 
@@ -272,6 +272,7 @@ def page_segment(images):
         edited_text = edited_text.strip().split('\n\n')
         save_page(edited_text)
 
+        os.remove(image_path)
         cv2.destroyAllWindows()
 
 
@@ -292,7 +293,7 @@ def create_json_file(file_path):
     }
 
     # Write the JSON data to the file
-    with open(file_path, 'w', encoding='cp1252') as file_path:
+    with open(file_path, 'w', encoding='utf-8') as file_path:
         json.dump(json_data, file_path, ensure_ascii=False, indent=4)
     
     print(f"JSON file created at {file_path}")
