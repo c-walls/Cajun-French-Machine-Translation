@@ -160,7 +160,7 @@ class TranslationManager:
 
 def create_editor(english_text, cajun_french_text):
     root = tk.Tk()
-    root.title("Corpus Alignment Tool")
+    root.title("Corpus Alignment Tool [Ctrl+Shift+Z to translate]")
     root.geometry("1400x800")
     root.state("zoomed")
 
