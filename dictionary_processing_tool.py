@@ -305,6 +305,24 @@ def handle_cleanup(output_path):
     else:
         print(f"\nSaving the remaining {len(os.listdir(output_path))} images for processing later.\n")
 
+def convert_to_parallel_corpus(json_file):
+    french_texts = []
+    english_texts = []
+    
+    with open(json_file, 'r', encoding='utf-8') as file:
+        json_data = json.load(file)
+
+    file_name = json_data['FileName']
+    source = json_data['Source']
+    Seg_details = json_data['SegmentationDetails']
+    data = json_data['Data']
+
+    for key in data.keys():
+        french_texts.extend(data[key]['Extracted French Texts'])
+        english_texts.extend(data[key]['Extracted English Texts'])
+
+    print(f"\nLength of French Texts: {len(french_texts)}\nLength of English Texts: {len(english_texts)}\n")
+
 
 def main():
     base_dir = os.environ.get("PROCESSING_DIR")
@@ -331,6 +349,11 @@ def main():
     else:
         json_file = os.path.join(base_dir, base_dir.split("\\")[-1] + ".json")
         create_json_file(json_file)
+
+    #Helper function to convert the JSON file to a parallel corpus
+    if len(sys.argv) > 1 and sys.argv[1] == "convert":
+        convert_to_parallel_corpus(json_file)
+        exit(0)
 
     if os.path.exists(output_path):
         images = os.listdir(output_path)
