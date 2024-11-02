@@ -1,0 +1,2964 @@
+{
+    "metadata": {
+        "file_name": "marcotte_book.csv",
+        "source": "Contes, Farces et Foleries by Marion Marcotte (Translated by David Émile Marcantel)",
+        "last_modified": "11-02-2024 02:56:42",
+        "total_lines": 726,
+        "segmentation_details": "3 Biographical Articles and 8 Short Stories\n(Segmented by English-French page pairs):\n\n1) Marion Marcotte, Master of the Cajun Language (pg. 1 - 3)\n1) The Life of Marion Louis Marcotte, Jr. (pg. 4 - 7)\n1) Floyd Soileau: Reminiscences (pg. 8 - 12)\n2) L'Announcement (pg. 13 - 14)\n3) L'Eau Haute De '27 (pg. 15 - 18)\n4) L'Histoire a Dudley (pg. 19 - 20)\n5) Le Pategau (pg. 21 - 25)\n6) Au Bal A Nonc Raggaux (pg. 26 - 28)\n7) Le Pedleur (pg. 29 - 31)\n8) Le Charivari (pg. 32 - 43)\n9) La Noce a Roselia (pg. 44 - 47)",
+        "segmentation_index": {
+            "Page 1": 10,
+            "Page 2": 12,
+            "Page 3": 13,
+            "Page 4": 8,
+            "Page 5": 15,
+            "Page 6": 11,
+            "Page 7": 2,
+            "Page 8": 15,
+            "Page 9": 17,
+            "Page 10": 21,
+            "Page 11": 17,
+            "Page 12": 2,
+            "Page 13": 10,
+            "Page 14": 5,
+            "Page 15": 14,
+            "Page 16": 18,
+            "Page 17": 24,
+            "Page 18": 16,
+            "Page 19": 16,
+            "Page 20": 28,
+            "Page 21": 14,
+            "Page 22": 14,
+            "Page 23": 18,
+            "Page 24": 22,
+            "Page 25": 13,
+            "Page 26": 15,
+            "Page 27": 25,
+            "Page 28": 14,
+            "Page 29": 12,
+            "Page 30": 16,
+            "Page 31": 9,
+            "Page 32": 7,
+            "Page 33": 20,
+            "Page 34": 16,
+            "Page 35": 21,
+            "Page 36": 17,
+            "Page 37": 24,
+            "Page 38": 20,
+            "Page 39": 25,
+            "Page 40": 28,
+            "Page 41": 25,
+            "Page 42": 23,
+            "Page 43": 9,
+            "Page 44": 16,
+            "Page 45": 13,
+            "Page 46": 14,
+            "Page 47": 2
+        }
+    },
+    "data": [
+        {
+            "English": "The first time I heard one of Marion Marcotte’s stories was in the 60s on Jerry Dugas’s radio program “Allons Danser” on KJEF in Jennings.",
+            "Cajun French": "La première fois que j’ai entendu une des histoires de Marion Marcotte, c’était dans les années 60 dans l’émission de radio de Jerry Dugas «Allons Danser» sur KJEF à Jennings."
+        },
+        {
+            "English": "I was immediately fascinated.",
+            "Cajun French": "Jai tout de suite été fasciné."
+        },
+        {
+            "English": "This was something entirely different from what the Cajun radio shows were usually playing.",
+            "Cajun French": "C’était quelque chose d’entièrement différent de ce que les émissions de radio cadiennes diffusaient habituellement."
+        },
+        {
+            "English": "Marion’s stories were first issued on 45 rpm records and played on radio stations across south Louisiana, from New Orleans to as far west as Houston.",
+            "Cajun French": "Les histoires de Marion ont d’abord été gravées sur des disques à 45 tours, diffusées sur des stations de radio dans tout le sud de la Louisiane, de la Nouvelle-Orléans jusqu’à Houston à l’ouest."
+        },
+        {
+            "English": "I noticed that one of the stories had a character named Jerry Dugas, just like our local Cajun DJ.",
+            "Cajun French": "J’ai remarqué que l’une des histoires avait un personnage nommé Jerry Dugas, tout comme notre animateur cadien (Cajun DJ) local."
+        },
+        {
+            "English": "Jerry told me that he had given Marion permission to name one of the characters in his stories after him.",
+            "Cajun French": "Jerry m’a dit qu’il avait donné à Marion la permission de donner son nom à lun des personnages de ses histoires."
+        },
+        {
+            "English": "In the stories, the characters are often named after real people, often people who were active in the Cajun music scene, like Huey Meaux and Jim Soileau, in Louisiana and Texas.",
+            "Cajun French": "Dans les histoires, les personnages sont souvent nommés d’après de vraies personnes, souvent des personnes qui étaient actives sur la scène musicale cadienne, telles que Huey Meaux et Jim Soileau en Louisiane et au Texas."
+        },
+        {
+            "English": "Floyd Soileau, the owner of the company that produced and sold Marion’s records, told me recently that it was his idea to use the names of some Cajun DJs as characters in Marion’s tales, with their permission, of course.",
+            "Cajun French": "Floyd Soileau, le propriétaire dela compagnie qui produisait et vendait les disques de Marion, m’a dit dernièrement que c’est lui qui a eu l’idée d’utiliser les noms de quelques animateurs d’émissions de radio de musique cadienne comme personnages dans les contes de Marion, avec leur permission, bien entendu."
+        },
+        {
+            "English": "He thought that would encourage them to play the stories on the radio.",
+            "Cajun French": "Il pensait que cela es encouragerait à jouer ces contes à la radio."
+        },
+        {
+            "English": "After Marion used a few names of Cajun DJs in his stories, other announcers asked to be included in future tales, which the artist did.",
+            "Cajun French": "Après avoir mis quelques noms de DJs cadiens dans quelques contes, beaucoup d’autres DJs demandaient d’être inclus dans. les contes futurs, ce que Marion a fait."
+        },
+        {
+            "English": "That is how many Cajun DJs ended up being transported as participants into the fantastic adventures that Marion Marcotte imagined.",
+            "Cajun French": "Comme cela, beaucoup d’animateurs de radio de musique cadienne se sont trouvés transportés comme participants dans les aventures fantastiques qu’imaginait Marion Marcotte."
+        },
+        {
+            "English": "The salesman in the story “Le pedleur” (“The Peddler”) is obviously modeled after Senator Dudley J. LeBlanc, or “Cousin Dud,” famous for his patent medicine Hadacol.",
+            "Cajun French": "Le vendeur dans l’histoire «Le pedleur» s’est inspiré du sénateur Dudley J. LeBlanc, dit «Cousin Dud» et son L médicament breveté Hadacol."
+        },
+        {
+            "English": "The raconteur in these stories is almost never named Marion Marcotte.",
+            "Cajun French": "Le narrateur dans ces histoires d’habitude ne s’appelle pas Marion Marcotte."
+        },
+        {
+            "English": "No, it is Dudley Bernard, Harry Anselmi or some other name of a real person.",
+            "Cajun French": "Non, il s’agit de Dudley Bernard, Harry Anselmi ou d’un autre nom de personne réelle."
+        },
+        {
+            "English": "And the situations are ones that people could identify with, they really happened, although greatly exaggerated in Marion’s telling.",
+            "Cajun French": "Et les situations sont des réalités auxquelles les gens peuvent s’identifier. Elles se sont réellement passées, bien que grandement exagérées dans le récit de Marion."
+        },
+        {
+            "English": "These stories are a time-travel window into rural life in French Louisiana in the first half of the twentieth century, a time when, in some villages, everyone spoke French.",
+            "Cajun French": "Ces histoires ouvrent une fenêtre sur la vie rurale en Louisiane française dans la première moitié du XX siècle, une époque où, dans certains villages, tout le monde parlait français."
+        },
+        {
+            "English": "With no television and little radio, people gathered for veillées at home to discuss local events, not national or international ones.",
+            "Cajun French": "Sans télévision et avec peu de radio, les gens se réunissaient chez eux pour des veillées afin de discuter d’événements locaux, et non pas nationaux ou internationaux."
+        },
+        {
+            "English": "Marion was from Moreauville in northern Avoyelles Parish.",
+            "Cajun French": "Marion était originaire de Moreauville dans le nord de la paroisse des Avoyelles."
+        },
+        {
+            "English": "Although he spoke what is commonly known as Cajun French, there were few families of Acadian descent in Avoyelles.",
+            "Cajun French": "Bien que le français qu’il parlait soit connu comme le “français cadien”, il y avait peu de familles de souche acadienne aux Avoyelles."
+        },
+        {
+            "English": "The term Cajun derives from Acadian, but Acadians were only one of several French-speaking groups that settled in Louisiana at different times, influencing each other’s dialects.",
+            "Cajun French": "Le terme cadien est dérivé du mot Acadien, mais les Acadiens n’étaient qu’un de plusieurs groupes francophones qui se sont installés en Louisiane à différents moments dans l’histoire."
+        },
+        {
+            "English": "Spanish, Native American, Afro-Caribbean, English and other language varieties were also spoken in the region and contributed to a lesser degree to the evolution of Louisiana French.",
+            "Cajun French": "Aux contacts entre ceux-ci s’ajoute l’influence d’autres groupes linguistiques comme les Espagnols, les Amérindiens, les Africains et les Antillais, dont les langues ont contribué à un moindre degrès à l’évolution du français louisianais."
+        },
+        {
+            "English": "While noticeable differences can be heard between the French of different geographical regions and even between neighboring communities, Louisiana French speakers are typically able to communicate with each other with little difficulty.",
+            "Cajun French": "On peut remarquer des différences intéressantes entre les parlers régionaux et même des fois entre des communautés avoisinantes en Louisiane, mais en général les Louisianais francophones se comprennent sans difficulté."
+        },
+        {
+            "English": "Marion was a master of Louisiana French.",
+            "Cajun French": "Marion était un maître du français louisianais."
+        },
+        {
+            "English": "He had an amazing vocabulary, fluency, and expressiveness in his language.",
+            "Cajun French": "Il avait un vocabulaire, une aisance et une expressivité étonnants dans sa langue."
+        },
+        {
+            "English": "I think he invented a few of his words, but so did Shakespeare.",
+            "Cajun French": "Je pense qu’il a inventé quelques-uns de ses mots, mais Shakespeare a fait pareil."
+        },
+        {
+            "English": "He was making the story up as he recorded, playing his guitar in a style that was uniquely his, which added drama to the tales.",
+            "Cajun French": "Il inventait l’histoire au fur et à mesure qu’il l’enregistrait, jouant de la guitare dans un style qui lui était propre, ce qui ajoutait du drame aux récits."
+        },
+        {
+            "English": "Considering the recording technology of the time, this was amazing.",
+            "Cajun French": "Compte tenu de la technologie d’enregistrement de l’époque, c’était incroyable."
+        },
+        {
+            "English": "These are not jokes that have a punchline.",
+            "Cajun French": "Ce ne sont pas des blagues qui ont une chute."
+        },
+        {
+            "English": "Once you have heard the punchline, there is no desire to re-hear the joke.",
+            "Cajun French": "Une fois que vous avez entendu la chute, vous n’avez pas envie d’entendre à nouveau la blague."
+        },
+        {
+            "English": "But Marion’s tales have charmed audiences and been listened to on radio, albums, CDs and now, by streaming, for more than sixty years.",
+            "Cajun French": "Mais les contes de Marion ont séduit le public et sont écoutés à la radio, sur des albums, des CD et maintenant, en diffusion en continu, depuis plus de soixante ans."
+        },
+        {
+            "English": "People don’t get tired of hearing them or of repeating them from memory.",
+            "Cajun French": "Les gens ne se lassent pas de les entendre ou de les répéter de mémoire."
+        },
+        {
+            "English": "His stories of rural Cajun life are so imaginative.",
+            "Cajun French": "Ses histoires de la vie rurale cadienne sont si imaginatives."
+        },
+        {
+            "English": "Who insults someone by saying, “You didn’t grate the moon to make the stars” or, “You didn’t put the water in coconuts”?",
+            "Cajun French": "Qui insulte quelqu’un en disant: «C’est pas proche toi qu’a râpé la lune pour faire les étoiles» ou, «c’est pas proche toi qu’a mis l’eau dans les cocos»?"
+        },
+        {
+            "English": "What a put-down!",
+            "Cajun French": "Quel rabaissement!"
+        },
+        {
+            "English": "This book is the first time that all these stories have a been transcribed, translated, and printed so that new generations can learn the stories and how to speak Cajun, a even if they did not have the blessing of growing up in a home surrounded by Louisiana French.",
+            "Cajun French": "Ce livre est la première fois que toutes ces histoires ont été transcrites, traduites et imprimées pour que les nouvelles générations puissent apprendre les histoires et comment parler cadien, même si elles n’ont pas eu la bénédiction de grandir dans un foyer entouré du français louisianais."
+        },
+        {
+            "English": "The Marcotte saga in this hemisphere dates back to the early 1700s when Jean-Baptiste Marcotte migrated from France to the colonies of New France in present-day Canada.",
+            "Cajun French": "La saga des Marcotte dans cet hémisphère remonte au début des années 1700, lorsque Jean-Baptiste Marcotte a émigré de France vers les colonies de la Nouvelle-France, dans l’actuel Canada."
+        },
+        {
+            "English": "At the time, few could have predicted that a Marcotte descendant would become one of the premier songwriters, storytellers, vocalists, and guitar players of a French Louisiana.",
+            "Cajun French": "À l’époque, personne n’aurait pu prédire qu’un descendant Marcotte deviendrait Pun des meilleurs compositeurs, conteurs, chanteurs et guitaristes de la Louisiane française."
+        },
+        {
+            "English": "By the time Marion’s parents, Marion L. Marcotte, Sr. and Henrietta Jusselin, married in 1870, they were thoroughly imbued with the life of rural Avoyelles parish.",
+            "Cajun French": "Lorsque les parents de Marion, Marion L. Marcotte père et Henrietta Jusselin, se sont mariés, ils étaient déjà bien acculturés à la vie de la paroisse rurale des Avoyelles."
+        },
+        {
+            "English": "When Marion Jr. was born on August 15, 1916, he was the youngest son of ten children.",
+            "Cajun French": "Lorsque Marion fils naquit le 15 août 1916, il était le plus jeune fils de dix enfants."
+        },
+        {
+            "English": "He was raised with his three brothers and six sisters on a farm in Moreauville, Louisiana, where early on he learned the value of work.",
+            "Cajun French": "Il a été élevé avec ses trois frères et ses six sœurs dans une ferme à Moreauville, en Louisiane, où il a appris très tôt la valeur du travail."
+        },
+        {
+            "English": "In fact, he earned the money he used to buy his first guitar by working in the cotton fields of Louisiana.",
+            "Cajun French": "En fait, c’est en travaillant dans les champs de coton de la Louisiane qu’il a gagné l’argent qui lui a permis d’acheter sa première guitare."
+        },
+        {
+            "English": "After graduating from Moreauville High School, the young musician moved with his parents to New Orleans and began playing music in the local | night club scene, aligning himself with other musicians and eventually forming his own band.",
+            "Cajun French": "Après avoir obtenu son diplôme à l’école secondaire de Moreauville, le jeune musicien s’est installé avec ses parents à la Nouvelle-Orléans et a commencé à jouer de la musique dans les boîtes de nuit locales, s’alignant avec d’autres musiciens et formant finalement son propre groupe."
+        },
+        {
+            "English": "His family later settled in Arabi, where he cared for his mother until her death in 1962.",
+            "Cajun French": "Sa famille s’est ensuite installée à Arabi, où il a pris soin de sa mère jusqu’à sa mort en 1962."
+        },
+        {
+            "English": "Marion married Rita Mae Spera in 1959 after ten years of dating; he was 43.",
+            "Cajun French": "Marion a épousé Rita Mae Spera en 1959 après dix ans de fréquentation; il avait 43 ans."
+        },
+        {
+            "English": "They had three children: Louis Marion III, Lori Maria, and Lisa Mona.",
+            "Cajun French": "Ils ont eu trois enfants: Louis Marion III, Lori Maria et Lisa Mona."
+        },
+        {
+            "English": "When he wasn’t writing or playing music, Marion worked as a longshoreman to support his family.",
+            "Cajun French": "Lorsqu’il n’écrivait pas ou ne jouait pas de musique, Marion travaillait comme débardeur pour subvenir aux besoins de sa famille."
+        },
+        {
+            "English": "The numerous records Marion published resonated powerfully with all those with whom he shared common roots in Cajun Louisiana.",
+            "Cajun French": "Les nombreux disques que Marion a gravés ont trouvé un écho puissant auprès de tous ceux avec qui il partageait des racines communes en Louisiane cadienne."
+        },
+        {
+            "English": "He knew his neighbors’ poverty and struggles, and understood that the unexpected death of a cow could mean hungry children and an existential threat in post-Depression Louisiana.",
+            "Cajun French": "Il connaissait la pauvreté et les difficultés de ses voisins, et comprenait que la mort inattendue d’une vache pouvait signifier des enfants affamés et une menace existentielle dans la Louisiane de l’après-dépression."
+        },
+        {
+            "English": "His stories are funny to be sure, but to see only their humor is to miss the intrinsic qualities that make them timeless.",
+            "Cajun French": "Ses histoires sont certes amusantes, mais ne voir que leur humour, c’est passer à côté des qualités intrinsèques qui les rendent intemporelles."
+        },
+        {
+            "English": "Marion Marcotte’s stories are transfigured tragedies.",
+            "Cajun French": "Les histoires de Marion Marcotte sont des tragédies transfgurées."
+        },
+        {
+            "English": "Tragedy and loss seep through every pore of these tales, whether the subject is a flood, a drunk, a faithless wife, or an abusive husband.",
+            "Cajun French": "La tragédie et la perte s’infiltrent dans chaque pore de ces contes, que le sujet soit une inondation, un ivrogne, une femme infdèle ou un mari abusif."
+        },
+        {
+            "English": "He tells them with simplicity, in a way everyday country folks could easily relate to and in which they could see their own struggles crystalized and subdued by art.",
+            "Cajun French": "Il les raconte avec simplicité, d’une manière à laquelle les gens de la campagne peuvent facilement s’identifier et dans laquelle ils peuvent voir leurs propres luttes cristallisées et soumises par l’art."
+        },
+        {
+            "English": "Like an alchemist changing lead into gold, Marcotte transformed the tragedies around him a into comedy.",
+            "Cajun French": "Tel un alchimiste changeant le plomb en or, Marcotte transforme les tragédies qui l’entourent en comédie."
+        },
+        {
+            "English": "At the same time, his listeners were able to laugh at the hardships they knew all too well, rather than sink beneath them.",
+            "Cajun French": "En même temps, ses auditeurs pouvaient rire des misères qu’ils ne connaissaient que trop bien, plutôt que de sombrer sous leur poids."
+        },
+        {
+            "English": "Theirs was the laughter of the victorious.",
+            "Cajun French": "C’est le rire des vainqueurs qui les fait rire."
+        },
+        {
+            "English": "Most of his stories originated from actual scenes witnessed by Marion, watching from the sidelines and drawing much from the commentary of the Marcotte household.",
+            "Cajun French": "La plupart de ses récits sont issus de scènes réelles dont Marion a été témoin, regardant de loin et puisant beaucoup dans les commentaires de la maison Marcotte."
+        },
+        {
+            "English": "As the youngest boy, he was mothered by his six sisters who cultivated within him a sensitivity that was unusual for men of his period.",
+            "Cajun French": "Jeune garçon, ses six sœurs l’ont toutes materné et ont cultivé en lui une sensibilité peu commune aux hommes de son époque."
+        },
+        {
+            "English": "When his first and only son, Louis, was born, he could unhesitatingly shower the child with the love he had received himself in the Marcotte household.",
+            "Cajun French": "À la naissance de son premier et unique fils, Louis, il ne se laisse pas décourager et lui transmet l’amour qu’il a reçu de la famille Marcotte."
+        },
+        {
+            "English": "While in the delivery waiting room at West Jefferson Hospital, he wrote the song “Mon Petit Garçon,” about his newborn on a paper napkin.",
+            "Cajun French": "Dans la salle d’attente de l’hôspital West Jefferson, il écrit la chanson «Mon petit garçon», sur son nouveau-né, sur une serviette en papier."
+        },
+        {
+            "English": "There is no trace of tragedy in this work.",
+            "Cajun French": "Il n’y a aucune trace de tragédie dans cette œuvre."
+        },
+        {
+            "English": "Like many rural-born Louisianans of the time, Marion identified as both French and as a French-speaking American.",
+            "Cajun French": "Comme beaucoup de Louisianais de l’époque nés à la campagne, Marion s’identifiait à la fois comme Français et comme Américain francophone."
+        },
+        {
+            "English": "His parents spoke only French.",
+            "Cajun French": "Ses parents ne parlaient que le français."
+        },
+        {
+            "English": "He himself did not speak English until he went to school at the age of six because, even though French was the language of his community, the state constitution of 1921 mandated that all courses be taught in English, effectively relegating French to the status of a “foreign” language in the schools.",
+            "Cajun French": "Lui-même ne parlait pas l’anglais avant d’aller à l’école à l’âge de six ans car, même si le français était la langue de sa communauté, la Constitution de l’État de 1921 exigeait que tous les cours soient donnés en anglais, reléguant de fait le français au statut de langue «étrangère» dans les écoles."
+        },
+        {
+            "English": "At a time when schools began to enforce an“English-only” standard of language for students, Marion’s Cajun tales set an example for groups of French-speaking Louisianans who refused to be silenced.",
+            "Cajun French": "À l’époque où les écoles ont commencé à appliquer une norme de langue «uniquement anglaise», les contes cadiens de Marion ont servi d’exemple aux Louisianais francophones qui ont refusé de se taire."
+        },
+        {
+            "English": "For many families who were more and more isolated within an a English-dominated society, the ability to hear his stories over the radio offered a sort of catharsis as children, parents, and grandparents continued to listen to a man a who understood their culture and who was clearly proud of it.",
+            "Cajun French": "Pour de nombreuses familles de plus en plus isolées au sein d’une société dominée par l’anglais, la possibilité d’entendre ses histoires à la radio offrait une sorte de catharsis car les enfants, les parents et les grands-parents continuaient d’écouter un homme qui comprenait leur culture et qui en était clairement fier."
+        },
+        {
+            "English": "Marcotte’s popularity began in the mid-1950s and peaked through the early 1970s with his works still played on radio stations throughout the state of Louisiana and some parts of Texas.",
+            "Cajun French": "La popularité de Marcotte a commencé à la fin des années 1950 et a atteint son apogée au début des années 1970, ses œuvres étant toujours diffusées sur les stations de radio de l’État de Louisiane et de certaines régions du Texas."
+        },
+        {
+            "English": "Besides his stories, Marion created jingles for What-A-Burger and campaign songs for political candidates, and songs that spoke of a love, family, and heartache.",
+            "Cajun French": "Outre ses histoires, Marion a créé des jingles pour Whar-A-Burger et des chansons de campagne pour les candidats politiques, ainsi que des chansons qui parlaient d’amour, de famille et de chagrin d’amour."
+        },
+        {
+            "English": "The nuances of his advanced percussion were difficult to capture with the recording equipment of the 1960s.",
+            "Cajun French": "Son mélange de contes orales et d’accompagnement musical dramatique sur la guitare étaient difficiles à accomplir avec le matériel d’enregistrement des années 1960."
+        },
+        {
+            "English": "Today, colleges in the United States as well as a Canada use Marion’s French tales in their curricula for the study of Louisiana French.",
+            "Cajun French": "Aujourd’hui, des universités aux États-Unis et au Canada utilisent les contes français de Marion dans leurs programmes  d’enseignement du français louisianais."
+        },
+        {
+            "English": "The University of Louisiana at Lafayette, houses Marion’s work in their archives.",
+            "Cajun French": "L’Université de Louisiane à Lafayette conserve les travaux de Marion dans ses archives."
+        },
+        {
+            "English": "On January 29, 1998 Marion Marcotte passed away at the age of 81.",
+            "Cajun French": "Le 29 janvier 1998, Marion Marcotte est décédé à l’âge de 81 ans."
+        },
+        {
+            "English": "I am Floyd Soileau, producer of Cajun French music of Louisiana since 1956.",
+            "Cajun French": "Ça icitte c’est Floyd Soileau, produceur de la musique cadien français de la Louisiane depuis 1956."
+        },
+        {
+            "English": "I have the Gin and Swallow labels.",
+            "Cajun French": "J’avais des labels Gin et Swallow."
+        },
+        {
+            "English": "We have a business in Ville Platte, and I would like to tell you a little bit about my good friend, the late Marion Marcotte.",
+            "Cajun French": "On avait un business à la Ville Platte et j’aimerais vous dire un ti peu pour mon bon ami, le défunt Marion Marcotte."
+        },
+        {
+            "English": "Marion was born and raised in the country near the a little village of Moreauville in Avoyelles Parish.",
+            "Cajun French": "Marion a été né et élevé dans la campagne près du ti village de Moreauville dans la paroisse des Avoyelles."
+        },
+        {
+            "English": "From the time that he was a little boy, his parents noticed that he had an interest in music.",
+            "Cajun French": "Depuis qu’il était un ti garçon ses parents s’ont aperçu qu’il avait un intérêt dans la musique."
+        },
+        {
+            "English": "He was determined to develop the talent that he possessed.",
+            "Cajun French": "Il était déterminé de sortir ce talent qu’il avait."
+        },
+        {
+            "English": "So, he picked cotton to earn six dollars to buy a guitar.",
+            "Cajun French": "Ça fait qu’il a ramassé du coton pour six piastres pour acheter un guitare."
+        },
+        {
+            "English": "He began to play music and to play for house dances and in all the neighborhoods where he lived in Avoyelles Parish.",
+            "Cajun French": "Et il a commencé à jouer la musique et jouer pour les bals de danse dans les maisons et alentour des voisinages où i restait dans la paroisse Avoyelles."
+        },
+        {
+            "English": "It was not long before his parents went to New Orleans to work.",
+            "Cajun French": "Là, c’était pas longtemps que ses parents ont été à la Nouvelle-Orléans pour travailler là-bas."
+        },
+        {
+            "English": "That is when his interest in music really progressed.",
+            "Cajun French": "Là, il a vraiment avancé son intérêt dans la musique."
+        },
+        {
+            "English": "He organized his band, and they played every a weekend at different locations in New Orleans.",
+            "Cajun French": "Il a organisé son band et ça jouait à tous les fins de semaine à différentes locations à la Nouvelle-Orléans."
+        },
+        {
+            "English": "It was there that he began to write and sing the songs that he was writing in French and others in English.",
+            "Cajun French": "C’est là qu’il a commencé à écrire et chanter ses chansons qu’il écrivait en français et d’autres en anglais."
+        },
+        {
+            "English": "He had auditioned for a record company in New Orleans.",
+            "Cajun French": "Et il a audition ça pour uné compagnie de disques à la Nouvelle-Orléans."
+        },
+        {
+            "English": "They signed him to a contract, and I think that he made a total of five 45 rpm records for the company.",
+            "Cajun French": "Ils l’ont signé pour un contrat et je crois qu’il a fait un total de cinq disques 45 pour la compagnie."
+        },
+        {
+            "English": "But he did not believe that the company was promoting his records enough, and he asked to be released from his contract after the fourth record came out, if I remember correctly.",
+            "Cajun French": "Mais i croyait pas que la compagnie promotait ses records assez et il a demandé d’être lâché de son contrat après que le quatrième record a sorti, si je me rappelle bien."
+        },
+        {
+            "English": "It was then that he decided to make audition tapes and to send them in the mail to other companies.",
+            "Cajun French": "C’est là qu’il a décidé de faire d’autres audition tapes et de les envoyer dans a malle à d’autres compagnies."
+        },
+        {
+            "English": "I was lucky that he sent me a copy of two songs that he had written to see if I was interested in making records with him.",
+            "Cajun French": "Moi, j’ai eu de la chance. Il m’a envoyé une copie de deux chansons qu’il avait écrit pour voir si j’étais intéressé de faire des disques avec lui."
+        },
+        {
+            "English": "After I had carefully listened to what he had sent, I wrote him to ask if he perhaps had other songs that I could hear before deciding which one I wanted to use for his first record before signing a contract.",
+            "Cajun French": "Après que j’avais bien écouté çu-là qu’il avait envoyé, j’ai écrit que peut-être il avait d’autres chansons que je pouvais attendre avant que je décide quelle je voulais mettre pour son premier disque avant de signer un contrat."
+        },
+        {
+            "English": "He sent me another tape of his songs and after the two songs he had recorded a little story, a very funny tale, the story of someone who worked in a dancehall and who was hired to keep the peace.",
+            "Cajun French": "Et il m’avait envoyé un autre tape de ses chansons et après les deux chansons il avait recordé une tite histoire, un ti conte bien farce, une histoire d’un travaillant dans une salle de danse qui était engagé pour tenir la paix."
+        },
+        {
+            "English": "He was talking to the people who were a in the dancehall before the dance began that evening.",
+            "Cajun French": "Et il était après adresser le monde qui était là à la salle de danse avant que le bal commence ce soir-là."
+        },
+        {
+            "English": "It was called “The Announcement”.",
+            "Cajun French": "C’était nommé «L’annoncement»."
+        },
+        {
+            "English": "And I couldn’t stop laughing when listening to that.",
+            "Cajun French": "Et je pouvais pas arrêter deruea écouter ça."
+        },
+        {
+            "English": "It was something very funny.",
+            "Cajun French": "C’était quelque chose beaucoup farce."
+        },
+        {
+            "English": "I had never heard someone a speak like that and tell a story like that.",
+            "Cajun French": "J’avais jamais attendu quelqu’un parler comme ça et faire une histoire comme ça."
+        },
+        {
+            "English": "By luck, I had a two jukebox record buyers in the lobby of my place at a the same time that I was listening to that tape.",
+            "Cajun French": "Et c’était une adonnance que j’avais deux acheteurs de disques à l’entrée de ma place en même temps que j’étais après attendre ce tape-là."
+        },
+        {
+            "English": "One had gone into the back with me to get records and the other one, who was in front, was listening and it was he who heard the story, “The Announcement,” first.",
+            "Cajun French": "Un qu’avait été en arrière pour attraper l des records avec moi et l’autre qui était devant écouter et c’est lui qui a attendu l’histoire, «L’annoncement», premièrement."
+        },
+        {
+            "English": "And he began to laugh, alone after listening to the tape",
+            "Cajun French": "Et il a commencé à rire, lui seul après attendre le tape."
+        },
+        {
+            "English": "Before knowing why he was laughing, we went up to see what was going on and I heard a little bit of the story.",
+            "Cajun French": "Avant qu’on sait pourquoi il était après rire, on approchait pour voir ça qu’il avait et j’ai attendu un ti boute de l’histoire."
+        },
+        {
+            "English": "So I put the story on again from the beginning and we listened to all of it.",
+            "Cajun French": "Et j’ai remis le tape encore commençant au commencement et on l’a écouté en tout."
+        },
+        {
+            "English": "The three of us laughed like crazy while listening to Marion Marcotte and his announcement.",
+            "Cajun French": "Et les trois a ri comme des fous à écouter Marion Marcotte et son annoncement."
+        },
+        {
+            "English": "That was when I asked the record buyer, I said, “Tell me, if I put that on a 45, would you a put that record on your jukebox?”",
+            "Cajun French": "C’est là j’ai demandé à le acheteur de disques, j’ai dit: «Dis-moi, si je mettrais ça dessus un 45, tu mettrais ce record sus ton jukebox?»"
+        },
+        {
+            "English": "“Oh, yes!” he said, “The people will like that. It’s something different.”",
+            "Cajun French": "«Ah, ouais!» i dit, «Ils vont aimer ça. C’est quelque chose de différent.»"
+        },
+        {
+            "English": "I said, “I’ll do it then.”",
+            "Cajun French": "J’ai dit: «Je vas le faire, alors.»"
+        },
+        {
+            "English": "So, I called Marion and I told him, “I’m ready to put out your first record.”",
+            "Cajun French": "Ça fait, j’ai appelé Marion et jy ai dit: «J’sus paré pour sortir ton premier disque.»"
+        },
+        {
+            "English": "I was going to put such and such a song on one side, but I wanted to put the story, “The Announcement” on the other side.",
+            "Cajun French": "J’allais mettre une telle et | telle chanson sus un bord, mais je voulais mettre l’histoire «L’annoncement» sus l’autre bord."
+        },
+        {
+            "English": "He said, “That’s fine.”",
+            "Cajun French": "Il a dit: «Ça cest correct.»"
+        },
+        {
+            "English": "So, we put out the record and I sent it to all the DJs, the people who played French music on the radio stations across Louisiana and in East Texas.",
+            "Cajun French": "Ça fait on a sorti ce disque, ce record-là, et j’ai envoyé ça à tous les DJs, le monde qui jouait la musique français sus les stations de radio en travers de la Louisiane et dans le est du Texas."
+        },
+        {
+            "English": "I sent them a copy for them to listen to.",
+            "Cajun French": "Je yeux a envoyé une copie pour eux-autres attendre."
+        },
+        {
+            "English": "And I sold these records to all the other operators who had jukeboxes across our territory.",
+            "Cajun French": "J’ai vendu tous ces disques-là à les autres opérateurs qu’avaient des jukebox en travers de notre territoire."
+        },
+        {
+            "English": "That began to be a big success.",
+            "Cajun French": "Ça a commencé à être un gros succès."
+        },
+        {
+            "English": "His story was playing on programs that ordinarily played only music.",
+            "Cajun French": "Son histoire était après jouer dans des programs qui étaient ordinairement de la musique."
+        },
+        {
+            "English": "But it was so funny that people continued to call, “I want to hear that man talk some more.”",
+            "Cajun French": "Mais c’était assez farce et le monde continuait à appeler: «Je veux attendre l’homme-là parler encore.»"
+        },
+        {
+            "English": "And that is how it all started.",
+            "Cajun French": "Et c’est comme ça qu’a commencé l’affaire."
+        },
+        {
+            "English": "So, the first record came out, and it did very well, and Marion realized, like I realized, that his tales were very popular with the audience and it was time for another one.",
+            "Cajun French": "Ça fait, le premier record à sorti et il a fait beaucoup bien et Marion s’a aperçu, comme moi je m’ai aperçu, que ses histoires étaient beaucoup populaires avec le monde et c’était temps pour une autre."
+        },
+        {
+            "English": "That was when he sent me a second one, which a was “All About Dudley.”",
+            "Cajun French": "C’est là qu’ilma envoyé une deuxième qui était pour «L’histoire à Dudley»."
+        },
+        {
+            "English": "And after that one came out, the sales began to be stronger than ever.",
+            "Cajun French": "Et après çu-là a sorti, la vente a commencé à être encore plus fort que jamais."
+        },
+        {
+            "English": "People didn’t a want to buy just one.",
+            "Cajun French": "Ça voulait pas acheter un."
+        },
+        {
+            "English": "They wanted the two records.",
+            "Cajun French": "Ça voulait les deux disques."
+        },
+        {
+            "English": "They bought three and four records at a time.",
+            "Cajun French": "C’était trois disques et quatre disques à la fois."
+        },
+        {
+            "English": "But “L’histoire à Dudley” was one of the most popular for a good while.",
+            "Cajun French": "Mais «L’histoire à Dudiey» était une de les plus populaires pour un bon bout de temps."
+        },
+        {
+            "English": "It was so popular that you couldn’t go to a party with your friends or a party with your French-speaking friends without there being someone who would start repeating one or two lines of his story.",
+            "Cajun French": "Il était si populaire que tu pouvais pas aller à une soirée avec des amis ou une partie avec des amis qui parlaient français si i n-a une personne dans la bande pour sûr pour recommencer à dire une ou deux lignes de son histoire."
+        },
+        {
+            "English": "And the most popular line a was when he said his father-in-law offered him a glass of wine which had little ice cubes in it.",
+            "Cajun French": "Et la ligne plus populaire, son beau-père lui a offert un verre de vin qui avait des tits cailloux de glace dedans."
+        },
+        {
+            "English": "The ice cubes were hitting the edge of the glass and made a sound like “ting, ting, ting.”",
+            "Cajun French": "Les tits cailloux de glace qui cognaient sus le bord du verre et ça faisait «Ting, ting, ting»."
+        },
+        {
+            "English": "People who were telling jokes repeated this story I don’t know how many times at soirées, and that was a line that was very popular.",
+            "Cajun French": "Ils ont répété cette histoire je connais pas combien de fois à des soirées par du monde qui était après dire des farces et c’était une ligne qui était beaucoup populaire."
+        },
+        {
+            "English": "People were talking about Marion Marcotte.",
+            "Cajun French": "Le monde parlait pour Marion Marcotte."
+        },
+        {
+            "English": "They liked what he said about how his father-in-law had caught him by the a seat of his pants and had thrown him through a window, making him fall into a rosebush full of thorns.",
+            "Cajun French": "Ça aimait quoi il avait dit, que son beau-père y avait attrapé par le fond de culotte et i l’avait envoyé en travers de la vitre et il est tombé dans un rosier plein de piquants."
+        },
+        {
+            "English": "All these things were very funny and that helped to develop a market for his tales.",
+            "Cajun French": "Tous ces affaires-là étaient beaucoup farces et ça a aidé à développer un marché pour ses histoires."
+        },
+        {
+            "English": "People were buying them and sending them to their relatives across the United States, Canada, France, and other countries.",
+            "Cajun French": "Le monde était après acheter ça et l’envoyer pour des parents en travers les États-Unis, le Canada, la France et d’autres pays."
+        },
+        {
+            "English": "He was very popular at that time at festivals and other celebrations.",
+            "Cajun French": "Il était beaucoup populaire à ce temps-là à les festivals et d’autres célébrations."
+        },
+        {
+            "English": "He had a special way of telling his stories.",
+            "Cajun French": "Il avait une spéciale manière pour dire ses histoires."
+        },
+        {
+            "English": "He used a guitar music to help accentuate what he was saying.",
+            "Cajun French": "Et là, il usait de la musique de guitare pour aider à mettre un accent dessus ça qu’il était après dire."
+        },
+        {
+            "English": "That was something that had not been done before.",
+            "Cajun French": "C’était quelque chose qu’avait pas été fait avant."
+        },
+        {
+            "English": "And people a who had the chance to hear Marion on his records were not going to forget it for several years.",
+            "Cajun French": "Et le monde qu’a eu la chance d’attendre Marion dessus ses disques va pas l’oublier pour plusieurs années."
+        },
+        {
+            "English": "There’s something else I want to say. Some years ago, he called me one morning and he was very excited that he a had another story to record for me to put out on a record.",
+            "Cajun French": "Et une chose je voulais dire, quelques années passées, i m’a appelé sus un matin et il était beaucoup excité qu’il avait une autre histoire pour recorder pour moi lâcher sus un disque."
+        },
+        {
+            "English": "He was so excited because he believed that he had possibly the best tale that would be the most popular of all the stories that he had recorded.",
+            "Cajun French": "Pourquoi il était si excité comme ça, i croyait qu’il avait possiblement le conte qui était plus fort et plus populaire que tous les autres contes qu’il avait recordé."
+        },
+        {
+            "English": "I asked him, “What are you going to a call it?”",
+            "Cajun French": "J’y ai dit: «Qui tu vas l’appeler?»"
+        },
+        {
+            "English": "“I’m going to call it, ‘The Politician.’”",
+            "Cajun French": "Je vas l’appeler, «Le politicien»."
+        },
+        {
+            "English": "When be told me that, that made me think, “With political affairs in Louisiana as they are, that will be extremely popular.”",
+            "Cajun French": "Quand il m’a dit ça, ça m’a fait jongler, «Avec l’affaire de politique dans la Louisiane, ça va être populaire affreux.»"
+        },
+        {
+            "English": "But, unfortunately, a few days after a that, he suffered a stroke that affected his speech, and since he didn’t record it, it will never be heard.",
+            "Cajun French": "Mais, par malheur, quelques jours après ça, il a souffert un stroke. Et, ça a affecté son parlement. Et d’abord i l’a pas recordé, i va être jamais attendu."
+        },
+        {
+            "English": "Nevertheless, people who speak French and who heard the tales of Marion Marcotte will remember Marion Marcotte as long as they live.",
+            "Cajun French": "Mais, le monde qui parle français et qui a attendu les contes à Marion Marcotte, i va se rappeler de Marion Marcotte aussi longtemps que ça vit."
+        },
+        {
+            "English": "And as for me, I think that his stories in French and his songs, and the songs in French by other Cajun musicians, have helped to keep our Cajun French alive for the last sixty years and more.",
+            "Cajun French": "Et moi, je crois que ses histoires en français et ses chansons, et les chansons en français par d’autres musiciens cadiens, a aidé à garder notre langue cadien français vivant pour les passés soixante ans et plus."
+        },
+        {
+            "English": "That has caused a lot of young people to learn to speak our beautiful French language.",
+            "Cajun French": "Ça a fait un tas de jeune monde apprendre à parler notre belle langue français."
+        },
+        {
+            "English": "My friends, I have an announcement to make here tonight.",
+            "Cajun French": "Mes amis, jai un annoncement à faire icitte ce soir."
+        },
+        {
+            "English": "I want to let you know that my dance hall is a respectable place where respectable people come to have a good time every Saturday evening.",
+            "Cajun French": "Je veux vous laisser savoir que ma salle de danse, c’est une place respectable ayoù le monde respectable vient pour s’amuser tous les samedis au soir."
+        },
+        {
+            "English": "Last Saturday, like every other Saturday, I gave a dance here, but it just so happened that I wasn’t here to keep the peace.",
+            "Cajun French": "Samedi passé, comme tous les autres samedis, j’ai donné un bal icitte, mais je m’adonnais à pas être là pour tenir la paix."
+        },
+        {
+            "English": "And the next day there were complaints that were made that some bad conduct and cussing had taken place.",
+            "Cajun French": "Et le lendemain i n-a des complaints qu’a été faits. Que i n-avait de la méchante conduit et du jurement qu’avaient pris place."
+        },
+        {
+            "English": "When they told me that, it made me so angry that could’ve cut ten-penny nails with my teeth.",
+            "Cajun French": "Et quand i m’ont raconté ça, ça m’a tellement mis en colère, jusqu’à j’aurais pu couper des clous «dix penny» avec mes dents."
+        },
+        {
+            "English": "But next Saturday, I’ll make sure to be here to keep the peace, and I don’t want to hear a peep in here.",
+            "Cajun French": "Mais samedi-ça-là, je m’adonne à être là pour tenir la paix et je veux pas attendre dire «pacane, je te casse» ici dedans."
+        },
+        {
+            "English": "Because I’m a man with patience as short as a goat’s a goatee, and the first one I see who’s not behaving well, I’m gonna grab him by the scruff of his neck and the seat of his pants and I’ll give him a good sifting.",
+            "Cajun French": "Parce que moi, je suis un homme qu’a la patience aussi court que le bouquin d’un cabri et le premier que je vas ‘oir qui se conduit pas bien je vas l’empoigner par le chignon du cou et le fond de culotte et je vas bien le tamiser."
+        },
+        {
+            "English": "When I’m a done, they’ll definitely believe they’ve gone through a gristmill.",
+            "Cajun French": "Et quand j’auras fini avec, i vont croire sûr qu’i’s avaient passé au travers un moulin à gru."
+        },
+        {
+            "English": "I want to let you know, my friends, that I can handle these rascals because, me, I’m a man who has long, long hair that grows on my head, and it takes a good yank to pull it out.",
+            "Cajun French": "Je veux vous laisser savoir, mes amis, que je sus capable de manier ces malins-là parce que moi, je sus un homme qui a de grands grands cheveux qui poussent sus la tête et ça prend un bon pour me les arracher."
+        },
+        {
+            "English": "Because I have the reputation of being the bull of the hill, and my brother Pierre’s the a one who’s the cock of Grand’Piniére.",
+            "Cajun French": "Parce que j’ai la réputation d’être le taureau du coteau et mon frère Pierre, c’est celui qui est le coq de la Grand’Pinière."
+        },
+        {
+            "English": "I want you all to have a good time, but remember, I’ll be watching you just like a vulture watches a carcass.",
+            "Cajun French": "Je veux que vous-autres ait un bon temps mais oubliez pas, je vas être après vous guetter manière comme un carencro guète une charogne."
+        },
+        {
+            "English": "Now, the players will continue the music.",
+            "Cajun French": "À présent, les joueurs vont continuer avec la musique."
+        },
+        {
+            "English": "I got Péro Manuel to play the trumpet and Pierre Roussel will accompany him on bass.",
+            "Cajun French": "J’ai eu Péro Manuel pour jouer de la trompe et Pierre Roussel va l’accompagner avec une basse."
+        },
+        {
+            "English": "They’ll open the dance with a waltz they composed themselves.",
+            "Cajun French": "I vont ouverre le bal avec une valse que is ont composé eux-autres-même."
+        },
+        {
+            "English": "The name of this waltz is “The Thrill of Ville Platte.”",
+            "Cajun French": "Le nom de cette valse-là, c’est «Le frisson de la Ville Platte.»"
+        },
+        {
+            "English": "I want to tell you all the trouble I had during the flood of ‘27.",
+            "Cajun French": "Je veux vous raconter ma misère j’avais durant l’eau haute de ‘27."
+        },
+        {
+            "English": "I was drowning up to my eyelids.",
+            "Cajun French": "J’avais noyé jusqu’aux paupières."
+        },
+        {
+            "English": "The water was almost in the attic.",
+            "Cajun French": "L’eau passait proche en le grenier."
+        },
+        {
+            "English": "I climbed up into the second floor of my barn with my wife, children, my cats and my dogs.",
+            "Cajun French": "J’étais échafaudé dessus la deuxième étage de mon hangar avec ma femme, mes petits, mes chats et mes chiens."
+        },
+        {
+            "English": "I was so poor that I had a bitter taste in my mouth.",
+            "Cajun French": "J’étais pauvre jusqu’à ma bouche était amère."
+        },
+        {
+            "English": "To a tell you the holy truth, I was close to starving.",
+            "Cajun French": "Pour vous dire la sainte vérité, j’étais proche à la crève de faim."
+        },
+        {
+            "English": "Because of not having eaten, I was so weak I was wobbling.",
+            "Cajun French": "Pas avoir eu mangé, ça m’avait tellement affaibli jusqu’à je voilais."
+        },
+        {
+            "English": "I was so a skinny you could have played eenie-meenie-minie-mo on my backbone.",
+            "Cajun French": "J’avais tellement maigri jusqu’à t’aurais pu jouer pin-pi-po sus mes nœuds de reins."
+        },
+        {
+            "English": "I heard that the government had sent the Red Cross to Pointe-au-Chien to provide rations to the a  people who were starving.",
+            "Cajun French": "J’avais reçu des nouvelles que le gouvernement avait envoyé la Croix Rouge à la Pointe-au-Chien pour donner des rations au monde qui était à la crève de faim."
+        },
+        {
+            "English": "When I got the news, I didn’t waste any time.",
+            "Cajun French": "Quand j’ai su ces nouvelles, j’ai pas perdu de temps."
+        },
+        {
+            "English": "I got aboard my skiff and I paddled to where they were.",
+            "Cajun French": "J’ai embarqué dans mon chaland et je m’ai pagaillé là où i’s étaient."
+        },
+        {
+            "English": "I think luck was with me that day a because I was very successful.",
+            "Cajun French": "Mon idée le bonheur était avec moi ce jour-là parce que j’avais bien réussi."
+        },
+        {
+            "English": "They gave me a plow, a disk plow, a double harrow, a Jig Whiz [saw], a planter, shoes for all my children, a scrawny possum, turnips, a corset for my wife, a toothbrush, a set of false teeth, a clothesline, a pack of gum, forty cents in change, and a sack with two ends, with a tomcat on one side and pair of andirons on the other.",
+            "Cajun French": "I m’avaient donné une charrue, un disque, une herse double, un djigouise, un planteur, des souliers pour tous mes petits, | un rat de bois maigre, des navéts, un corset pour ma femme, une brosse à dents, un râtelier, une corde à linge, un paquet de gomme, quarante sous en argent et un sac à deux boutes avec un matou d’un côté et une paire de chenets l’autre bord."
+        },
+        {
+            "English": "While on my way back from getting these rations, I stopped by René Fontenot’s store that’s located in the reeds at L’Anse-aux-Pailles.",
+            "Cajun French": "En revenant des rations, quand j’ai arrivé devant la boutique à René Fontenot qui se trouve dans les roseaux à l’Anse-aux-Pailles."
+        },
+        {
+            "English": "I decided to take my forty cents and buy myself a pound of coffee and a can of Pet Milk.",
+            "Cajun French": "J’ai décidé de prendre mon quarante sous et m’acheter une livre de café et un can de Pet Milk."
+        },
+        {
+            "English": "Can you imagine!?",
+            "Cajun French": "Pense donc?!"
+        },
+        {
+            "English": "I hadn’t drunk coffee in over three weeks.",
+            "Cajun French": "J’avais pas bu du café i n-avait au-dessus de trois semaines."
+        },
+        {
+            "English": "I wanted to have to a little sip so badly that I could taste it on my palate.",
+            "Cajun French": "J’avais tellement envie d’une tite gorgée jusqu’à. j’avais le goût dans le palais."
+        },
+        {
+            "English": "When I went into René’s store, I saw that troublemaker Bradley Meaux, sitting at the end of the counter.",
+            "Cajun French": "Quand j’ai rentré dans la | boutique à René, j’ai vu ce malfaicteur, Bradley Meaux, qui | était assis sus le bout du comptoir."
+        },
+        {
+            "English": "When I appeared in the door, he said, “Well, look what the cat’s dragged in here! It’s Jim Soileau.”",
+            "Cajun French": "Quand j’ai paru dans la porte, i dit, «’Gardez donc qui les chats ont traîné ici dedans! C’est Jim Soileau.»"
+        },
+        {
+            "English": "He said, “How’s it going, Jim? I thought you’d been washed away with the bullfrogs in the flood.”",
+            "Cajun French": "I dit, «Comment c’est, Jim? J’ai cru t’avais parti à la dérive avec les ouaouarons dans l’eau haute.»"
+        },
+        {
+            "English": "He said, “You know, Jim Soileau, it’s not you who  put water in coconuts, no siree.”",
+            "Cajun French": "I dit, «Hé Jim Soileau, c’est pas proche toi qu’a mis l’eau dans les cocos, non.»"
+        },
+        {
+            "English": "He was trying to make fun of me.",
+            "Cajun French": "Il était après essayer de se foutre de moi."
+        },
+        {
+            "English": "He thought I wouldn’t say anything.",
+            "Cajun French": "I croyait pas que j’aurais rien dit."
+        },
+        {
+            "English": "But, I shut him up, yeah.",
+            "Cajun French": "Mais, je l’ai bouché, ouais."
+        },
+        {
+            "English": "I said, “No, Bradley, it wasn’t me who put water in coconuts. But don’t forget, you old dog, you weren’t the one who grated the moon to make the stars.”",
+            "Cajun French": "Je dis, «Non, Bradley, c’est pas moi qui a mis l’eau dans les cocos. Mais oublie pas, vieux chien, c’est pas proche toi qu’a râpé la lune pour faire les étoiles.»"
+        },
+        {
+            "English": "When I said that, it surprised him.",
+            "Cajun French": "Quand j’ai dit ça, ça l’a surpris."
+        },
+        {
+            "English": "He jumped down from the counter.",
+            "Cajun French": "Il a sauté en bas du comptoir."
+        },
+        {
+            "English": "I thought he was gonna sock me.",
+            "Cajun French": "J’ai cru i m’en aurait foutu un."
+        },
+        {
+            "English": "Before he could answer, René Fontenot spoke up.",
+            "Cajun French": "Avant il a pu me répondre, René Fontenot s’emmélait."
+        },
+        {
+            "English": "He said, “Listen here, if you two don’t shut up, l'll bang your heads together.”",
+            "Cajun French": "I dit, «Écoutez ici. Si vous-autres la ferme pas, je vas vous Li cogner votres têtes ensemble.»"
+        },
+        {
+            "English": "He said, “As for you, Jim Soileau, if I sock you, you’ll think it’s a steam-powered beam that hit you.”",
+            "Cajun French": "I dit, «Tant qu’à pour toi, Jim Soileau. Si je t’en fous un, tu vas croire que c’est un madrier à la vapeur qui t’a frappé.»"
+        },
+        {
+            "English": "Don’t forget, my boy, I kept my mouth shut, yeah",
+            "Cajun French": "Oublie pas, ti, j’ai quitté ma bouche fermée, ouais."
+        },
+        {
+            "English": "Because René Fontenot is one of the meanest guys I know.",
+            "Cajun French": "Parce que René Fontenot, c’est un de les si méchants bougres que je connais."
+        },
+        {
+            "English": "They told me that he’s so mean that when he shaves in the morning, he puts his gun on the table next to him in case he doesn’t like his reflection he sees in the mirror.",
+            "Cajun French": "I m’ont dit qu’il est tellement mauvais jusqu’à quand i se rase les matins, i met son pistolet sus la table à côté de lui, en tout cas il aime pas son image dans le miroir."
+        },
+        {
+            "English": "They told me he shoots the mirror when he’s in a bad mood when he looks at himself.",
+            "Cajun French": "I m’ont dit qu’i perce son miroir à coups de balle de pistolet quand il est de mauvaise humeur et i se regarde dans le miroir."
+        },
+        {
+            "English": "Anyway, I didn’t want to get in an argument with an animal like Bradley Meaux.",
+            "Cajun French": "N’importe, Je voulais pas m’ostiner avec un animal comme Bradley Meaux."
+        },
+        {
+            "English": "I bought my pound of coffee and my can of Pet Milk, and I paddled home.",
+            "Cajun French": "J’ai acheté ma livre de café et mon can de Pet Milk et je m’ai pagaillé à la maison."
+        },
+        {
+            "English": "When I got home, I told my wife Clothilde, I said, “Listen, dear, I’ve wanted some coffee for so long... Let’s stoke up the fire.”",
+            "Cajun French": "Quand j’ai arrivé à la maison, j’ai dit à ma femme Clothilde, je dis, «Écoute, chère, i n-a assez longtemps j’ai envie du café.... Atisonne le feu.»"
+        },
+        {
+            "English": "She reached into the corncob bucket that we’d put right next to the stove and put a handful in the fire.",
+            "Cajun French": "Alle a passé sa main dans la baille de coton-maïs i n-avait collé du réchaud, alle a mis une maintée dedans."
+        },
+        {
+            "English": "That made purple embers.",
+            "Cajun French": "Ça a fait des braises violettes."
+        },
+        {
+            "English": "She took the coffee pot and put it on the fire.",
+            "Cajun French": "Là, alle a pris la grègue. Alle l’a mis sus le feu."
+        },
+        {
+            "English": "When I heard the coffee drip into the coffee pot, it made a sound like touc, touc, touc, touc, touc, touc-touc.",
+            "Cajun French": "Quand j’ai attendu le café était après couler dans la grègue, ça faisait touc, touc, touc, touc, touc, touc-touc."
+        },
+        {
+            "English": "I rolled myself a Bull Durham cigarette and tucked it behind my ear.",
+            "Cajun French": "Je m’ai roulé une cigarette de Bull Durham et je me l’ai accroché derrière l’oreille."
+        },
+        {
+            "English": "When the coffee was ready, I took my ax.",
+            "Cajun French": "Quand le café était à mouche, j’ai pris ma hache."
+        },
+        {
+            "English": "I hit the can of Pet Milk with it.",
+            "Cajun French": "J’ai foutu un coup de hache dans ce can de Pet Milk."
+        },
+        {
+            "English": "That made a gash.",
+            "Cajun French": "Ça a fait une gueule."
+        },
+        {
+            "English": "My wife had poured some coffee for me into a cup.",
+            "Cajun French": "Ma femme m’a vidé du café dans une tchacouelle."
+        },
+        {
+            "English": "I took the can of Pet Milk and emptied it into the cup.",
+            "Cajun French": "J’ai pris le can de Pet Milk, j’en ai vidé dans le café."
+        },
+        {
+            "English": "It made a sound like “bloom.”",
+            "Cajun French": "Ça a fait «bloume.»"
+        },
+        {
+            "English": "The cream hit the bottom of the cup; then it came back up and made a cloud.",
+            "Cajun French": "La crème a frappé le bas de la tchacouelle, là c’est revenu en haut, ça a fait un embarras."
+        },
+        {
+            "English": "Yeah, boy, then I pulled my Bull Durham cigarette from behind my ear and I lit it.",
+            "Cajun French": "Hé ti! Mais là je m’ai décroché ma cigarette de Bull Durham de derrière mon oreille et je l’ai allumé."
+        },
+        {
+            "English": "I took such a big draw of smoke that I almost seasoned my lung.",
+            "Cajun French": "J’ai pris tellement une grosse boucane jusqu’à j’ai manqué de m’assaisonner un poumon."
+        },
+        {
+            "English": "Then I took my cup of coffee and my cigarette, I went to sit in the rocking chair in front of the stove. I sat there rocking, drinking my coffee and smoking.",
+            "Cajun French": "Là j’ai pris ma tchacouelle de café et ma cigarette, j’ai été m’asseoir sus la berce, devant le réchaud et je me berçais, buvais mon café et je fumais."
+        },
+        {
+            "English": "That’s the life, yeah.",
+            "Cajun French": "C’est ça t’appelais tamiser la vie, ouais."
+        },
+        {
+            "English": "My wife was pacing in front of me, cooking the possum and turnips.",
+            "Cajun French": "Ma femme était après piétonner devant  moi, après cuire le rat de bois et les navets."
+        },
+        {
+            "English": "From time to time, I gave her a little pat.",
+            "Cajun French": "À tout moment, je lui foutais une tite tape."
+        },
+        {
+            "English": "Pow! Then, all of a sudden, I grabbed her and turned her over me on the rocking chair.",
+            "Cajun French": "Pow! Là tout d’un coup, je l’ai empoigné et je l’ai renversé sus la berce."
+        },
+        {
+            "English": "I kissed her - mwaaaah! and said, “Well, what a sweet little doll; I love her bigtime, yeah!”",
+            "Cajun French": "Et je l’ai embrassé - Tjacque! Là j’y dis, je dis «Hé sa chère tite catin, je dis, je l’aime gros, ouais!»"
+        },
+        {
+            "English": "When I let go, she was out of breath.",
+            "Cajun French": "Quand je lai lâché, alle était tout essoufflée."
+        },
+        {
+            "English": "She turned to me and said, “What’s wrong with you, Jim Soileau? You a must have a drawer of milk curds in your brain.”",
+            "Cajun French": "À se retourne sus moi, a dit, «Ça i n-a avec toi, Jim Soileau? Tu dois avoir un tiroir de lait caillé dans ta cervelle.»"
+        },
+        {
+            "English": "She added, “You must be losing the little bit of a mind you have.”",
+            "Cajun French": "A dit, «Tu dois être après perdre ton ti brin d’esprit que t’as.»"
+        },
+        {
+            "English": "She was acting like she didn’t like my caresses.",
+            "Cajun French": "A faisait comme alle aimait pas mes caresses."
+        },
+        {
+            "English": "But, I know how to get along with my wife, yeah.",
+            "Cajun French": "Mais, moi je connais appâter ma femme, ouais."
+        },
+        {
+            "English": "It’s much better to make believe she’s right than to let her begin to argue.",
+            "Cajun French": "C’est beaucoup mieux d’y faire à croire que la quitter commencer à disputer."
+        },
+        {
+            "English": "Because, by thunder, when my wife starts a quarreling, it’s like popcorn popping. I hear ta-ta-ta-ta-ta-ta-ta-ta-ta. It doesn’t end.",
+            "Cajun French": "Parce que, tonnerre mes chiens, quand ma femme commence à quereller, c’est comme un tac-tac qu’après fleurir. J’attends, ta-ta-ta-ta-ta-ta-ta-ta-ta. N-a pus de finition."
+        },
+        {
+            "English": "Once supper was cooked and I sat down at the table.",
+            "Cajun French": "Quand le souper était cuit et je mai attablé."
+        },
+        {
+            "English": "I told my wife, Clothilde, I said, “Listen, dear, put the cats out because I don’t want them brushing against my a legs while I’m eating my possum.”",
+            "Cajun French": "J’ai dit à ma femme, Clothilde, je dis «Écoute, chère, fous les chats dehors, parce que je veux pas que ça repasse dans mes jambes pendant j’sus après manger mon rat de bois.»"
+        },
+        {
+            "English": "By thunder! that was a night!",
+            "Cajun French": "Tonnerre mes chiens! ça c’est un soir."
+        },
+        {
+            "English": "I ate so much that you could’ve played the drum on my stomach after I was finished.",
+            "Cajun French": "J’ai tellement mangé jusqu’à t’aurais pu jouer le tambour sus mon estomac après que j’ai eu fini."
+        },
+        {
+            "English": "I guarantee you that if I’d died that night, it wouldn’t have been from hunger.",
+            "Cajun French": "Je ten garantis si je serais mort ce soir-là, ç’aurait pas été avec la faim."
+        },
+        {
+            "English": "That’s why I want to say, my friends, that there’s no one in the world who could’ve had more trouble than me during the flood of ‘27.",
+            "Cajun French": "C’est pour ça je veux vous dire, mes amis, i n-a pas personne dans le monde entier qu’a doit eu plus de la misère que moi durant l’eau haute de ‘27."
+        },
+        {
+            "English": "I was coming back from my field at noon.",
+            "Cajun French": "Je m’en revenais du clos en plein midi."
+        },
+        {
+            "English": "I'd hoed all morning.",
+            "Cajun French": "J’avais pioché tout la matinée."
+        },
+        {
+            "English": "It was a day that was so hot that everyone had to put chunks of ice in hens' water troughs 'cause they were laying boiled eggs.",
+            "Cajun French": "C’était une journée qui était tellement chaude jusqu’à le monde a eu pour mettre des chunks de glace dans les auges de poules, parce que les poules étaient après pondre des œufs bouillis."
+        },
+        {
+            "English": "I was walking on the roadside, barefoot in the dust, going home to eat the clod that my wife had cooked me for dinner.",
+            "Cajun French": "J’étais après marcher sur le bord du chemin, nu-pieds dans la poussière, en allant à la maison pour manger ma motte que ma femme m’avait cuit pour dîner."
+        },
+        {
+            "English": "It was so hot that I saw monkeys before my eyes.",
+            "Cajun French": "J’avais chaud a jusqu’à je voyais des macaques devant mes yeux."
+        },
+        {
+            "English": "The sun had burned my eyelids, and my stomach was like a hollow gourd 'cause I was so hungry.",
+            "Cajun French": "Le soleil m’avait grillé les paupières et mon estomac était aussi creux qu’une calebasse, force que javais faim."
+        },
+        {
+            "English": "When I arrived at the home of my father-in-law, Mr. Hilaire Barré, I saw him stick his head out the window.",
+            "Cajun French": "Quand j’ai arrivé devant la maison de mon beau-père, monsieur Hilaire Barré, je vois i sort sa tête en dehors du châssis."
+        },
+        {
+            "English": "He motioned to me while yealling.",
+            "Cajun French": "I m’a fait signe. I crie après moi."
+        },
+        {
+            "English": "He said, \"Come here, Dudley Bernard! I want to talk with you.\"",
+            "Cajun French": "I dit «Rentreici, Dudley Bernard! Je veux causer avec toi.»"
+        },
+        {
+            "English": "I couldn't imagine what in thunder my father-in-law, Mr. Hilaire, wanted with me.",
+            "Cajun French": "Je pouvais pas m’imaginer qui de tonnerre mon beau-père monsieur Hilaire voulait avec moi."
+        },
+        {
+            "English": "Imagine! Me, with whom he's been an enemy for over ten years since I eloped with his daughter and married her without his consent.",
+            "Cajun French": "Pense donc, moi qui est ennemi avec lui i n-a au dessus de dix ans depuis j’avais parti marron avec sa fille et je l’ai marié à sans son consentement."
+        },
+        {
+            "English": "When I walked into the front room, the first time I stepped foot in his house, it was cold in the place.",
+            "Cajun French": "Quand j’ai rentré dans la chambre devant, la première fois je fous mes pieds dans sa maison, c’était froid en dedans-là."
+        },
+        {
+            "English": "He had a velvet carpet that covered the floor.",
+            "Cajun French": "I n-avait un tapis de velours qui couvrait le plancher."
+        },
+        {
+            "English": "It scratched my toes.",
+            "Cajun French": "Ça me grattait les orteils."
+        },
+        {
+            "English": "I sank up to my knees in it.",
+            "Cajun French": "J’ai calé jusqu’aux genoux dedans."
+        },
+        {
+            "English": "\"Kid\", I thought, \"this isn't at all like the cabin where I live where you can see the crawfish chimneys through the cracks in the floor.\"",
+            "Cajun French": "«Eh ti», j’ai pensé, «c’était pas proche ma cabane que je reste dedans où tu peux voir les cheminées d’écrevisses en travers des craques du plancher.»"
+        },
+        {
+            "English": "He said, “Sit down, Dudley.”",
+            "Cajun French": "I me dit, «Assois-toi, Dudley.»"
+        },
+        {
+            "English": "I sat on the velvet sofa.",
+            "Cajun French": "Je m’assis sur un sofa de velours."
+        },
+        {
+            "English": "I sank up to my ears.",
+            "Cajun French": "J’ai calé jusqu’aux oreilles dedans."
+        },
+        {
+            "English": "He said, “You want a little drink, Dud?”",
+            "Cajun French": "I dit, «Tu veux un filet, Dud?»"
+        },
+        {
+            "English": "I said, “Yes, Mr. Hilaire. I’ll take a little drink.”",
+            "Cajun French": "Je dis, «Ouais, monsieur Hilaire. Je vas prendre un ti filet.»"
+        },
+        {
+            "English": "He went into the kitchen.",
+            "Cajun French": "Il a été dans la cuisine."
+        },
+        {
+            "English": "He fixed me a glass of a wine.",
+            "Cajun French": "I m’a arrangé un gobelet de vin."
+        },
+        {
+            "English": "He put ice in it.",
+            "Cajun French": "Il a mis de la glace dedans."
+        },
+        {
+            "English": "I heard the ice knocking on the edge of the glass.",
+            "Cajun French": "T’attendais la glace qui cognait sur le bord du gobelet."
+        },
+        {
+            "English": "It went ding, ding, ding, ding.",
+            "Cajun French": "Ça faisait ding, ding, ding, ding."
+        },
+        {
+            "English": "That was the life, yeah.",
+            "Cajun French": "C’était vivre, ouais ça."
+        },
+        {
+            "English": "But I found it strange that my father-in-law, Mr. Hilaire, kept standing right in front of a me, staring at me like an owl.",
+            "Cajun French": "Mais je trouvais ça drôle que mon beau-père monsieur Hilaire s’est planté droite devant moi et i me charmait manière comme un hibou."
+        },
+        {
+            "English": "He waited until I drank the last drop.",
+            "Cajun French": "Il a espéré jusqu’à j’ai bu la dernière goutte."
+        },
+        {
+            "English": "He took the glass and put it on the table.",
+            "Cajun French": "Il a pris le gobelet et I l’a mis sur la table."
+        },
+        {
+            "English": "Then he didn’t waste a a moment: he darted over to me like a chicken hawk and grabbed me by the ear and ankles.",
+            "Cajun French": "Là, il a pas perdu de temps. I s’est dardé sur moi comme un mangeur de poules et i m’a poigné par une oreille et les chevilles de pied."
+        },
+        {
+            "English": "He gave me three kicks.",
+            "Cajun French": "I m’a foutu trois coups de pied."
+        },
+        {
+            "English": "I couldn’t sit for eight days after that.",
+            "Cajun French": "Jai pas pu m’asseoir pour huit jours après."
+        },
+        {
+            "English": "Then he rolled me into a ball and tossed me out the window, I fell into a rose a bush.",
+            "Cajun French": "Là, i m’a bien pelotonné et i m’a tiré en travers d’un châssis. J’ai tombé dans un rosier."
+        },
+        {
+            "English": "When I untangled myself from that rose bush, I took off running.",
+            "Cajun French": "Quand je m’ai dépétri à de ce rosier-là, j’ai parti à la course."
+        },
+        {
+            "English": "I was hauling it, old dog!",
+            "Cajun French": "Mais, j’étais après me hâler, ouais vieux chien!"
+        },
+        {
+            "English": "I ran so fast that you could’ve spun a top on my shirttail.",
+            "Cajun French": "Je courais tellement vite jusqu’à t’aurais pu tourner une toupie sur ma queue de chemise."
+        },
+        {
+            "English": "I looked back to see if the rascal was following me.",
+            "Cajun French": "Je regarde en arrière pour voir si ce coquin s’en venait derrière moi."
+        },
+        {
+            "English": "I saw that he still had his head in the window, shaking his fist.",
+            "Cajun French": "Je voyais il avait sa tête dans le châssis encore après secouer son poing."
+        },
+        {
+            "English": "He shouted at me, “Listen here, Dudley! You’d better not beat your wife anymore, and you’d better let her go out from now on! Because if you don’t let her go out, I’ll hang your backbone on the fence when I see you again!”",
+            "Cajun French": "I crie après moi, i dit, «Écoute ici, Dudley. Tu ferais mieux pus de bâtonner ta femme et tu ferais mieux de la laisser sortir asteur en allant. Parce que si tu l’empêches de sortir, je vas pendre ton reintier sur la barrière quand je vas te revoir!»"
+        },
+        {
+            "English": "Don’t you forget, old dog!",
+            "Cajun French": "Oublie pas, vieux chien!"
+        },
+        {
+            "English": "I let my wife go out after that, yeah.",
+            "Cajun French": "J’ai laissé ma femme sortir après ça, ouais."
+        },
+        {
+            "English": "No big deal.",
+            "Cajun French": "N’importe!"
+        },
+        {
+            "English": "For a man who’s been married as long as I have and with a bunch of kids like I have, and a woman who’s as bad as the mange, being jealous would just be a lot of foolishness anyway.",
+            "Cajun French": "Un homme qui est marié aussi longtemps que moi avec une bande de petits comme j’ai, et une femme qui est mauvaise comme une gale, être jaloux, c’est tout des couillonnades quand-même."
+        },
+        {
+            "English": "I went to a shooting contest at poor late Uncle Malin Calin’s corral, located twelve miles the other side of Pointe-a-Mitain on Coulée-des-Grues.",
+            "Cajun French": "J’avais été à un pategau dans le corail à pauvre défunt Nonc Malin Calin qui se trouve douze milles l’autre bord de la Pointe-à-Mitain sus la Coulée-des-Grues."
+        },
+        {
+            "English": "Before I go any further, my friends, you should know that we call this kind of shooting match a “pategau.”",
+            "Cajun French": "Avant je vas plus loin, mes amis, je veux vous laisser savoir que ça i’s appellent un pategau, c’est un tirage en fusil."
+        },
+        {
+            "English": "This is when they hang a goose by the legs at a certain distance and the one that blows the head off the goose with a shot is the one who wins the prize.",
+            "Cajun French": "C’est quand i pendent un z-oie par les pattes une certaine distance et celui-là qui coupe la tête du z-oie d’un coup de fusil, c’est lui qui gagne le prix."
+        },
+        {
+            "English": "That’s what they call a pategau.",
+            "Cajun French": "C’est ça i’s appellent un pategau."
+        },
+        {
+            "English": "When I got there the first thing I saw was those three troublemakers, Eldon Sonnier, Eugene Griffin and Jerry Dugas.",
+            "Cajun French": "Quand j’arrivais là, les premiers j’ai vu c’était ces trois tonnerres: Eldon Sonnier, Eugène Griffin et Jerry Dugas."
+        },
+        {
+            "English": "As usual, they were up to no good.",
+            "Cajun French": "À leur mode, i’s étaient mal après se conduire."
+        },
+        {
+            "English": "These three fellows have their heads in the same bonnet.",
+            "Cajun French": "C’est trois bougres qu’a la tête dans le même bonnet."
+        },
+        {
+            "English": "They’re always planning tricks to play on someone.",
+            "Cajun French": "I sont tout le temps après planner des niches pour jouer sur quelqu’un."
+        },
+        {
+            "English": "About the same time, Cousin Popelette showed up in a wagon with her flock of daughters.",
+            "Cajun French": "Au même temps, cousine Popelette arrivait là en wagon avec sa bande de filles."
+        },
+        {
+            "English": "She was always hauling her daughters from one place to another to introduce them to the men.",
+            "Cajun French": "Alle était tout le temps après trainailler ses filles un bord et de l’autre les introduire à les hommes."
+        },
+        {
+            "English": "She wanted her girls to find husbands so bad, but there was no one who nibbled on the bait.",
+            "Cajun French": "Ça alle avait plus envie que ses filles se trouvent des maris. Mais i n-a pas personne qui grignotait sus l’appât."
+        },
+        {
+            "English": "When she got down from the wagon, the first thing she did was to introduce her daughters to the young men that were there.",
+            "Cajun French": "Quand alle a débarqué de son wagon, la première chose alle a fait, alle a commencé à introduire ses filles aux jeunes gens qui étaient là."
+        },
+        {
+            "English": "She said, “This one is named Alméda, and there’s Cora, there’s Clara, there’s Célina, Olita, Bénita, Angéla, Paméla, Lydia, Ida, Elma, Nita, Lina...”",
+            "Cajun French": "À dit: «Celle-là, s’appelle Alméda. I n-a Cora, i il  n-a Clara, i n-a Célina, Olita, Bénita, Angéla, Paméla, Lydia, Ida, Elma, Nita, Lina..»"
+        },
+        {
+            "English": "she said, “to shorten things, they’re all there!”",
+            "Cajun French": "À dit, «Pour faire l’affaire plus court, a dit, i sont tous là!»"
+        },
+        {
+            "English": "She still a hadn’t finished naming them!",
+            "Cajun French": "Alle avait toujours pas fini de les nommer!"
+        },
+        {
+            "English": "She took her oldest daughter Alméda by the hand and walked to where the three troublemakers were, Eldon Sonnier, Eugéne Griffin and Jerry Dugas.",
+            "Cajun French": "Alle a pris sa plus vieille fille Alméda par la main et alle a marché où ces trois malfaicteurs là étaient: Eldon Sonnier, Eugène Griffin et Jerry Dugas."
+        },
+        {
+            "English": "They were sitting on a wagon tongue drinking sassafras tea from a jug.",
+            "Cajun French": "l’s étaient assis sus une flèche de wagon, après boire du thé de sassafran au même d’un jug."
+        },
+        {
+            "English": "“My boys,” she said, “it gives me great pleasure to introduce you to my daughter, Alméda. She’s the peach of the bunch.”",
+            "Cajun French": "A dit: «Mes garçons, a dit, ça me donne un gros plaisir de vous présenter ma fille Alméda. C’est la pêche de la bande.»"
+        },
+        {
+            "English": "Eldon Sonnier glanced over, and said, “Um, no, thank you for the cake, Cousin Popelette, but I have no a intention of getting mixed up with a muscovy duck like that, and I guarantee you that if she goes missing, they , won’t find her shoes under my bed.”",
+            "Cajun French": "Eldon Sonnier l’a regardé manière en biais, i fait, «Hum, i dit, non, merci pour le gâteau, cousine Popelette, mais j’ai aucune intention de m’accorner avec une canard d’inde comme ça. Et je t’en garantis si a manque, i vont pas trouver ses souliers en dessous mon lit.»"
+        },
+        {
+            "English": "Eugene Griffin said, “She looks like a screech owl. Her legs make me think of two broom straws planted in soap bars, and she walks like a chicken that’s eaten pumpkin seeds.”",
+            "Cajun French": "Eugène Griffin dit, «A ressemble à une chouette. Ses jambes me fait penser à deux mies de balai plantées sus deux briques de savon. Et a marche manière comme une poule qu’a mangé des graines de giraumont.»"
+        },
+        {
+            "English": "Jerry Dugas remarked, “She’s so gaunt and skinny that if she drinks a bottle of red pop, she’ll look like a thermometer. I’m sure when she was a baby, they had to put her under the steps for three days to see if she was gonna bark or talk.”",
+            "Cajun French": "Jerry Dugas a passé la remarque, i dit: «Alle est tellement efflanquée et maigre que si a boirait une bouteille de pop rouge, a ressemblerait à un thermomètre. J’sus sûr quand alle était petite, i’s ont eu pour la fourrer en dessous d’un escalier pour trois jours voir si alle aurait jappé ou parlé.»"
+        },
+        {
+            "English": "Eh kid, you talk about hell in the camp after that, old buddy. Feathers flew.",
+            "Cajun French": "Hé ti, tu parles de hell in the camp après ça, mon vieux. Les plumes volaient."
+        },
+        {
+            "English": "They made Cousin Popelette so angry that she was spitting mad about it.",
+            "Cajun French": "I’s ont tellement fait foutre cousine Popelette en colère jusqu’à alle en bavait."
+        },
+        {
+            "English": "I’m sure her temperature rose to four hundred degrees.",
+            "Cajun French": "J’sus sûr sa température a monté à quatre cents degrés."
+        },
+        {
+            "English": "She unhooked a swing bar from the wagon and went up to the three troublemakers.",
+            "Cajun French": "Alle a décroché un palonnier après le wagon et alle a approché ces trois malfaicteurs."
+        },
+        {
+            "English": "She said, “You big bums. You’re no prizes yourselves.”",
+            "Cajun French": "A dit, «Mes monstres de bons à rien! Vous-autres ressemble pas des bonbons vous-autres-même.»"
+        },
+        {
+            "English": "Those mustaches of yours make me think of three cats with angry tails.",
+            "Cajun French": "Avec vos moustaches, vous-autres me fait penser à trois chats qu’a la queue fâchée."
+        },
+        {
+            "English": "And another thing, when politeness was passed out, you must’ve been hiding behind the barn door, because y’all didn’t get any.",
+            "Cajun French": "Et une autre chose, quand la politesse a passé, vous-autres devait être cachés derrière une porte d’hangar, parce que vous-autres en a pas attrapé du tout."
+        },
+        {
+            "English": "You have more nerve than a washboard, and you don’t have the sense of an architect in a briar patch.",
+            "Cajun French": "Vous-autres est plus effrontés qu’un frottoir et vous-autres a pas plus d’esprit qu’un architecte dans une talle d’éronces."
+        },
+        {
+            "English": "She was chewing iron!",
+            "Cajun French": "A mordait le fer!"
+        },
+        {
+            "English": "She said, “Don’t get me any madder because, by thunder, if I get on top of you with this swing stick, when I’m done, they’ll think for sure that yall spent the afternoon in a barrel of raccoons with me on your back and a pair of spurs on my heels.”",
+            "Cajun French": "A dit, «Foutez-pas-moi plus en colère que je sus, non, parce que tonnerre mes chiens, si je monte à bord de vous-autres avec ce palonnier, quand j’auras fini, i vont croire sûr que vous-autres avait passé l’après-midi dans un baril de chaouis avec moi sus vos reins avec une paire d’éperons sus mes talons.»"
+        },
+        {
+            "English": "She was chewing nails!",
+            "Cajun French": "A mordait le fer!"
+        },
+        {
+            "English": "You talk about three guys who packed up and took off from there, well that was Eldon Sonnier, Eugene Griffin and Jerry Dugas.",
+            "Cajun French": "Tu parles de trois bougres qu’a plié bagage de là, mais ça c’était Eldon Sonnier, Eugène Griffin et Jerry Dugas."
+        },
+        {
+            "English": "They left right then, and I didn’t see them again the rest of the afternoon.",
+            "Cajun French": "I’s ont parti de là, j’ai pus revu le restant de l’après-midi."
+        },
+        {
+            "English": "When the men got in line to start shooting at the goose, they saw a cloud of dust that was coming up in the east.",
+            "Cajun French": "Quand les hommes s’est mis en ligne pour commencer à tirer après le z-oie, i’s ont vu une nuée de poussière qui s’enlevait dans l’est."
+        },
+        {
+            "English": "When it cleared a bit, they saw that it was somebody mounted on a many-colored mule.",
+            "Cajun French": "Quand ça s’est manière éclairci, i’s ont vu c’était un individu qui était monté sus un mulet couleur."
+        },
+        {
+            "English": "By thunder! That was about the biggest beast I’ve ever seen in my life.",
+            "Cajun French": "Tonnerre mes chiens, ça c’était la bétaille à peu près le plus haut sus pattes j’ai déjà vu dans ma vie."
+        },
+        {
+            "English": "I’ll bet you that that mule was fifty hands high.",
+            "Cajun French": "Je vas te parier que ce mulet avait cinquante mains de haut."
+        },
+        {
+            "English": "Also, he had a long-barreled gun tied to the sheath of his saddle. It was a musket.",
+            "Cajun French": "Là aussitte il avait un tcharabo d’amarré après les gaines de sa selle. C’était une mousquette."
+        },
+        {
+            "English": "I’ll bet you that musket barrel was seventy-six inches long.",
+            "Cajun French": "Je vas te parier que cette mousquette là avait soixante-seize pouces de canon."
+        },
+        {
+            "English": "When he approached the corral, Cousin Popelette said, “Hummm! Another escapee from the rope’s here.”",
+            "Cajun French": "Quand il a approché le corail, cousine Popelette fait «Hmm! Un autre échappé de corde qu’arrive.»"
+        },
+        {
+            "English": "Then she said, “It’s Willie Bordelon.”",
+            "Cajun French": "A dit, «C’est Willie Bordelon.»"
+        },
+        {
+            "English": "She said, “You see that. He’s not close to being a honeycomb.”",
+            "Cajun French": "A dit, «Tu vois ça, c’est pas proche du miel au nid.»"
+        },
+        {
+            "English": "He’s rougher than an alligator on the ground. When they first put shoes on his feet, they had to lasso him because he was wild.",
+            "Cajun French": "Il est plus brut qu’un cocodrie à terre. Quand i l’ont premier mis des souliers sus ses pieds, i’s ont eu pour le lasser parce qu’il était farouche."
+        },
+        {
+            "English": "Then they had to put rocks in his shoes for his feet to get used to the soles because he was so used to walking barefoot.",
+            "Cajun French": "Là i’s ont eu pour lui mettre des cailloux dans les souliers pour ses pieds s’habituent à les semelles, force qu’il était habitué à marcher nu-pieds."
+        },
+        {
+            "English": "When Willie saw Cousin Popelette, he said, “How are you, cousin?”",
+            "Cajun French": "Quand Willie a vu cousine Popelerte, i dit, «Comment. ça va, cousine?»"
+        },
+        {
+            "English": "He said, “I see you have a frown on your face. It looks like you got up on the wrong side of the bed this morning.”",
+            "Cajun French": "I dit, «Je vois vous a le bec de froncé; vous a dû se lever sus le méchant bord du lit ce matin.»"
+        },
+        {
+            "English": "She said, “Look here, you, you better close your clam because, the way I feel, if I jump on you, I’m gonna tear up your uvula. You’ll think it’s a tornado that hit you.”",
+            "Cajun French": "A dit, «Écoute icitte, toi, tu ferais mieux de fermer ta palourde parce que la manière je me sens, si je me darde sus toi, je vas te cangrener la luette. Tu vas croire que c’est un tourbillon qui t’a frappé.»"
+        },
+        {
+            "English": "And she said, “And another thing, Willie, you think.  you’re gonna break a lot of hearts this afternoon?”",
+            "Cajun French": "Et a dit, «Et une autre chose, Willie, tu crois tu vas gros casser des cœurs icitte cet après-midi?»"
+        },
+        {
+            "English": "He said, “Sure, cousin, I’ll break hearts, but it won’t be women’s hearts I’m gonna break - it’ll be goose  hearts.”",
+            "Cajun French": "I dit, «Sûr, cousine, i dit, je vas casser des cœurs, mais ça sera pas proche des cœurs de femmes je vas casser - ça sera des cœurs de z-oies.»"
+        },
+        {
+            "English": "That’s when he got off his mule.",
+            "Cajun French": "C’est là qu’il a descendu de son mulet."
+        },
+        {
+            "English": "He unhooked his gun that was tied to the sheath of his saddle, and he patted it.",
+            "Cajun French": "Il a décroché son tcharabo qu’était amarré après les gaines de sa selle et i l’a tapé."
+        },
+        {
+            "English": "He said, “You see this musket?”",
+            "Cajun French": "I dit, «Tu vois cette mousquette?»"
+        },
+        {
+            "English": "He said, “When I want to eat a rabbit, all I need is a rabbit’s address.”",
+            "Cajun French": "I dit, «Quand jai envie de manger du lapin, juste ça j’ai besoin c’est l’adresse d’un lapin.»"
+        },
+        {
+            "English": "Then he didn’t say anything else to anyone.",
+            "Cajun French": "Là, il a pus rien dit à personne."
+        },
+        {
+            "English": "He put his hand in the honey locust that was in the corral.",
+            "Cajun French": "Il a passé sa main dans le garofier il avait dans le corail."
+        },
+        {
+            "English": "He ripped out three bunches of Spanish moss.",
+            "Cajun French": "I s’est arraché trois chiffons de mousse."
+        },
+        {
+            "English": "He stuffed a bunch of moss in the barrel of the musket.",
+            "Cajun French": "Il a fourré un chiffon de mousse dans le canon de la mousquette."
+        },
+        {
+            "English": "Then he pulled out a powder horn of gunpowder.",
+            "Cajun French": "Là, il a sorti un cornet de poudre à fusil."
+        },
+        {
+            "English": "He poured sixteen and a third pounds, measured by eye, of gunpowder into the barrel.",
+            "Cajun French": "Il y a vidé seize livres et un tiers, mesurées à l’œil de poudre à fusil dans le canon."
+        },
+        {
+            "English": "Then he stuffed in another bunch of moss.",
+            "Cajun French": "Là il y a fourré un autre chiffon de mousse."
+        },
+        {
+            "English": "He tamped it down with a whalebone, and he put his hand in his overalls pocket.",
+            "Cajun French": "I l’a bien foulé avec une baleine, et il a passé sa main dans sa poche d’overalls."
+        },
+        {
+            "English": "He pulled out three harrow tines.",
+            "Cajun French": "Il a sorti trois dents de herse."
+        },
+        {
+            "English": "He dropped them into the barrel.",
+            "Cajun French": "I les a échappé dans le canon."
+        },
+        {
+            "English": "Then he approached where the men were in line to shoot at the a goose.",
+            "Cajun French": "Là il a approché où les hommes étaient en ligne pour tirer après le z-oie."
+        },
+        {
+            "English": "They’d hung the goose four hundred seventy-six a yards away, measured by eye, at the top of a pecan tree.",
+            "Cajun French": "l’s avaient pendu le z-oie à quatre cent soixante-seize yards mesurés à l’œil dans la tête d’un pacanier."
+        },
+        {
+            "English": "When Willie cast his eye on the goose, he said, “Move away, boys.”",
+            "Cajun French": "Quand Willie a jeté son œil sus le z-oie, i dit, «Ôtez vous-autres de là, boys!»"
+        },
+        {
+            "English": "He said, “Let me knock the fly off its beak. Then we’ll start shooting at the head of the goose.”",
+            "Cajun French": "I dit, «Laissez-moi y ôter la mouche qu’il a sus le bec. Là, on va commencer à tirer après la tête du z-oie.»"
+        },
+        {
+            "English": "Poor late Uncle Zénon Gremillion was a man who  could judge another from a distance.",
+            "Cajun French": "Pauvre défunt nonc Zénon Gremillion, c’était un homme qui pouvait juger un autre à loin."
+        },
+        {
+            "English": "He looked at the goose that was hanging at the top of a pecan tree four hundred seventy-six yards away and he looked at Willie Bordelon.",
+            "Cajun French": "Il a ‘gardé le z-oie qui était pendu dans la tête d’un pacanier à quatre cent soixante-seize yards et il a ‘gardé Willie Bordelon."
+        },
+        {
+            "English": "He shook his head.",
+            "Cajun French": "Et il a escoué sa tête."
+        },
+        {
+            "English": "He said, “Humm, humm, humm!\"",
+            "Cajun French": "I fait «Hm, hm, hm!»"
+        },
+        {
+            "English": "He said, “My friends,” he says, “don’t let Willie shoot, because if he shoots this musket, it’ll tear up the neighborhood.”",
+            "Cajun French": "I dit, «Mes amis,» i dit, «Laissez pas Willie tirer. Parce Là que si i tire ce tcharabo, i va défraîchir le voisinage.»"
+        },
+        {
+            "English": "And another thing, any man who can see a fly on the beak of a goose at four hundred seventy-six  yards, measured by eye, at the top of a pecan tree... well it’s no use for us to shoot at the head of the goose at all.",
+            "Cajun French": "Et une autre chose, n’importe qui homme qui peut ‘oir une mouche sur le bec d’un z-oie à quatre cent soixante-seize yards, mesurés à l’œil dans la tête d’un pacanier... ça sert pas qu’on tire après la tête du z-oie du tout."
+        },
+        {
+            "English": "They headed over there.",
+            "Cajun French": "I’s ont été."
+        },
+        {
+            "English": "They took down the goose.",
+            "Cajun French": "I’s ont dépendu le z-oie."
+        },
+        {
+            "English": "They gave it to Willie.",
+            "Cajun French": "I l’ont donné à Willie."
+        },
+        {
+            "English": "It was he who won the prize.",
+            "Cajun French": "C’est lui qui a gagné le prix."
+        },
+        {
+            "English": "They didn’t even fire a shot.",
+            "Cajun French": "I’s ont pas seulement tiré un coup de fusil."
+        },
+        {
+            "English": "He got on his mule and left.",
+            "Cajun French": "Il a remonté sus son mulet et i s’est halé de là."
+        },
+        {
+            "English": "As he pulled away, poor late Uncle Zénon remarked, “My friends, I have but one consolation in life. If Willie Bordelon dies before me, he’ll tear up hell.”",
+            "Cajun French": "Quand il a parti, pauvre défunt nonc Zénon a passé la remarque, i dit, «Mes amis, j’ai une seule consolation dans la vie. Que si Willie Bordelon meurt avant moi, i va défaire l’enfer»"
+        },
+        {
+            "English": "I’d gone to a dance at the dance hall of poor deceased Uncle Raggaux, which was in the caney backwoods.",
+            "Cajun French": "J’avais été au bal à la salle de danse à pauvre défunt Nonc Raggaux, qui se trouvait dans la criée des cannes."
+        },
+        {
+            "English": "To get there, you had to cross Bayou La Fourche in Piroute’s pirogue and turn to the left for sixteen miles until you arrived where the road made a big fork, and in the fork. there was a big tree stump that had burned but was no longer there.",
+            "Cajun French": "Pour toi arriver là, fallait tu croises le bayou La Fourche dans la pirogue à Piroute, et tu tournais à gauche pour seize milles jusqu’à t’arrivais où le chemin faisait une grande fourche, et dans la fourche i n-avait un gros chicot qui était brûlé mais il était pus là."
+        },
+        {
+            "English": "You’d take the fork to the right for twenty-one miles.",
+            "Cajun French": "Tu prendais la fourche à droite pour vingt et un milles."
+        },
+        {
+            "English": "Well, it was the third house on the other side of the old crooked persimmon tree that had the dry branch a that stuck out towards Aunt Na’s place.",
+            "Cajun French": "C’était la troisième maison l’autre bord du vieux plaqueminier croche qu’avait la branche sec qui pontait bord de chez Tante Na."
+        },
+        {
+            "English": "That’s where it was.",
+            "Cajun French": "C’est là c’était."
+        },
+        {
+            "English": "It was a beautiful evening dance at the beginning.",
+            "Cajun French": "C’était un beau bal au soir au commencement."
+        },
+        {
+            "English": "They’d served vinegar lemonade made with well water, and weak coffee.",
+            "Cajun French": "I’s avaient servi de la limonade en vinaigre fait avec de l’eau du puits et du café faible."
+        },
+        {
+            "English": "As for the lemonade, it was okay.",
+            "Cajun French": "Tant qu’à la limonade, ça pouvait faire."
+        },
+        {
+            "English": "But by thunder, the coffee they served! It was so weak that the coffee pot fainted and fell into the embers in the fireplace.",
+            "Cajun French": "Mais tonnerre mes chiens, le café i’s ont servi! Il était tellement faible jusqu’à la grègue a tombé en faiblesse dans les braises sus le foyer."
+        },
+        {
+            "English": "They had good music that night.",
+            "Cajun French": "I’s avaient de la bonne musique ce soir."
+        },
+        {
+            "English": "They had Guilroy Ghislain playing the violin and Sylvain Canavése accompanying him on the drum.",
+            "Cajun French": "ls avaient eu Guilroy Ghislain pour jouer du violon et Sylvain Canavèse lavait accompagné avec un tambour."
+        },
+        {
+            "English": "I’ll never forget the name of the waltz they were playing when I went in.",
+            "Cajun French": "Je vas jamais oublier lenom de cette valse is étaient après jouer quand j’ai rentré."
+        },
+        {
+            "English": "It could make the hair on your head stand up.",
+            "Cajun French": "Ça pouvait faire les cheveux dresser sus la tête, attendre ça."
+        },
+        {
+            "English": "The name was “Eyeball in the Bottom of the Well”.",
+            "Cajun French": "Le nom c’était «Coco-d’œil dans le fond du puits»."
+        },
+        {
+            "English": "When Grand Carcan - the poor old gal, she was a sitting on a bench in the corner listening to the music when she heard that, she burst out bawling.",
+            "Cajun French": "Quand Grand Carcan - la pauvre vieille alle était assis sus un banc dans le coin après écouter la musique- quand alle a attendu ça, a s’est éfflanquée à brailler."
+        },
+        {
+            "English": "She cried so much that she soaked four skirts wiping the tears from her eyes.",
+            "Cajun French": "Alle a tellement pleuré jusqu’à alle a trempé quatre jupes à s’essuyer les larmes dans les yeux."
+        },
+        {
+            "English": "She told me that it made her think about her poor old fifth husband who’d died of impetigo the year before.",
+            "Cajun French": "A m’a dit que ça lui faisait penser à son pauvre vieux cinquième mari qui était mort avec la gourme l’année devant."
+        },
+        {
+            "English": "Everything was going well at that night’s dance until the sons of Mr. Auguste Corusse came in.",
+            "Cajun French": "Tout allait bien en ce bal ce soir jusqu’à les garçons à monsieur Auguste Corusse ont rentré."
+        },
+        {
+            "English": "They were a band of troublemakers.",
+            "Cajun French": "C’était une bande de malfaicteurs."
+        },
+        {
+            "English": "There was Hilaire, Bélizaire, Clogeaire, Méyére, Robert, Olivére and Panthére.",
+            "Cajun French": "I n-avait Hilaire, Bélizaire, Clogeaire, Méyère, Robert, Olivère et Panthère."
+        },
+        {
+            "English": "They were always looking to make a ruckus, and they loved to bust up dances.",
+            "Cajun French": "C’était tout le temps en chasse du train. Et ça l-aimait casser les bals."
+        },
+        {
+            "English": "Turns out, the first time in my life I got in a fight was that night.",
+            "Cajun French": "Bin, c’est la première fois je m’ai battu dans ma vie, c’était ce même soir."
+        },
+        {
+            "English": "But it wasn’t with the sons of Mr. Auguste Corusse. It was with that damn Huey Meaux.",
+            "Cajun French": "Mais c’était pas avec les garçons à monsieur Auguste Corusse. C’était avec ce maudit Huey Meaux."
+        },
+        {
+            "English": "He was dancing with my girlfriend, and he insulted her.",
+            "Cajun French": "Il était après danser avec ma belle, i l’a insulté."
+        },
+        {
+            "English": "He said: “Dear, dancing with you’s like dragging a harrow in tall weeds ‘cause you’re so heavy.”",
+            "Cajun French": "Il y a dit, i dit:«Chère, danser avec toi, c’est manière comme traîner une herse dans les grandes herbes, force que t’es lourde.»"
+        },
+        {
+            "English": "Oh, and another thing, your legs are so bowed, it makes me think of collar boxes.",
+            "Cajun French": "Et le une autre chose, t’as les jambes tellement cambrées, ça me fait penser à des boîtes de colliers."
+        },
+        {
+            "English": "There’s not much chance of you catching a greased pig at the barn door with legs as bowed as yours.",
+            "Cajun French": "I n-aurait pas de danger que t’attrapes un cochon graissé dans la porte d’un hangar, avec tes jambes cambrées comme i sont."
+        },
+        {
+            "English": "When I heard that, it set me on fire.",
+            "Cajun French": "Quand j’ai attendu ça, ça m’a foutu le feu."
+        },
+        {
+            "English": "That made me so damn angry that I swallowed my chaw of tobacco.",
+            "Cajun French": "Ça m’a tellement fait foutre en colère jusqu’à j’ai avalé ma chique de tabac."
+        },
+        {
+            "English": "I threw a punch at him, but I missed.",
+            "Cajun French": "J’y ai tiré un coup de poing, je vas et je le manque."
+        },
+        {
+            "English": "The next time, I swung in the same place where I hadn’t hit him.",
+            "Cajun French": "L’autre fois j’y ai foutu à la même place où je l’aï pas frappé."
+        },
+        {
+            "English": "The third time, he dodged it.",
+            "Cajun French": "Le troisième, i l’a bardé."
+        },
+        {
+            "English": "Then he began to lose patience.",
+            "Cajun French": "Là, il a commencé à perdre patience."
+        },
+        {
+            "English": "He cracked me between the eye and the brow bone, and he threw me onto my back.",
+            "Cajun French": "I m’en a craqué un entre l’œil et la corne et i m’a jeté sus le dos."
+        },
+        {
+            "English": "I heard little birds singing in my ears.",
+            "Cajun French": "J’attendais les tits oiseaux chanter dans mes oreilles."
+        },
+        {
+            "English": "Then he jumped on top of me; He almost killed me.",
+            "Cajun French": "Là, il a monté à bord de moi; il a manqué de me tuer."
+        },
+        {
+            "English": "If it hadn’t been for that, by thunder, things woulda  gotten bad between me and that damn Huey Meaux.",
+            "Cajun French": "Et si ça aurait pas été pour ça, tonnerre mes chiens, ça ç’aurait passé brut entre moi et ce maudit Huey Meaux."
+        },
+        {
+            "English": "While I was struggling on the floor, there was an a  uproar at the other end of the dance hall.",
+            "Cajun French": "Pendant j’étais après me débattre sus le plancher, i n-a un sassaquoi qui s’en est levé à l’autre bout de la salle de danse."
+        },
+        {
+            "English": "Someone dropped a cocklebur into the corset of Madame Sosthéne.",
+            "Cajun French": "I n-a quelqu’un qu’a échappé une herbe-cotchine dans le corset à madame Sosthène."
+        },
+        {
+            "English": "She jumped out of her chair like a marionette and began jumping around all over the place, whinnying like a young colt in the north wind.",
+            "Cajun French": "Alle a sorti en dehors de sa chaise comme une marionnette, et alle a commencé à diigailler dans tout la place et a hennissait manière comme de un jeune poulain dans le vent du nord."
+        },
+        {
+            "English": "At the same time, the sons of Mr. Auguste Corusse spread ground red pepper all over the dance floor.",
+            "Cajun French": "En même temps, les garçons à monsieur Auguste Corusse, i’s ont épaillé du piment pilé sus tout le plancher dans la salle de danse."
+        },
+        {
+            "English": "It was the worst thing I’ve ever seen in my life.",
+            "Cajun French": "C’était la plus vilaine affaire que j’ai déjà vu dans ma vie."
+        },
+        {
+            "English": "Everyone began to scratch and sneeze.",
+            "Cajun French": "Le monde a commencé à se gratter et éternuer."
+        },
+        {
+            "English": "They sneezed so hard they blew the roof off the house.",
+            "Cajun French": "l’s ont éternué tellement fort jusqu’à is ont enlevé le toit de la maison."
+        },
+        {
+            "English": "Well, that broke up the dance.",
+            "Cajun French": "Mais là, ça a cassé le bal."
+        },
+        {
+            "English": "Me, I jumped through a window in the back where I saw that there was a big bull lying in the corral.",
+            "Cajun French": "Moi, j’ai sauté par un châssis en arrière et je vois i n-avait un gros bœuf qui était couché dans le corail."
+        },
+        {
+            "English": "One of Mr. Auguste Corusse’s boys had tied a bundle of corn shucks around its tail and set it on fire.",
+            "Cajun French": "I n-a un de les garçons à monsieur Auguste Corusse qu’y avait amarré un paquet de paille de maïs après la queue et i y a foutu le feu."
+        },
+        {
+            "English": "By thunder! That poor old bull ran two arpents on its knees before it was able to get on its feet.",
+            "Cajun French": "Tonnerre mes chiens! Ce pauvre vieux bœuf-là a couru deux arpents à genoux avant il a pu prendre patte."
+        },
+        {
+            "English": "But, when it was able to get on its feet, it started running around the house.",
+            "Cajun French": "Mais, quand il a remonté sus patte, il a commencé à courir autour de la maison."
+        },
+        {
+            "English": "It was really hauling it, yeah, old dog!",
+            "Cajun French": "Mais il était après se haler, ouais, vieux chien."
+        },
+        {
+            "English": "It ran so fast it sank its horns into its rear legs.",
+            "Cajun French": "I courait tellement vite jusquà i se fonçait dans les pattes derrière avec ses cornes."
+        },
+        {
+            "English": "That’s when I got into my buggy and took off from there, old dog.",
+            "Cajun French": "C’est là, moi j’ai monté dans ma voiture puis moi, je mai traîné de là, ouais, vieux chien."
+        },
+        {
+            "English": "It’s not a place for civilized people to go to a dance.",
+            "Cajun French": "C’est pas une place pour du monde civilisé aller au bal."
+        },
+        {
+            "English": "That’s why I want to warn you, my friends, don’t  ever go to a dance at the dance hall of poor deceased Uncle Raggaux, way down there in the caney backwoods.",
+            "Cajun French": "C’est pour ça je veux vous avertir, mes amis, allez pas jamais au bal à la salle de danse à pauvre défunt Nonc Raggaux qui se trouve dans la criée des cannes."
+        },
+        {
+            "English": "By thunder! There’s a lot of cows around here.",
+            "Cajun French": "Tonnerre mes chiens, i n-a beaucoup des vaches alentour d’ici."
+        },
+        {
+            "English": "There’s one trying to chew my vest....",
+            "Cajun French": "I n-a une qu’après essayer de me chiquer mon gilet..."
+        },
+        {
+            "English": "My friends, it gives me great pleasure to be here among this fine gathering of Cajuns.",
+            "Cajun French": "Mes amis, ça me donne un gros plaisir d’être ici parmi tout cette vaillante bande de Cadiens."
+        },
+        {
+            "English": "I’m presently making a big tour through all the towns in the state of a Louisiana to show off my new medicine that I invented myself and that’s just come on the market.",
+            "Cajun French": "J’après faire un grand tour dans tous les villages dans l’état de la Louisiane afficher ma nouvelle médecine que j’ai patenté moi-même et qu’a juste sorti sus le marché."
+        },
+        {
+            "English": "The name of this medicine, it’s a tonic, it’s called Hasitall.",
+            "Cajun French": "Le nom de cette médecine - c’est un tonique - on appelle ça du Hasitall."
+        },
+        {
+            "English": "And I want to assure you and I want to inform you, my friends, that Hasitall’s good for any and all diseases and any and all upsets you can encounter in life.",
+            "Cajun French": "Et je veux vous garantir et je veux vous avertir, mes amis, que du Hasitall c’est bon pour tous les maladies et tous les caprices quelqu’un peut avoir dans la vie."
+        },
+        {
+            "English": "It took me three years of experimenting with an old Indian in the backwoods before we were able to find the ingredients to perfect this Hasitall tonic.",
+            "Cajun French": "Ça m’a pris trois ans d’expérimenter avec un vieux sauvage dans la criée des cannes avant on a pu trouver les ingrédients pour perfectionner ce tonique du Hasitall."
+        },
+        {
+            "English": "The ingredients in Hasitall, my friends, are a mixture of liver laxative, of grey-alum, mutton suet, muscadine juice, nutmeg, cinnamon, alum, extract of vanilla, mushrooms and asfetida herb.",
+            "Cajun French": "Les ingrédients de du Hasitall mes amis, c’est un mélange de régulateur de foie, de l’alun grise, du suif de mouton, du jus de soco, de la muscade, de la cannelle, de l’alun, de l’essence à la vanille, des champignons et du safétida."
+        },
+        {
+            "English": "That’s what ingredients Hasitall has, and that’s what it’s made of.",
+            "Cajun French": "C’est ça que les ingrédients du Hasitall et c’est ça c’est fait avec."
+        },
+        {
+            "English": "But before I go any further, my friends, I’d like to read the testimonial from a fine lady, Mrs. Clopha LaFéve.",
+            "Cajun French": "Mais avant je vas plus loin, mes amis, j’aimerais vous lire le témoignage de cette vaillante dame, Madame Clopha LaFève."
+        },
+        {
+            "English": "She’s from Bayou Blue.",
+            "Cajun French": "À devient du Bayou Bleu."
+        },
+        {
+            "English": "She tried three bottles of my Hasitall and a bottle of my Morning Dew Pierre Part Cough Syrup, and she wrote me a letter to let me know how much good it’d done her.",
+            "Cajun French": "Alle a essayé trois bouteilles de mon Hasitall, et une bouteille de mon Morning Dew Pierre Part sirop de toux Cough Syrup, et a m’a écrit une lettre pour me laisser savoir comment beaucoup du bien ça y avait fait."
+        },
+        {
+            "English": "Mrs. LaFéve had the sugar disease.",
+            "Cajun French": "Madame LaFève, alle avait la maladie de sucre."
+        },
+        {
+            "English": "Sugar disease, my friends, that’s called “diabetes” in English.",
+            "Cajun French": "La maladie de sucre, mes amis, c’est ça on appelle «diabetes» en anglais."
+        },
+        {
+            "English": "Bile had passed into her blood.",
+            "Cajun French": "La bile avait passé dans son sang."
+        },
+        {
+            "English": "It gave her jaundice, which is called yellow jaundice in English.",
+            "Cajun French": "Ça y avait donné la jaunisse, et la jaunisse c’est ça on appelle yellow jaundice en anglais."
+        },
+        {
+            "English": "She had inflamed tonsils and goiter.",
+            "Cajun French": "Alle avait une inflammation des amygdales et la goître."
+        },
+        {
+            "English": "She had yellow fever, measles, mumps, migraines, and smallpox.",
+            "Cajun French": "Alle a eu la fièvre jaune, la rougeole, la jobe, la migraine et la picote."
+        },
+        {
+            "English": "She was so weak and had lost so much weight, the poor dear, that she staggered.",
+            "Cajun French": "Alle était tellement affaiblie et alle avait tellement maigri, la pauvre bête, jusqu’à a caracolait."
+        },
+        {
+            "English": "She was so skinny that she had to walk twice in the same place to cast a shadow.",
+            "Cajun French": "Force qu’alle était éfflanquée, fallait a marche deux fois à la même place pour faire un ombrage."
+        },
+        {
+            "English": "She had calluses and corns on her toes that looked like knots of fat wood, and she had the seven-year itch so bad that she kept it for eight years.",
+            "Cajun French": "Alle avait des durillons et des cors sur les orteils qui semblaient à des nœuds de bois gras, et alle a eu la gale de sept ans tellement mauvais jusqu’à a l’a gardé huit ans."
+        },
+        {
+            "English": "But when she tried three bottles of my Hasitall and a bottle of my Morning Dew Pierre Part Cough Syrup, she grew as lively as a butterfly in a bowl of butter.",
+            "Cajun French": "Mais quand alle a essayé trois bouteilles de mon Hasitall et une bouteille de mon Morning Dew Pierre Part sirop de toux Cough Syrup, alle est venue aussi leste qu’un papillon dans une bol de beurre."
+        },
+        {
+            "English": "She began to bounce back and said that my Hasitall and my cough syrup made her feel so good and that she has so much energy and is so active she can climb to the top of a honey locust tree with no shirt on and catch a raccoon and shove one under each arm and climb down the honey locust without a scratch.",
+            "Cajun French": "Alle a commencé à prendre plume et a dit que mon Hasitall et mon sirop de toux y a fait tellement du bien jusqu’à présent alle a tellement de l’énergie et alle est tellement actif qu’a peut grimper à la tête d’un garofier à sans chemise et attraper un chaoui et en fourrer un dessous chaque bras et descendre de le garofer à sans une grafignure."
+        },
+        {
+            "English": "It’s a little hard to believe, but that’s what she wrote in the letter.",
+            "Cajun French": "C’est un peu dur à croire, mais c’est ça alle a mis sur la lettre."
+        },
+        {
+            "English": "She also said that her fifth husband, Clopha, was always complaining with a stomachache.",
+            "Cajun French": "A dit aussi que son cinquième mari Clopha était tout le temps après se plaindre avec du mal dans l’estomac."
+        },
+        {
+            "English": "He had such a delicate stomach that the doctor had to put him on a diet.",
+            "Cajun French": "Qu’il avait l’estomac tellement délicat jusqu’à le docteur a eu pour le mettre à la diète."
+        },
+        {
+            "English": "All he could eat was grosbeak gumbo and andouille that had been left out in the dew.",
+            "Cajun French": "Juste ça i pouvait manger, c’était du gombo de carcasse de grosbec et de l’andouille qu’avait passé au serein."
+        },
+        {
+            "English": "She also said that her fifth husband Clopha enjoyed eating peaches, but every time he ate a peach he a complained like a dog that’s eaten green persimmons.",
+            "Cajun French": "A dit aussi que son cinquième mari Clopha, il aimait beaucoup manger des pêches mais à chaque fois i mangeait une pêche i se plaignait comme un chien qu’avait mangé des plaquemines vertes."
+        },
+        {
+            "English": "But when he tried four bottles of my Morning Dew Pierre Part Cough Syrup and a bottle of my Hasitall, it did his stomach so much good that he can now swallow fish hooks mixed with spiky sycamore balls and sticker plants and it doesn’t hurt his stomach.",
+            "Cajun French": "Mais quand il a essayé quatre bouteilles de mon Morning Dew Pierre Part sirop de toux Cough Syrup et une bouteille de mon Hasitall, ça y a fait tellement du bien à l’estomac, jusqu’à présent i peut envaler des accrocs d’hameçon mêlés avec des boules de cotonnier et des patokas et ça lui fait pas du mal dans l’estomac."
+        },
+        {
+            "English": "She said that Clopha can eat peaches now. He swallows the pits, and it still doesn’t hurt his stomach.",
+            "Cajun French": "A dit que Clopha peut manger des pêches à présent, il envale les noyaux et ça lui fait toujours à pas du mal dans l’estomac."
+        },
+        {
+            "English": "It can prove to you, my friends, my Hasitall and my cough syrup’s good for any and all diseases and any and all a upsets anyone can encounter in life.",
+            "Cajun French": "Ça peut vous prouver, mes amis, que mon Hasitall et mon sirop de toux, c’est bon pour tous les maladies et tous les caprices quelqu’un peut avoir dans la vie."
+        },
+        {
+            "English": "My friends, I’m very sorry that I have no more time to stay here with all this nice group of Cajuns, but I have several villages to go to before the sun sets to publicize my new medicine.",
+            "Cajun French": "Mes amis, je regrette beaucoup que j’aie pas plus de temps à rester ici parmi tout cette vaillante bande de Cadiens, mais j’ai plusieurs villages à faire avant le soleil se couche, afficher ma nouvelle médecine."
+        },
+        {
+            "English": "But if you try my Hasitall and my cough syrup, and you want to write me a letter or testimonial, you can send letters to Cousin Pogoyo, eight eighty-eight, Alligator Street in Marais Bourreau.",
+            "Cajun French": "Mais si vous l’essayez, mon Hasitall et mon sirop de toux, et vous voulez m’écrire une lettre ou un témoignage, vous pouvez adresser mes lettres à Cousin Pogoyo, huit quatre-vingt-huit, la rue des Cocodrils en Marais Bourreau."
+        },
+        {
+            "English": "My friends, if you have trouble spelling my name, Pogoyo, just think of a skin and a yoyo and you a put the two together, then you spell that P, O, skin, G, O, Y - yoyo Pogoyo.",
+            "Cajun French": "Mes amis, si vous a de la misère à épeler mon nom, Pogoyo, juste pensez à une peau et un yoyo et vous mettez les deux ensemble, puis t’épelles ça P, O, peau, G, O, Y-yoyo, Pogoyo."
+        },
+        {
+            "English": "Cousin Pogoyo eight eighty-eight, Alligator Street in Marais Bourreau.",
+            "Cajun French": "Cousin Pogoyo, huit quatre-vingt-huit, la rue des Cocodrils en Marais Bourreau."
+        },
+        {
+            "English": "Goodbye, my friends.",
+            "Cajun French": "Au revoir, mes amis."
+        },
+        {
+            "English": "I’ll see you on my next grand tour.",
+            "Cajun French": "Je vas vous revoir sur mon autre grand tour."
+        },
+        {
+            "English": "My friends, I’d like to tell you another of my stories  that happened to me when I went to a charivari at Marcellus Augustin’s when he married Annette, Cousin Nénette’s daughter.",
+            "Cajun French": "Mes amis, j’aimerais vous raconter une autre de mes histoires qui m’a arrivé quand j’avais été au charivari à Marcellus Augustin quand il a marié Annette, la fille à cousine Nénette."
+        },
+        {
+            "English": "By thunder! That was just about the biggest free-for-all and the biggest uproar that I’ve seen in my life.",
+            "Cajun French": "Que le tonnerre m’écrase! Ça c’était à peu près le plus gros hailleton et le plus gros sassaquoi que j’ai déjà vu dans ma vie."
+        },
+        {
+            "English": "But before I go any further, my friends, I’d like to let you know that what is known as a charivari is when  a widower or widow, who marries for the second time, marries someone who’s never been married before.",
+            "Cajun French": "Mais avant je vas plus loin, mes amis, j’aimerais vous laisser savoir que ça on appelle un charivari, c’est quand un veuf ou une veuve se remarie pour la deuxième fois et i marie quelqu’un qu’a jamais été marié avant."
+        },
+        {
+            "English": "The first night after the wedding, everyone in the neighborhood gathers in front of the newlyweds’ yard gate, and they start making a racket, banging on buckets and plow disks and hollering, “Charivari!” outside the newlyweds’ gate until everyone is invited to come inside.",
+            "Cajun French": "Le premier soir du mariage, le monde dans le voisinage se rassemble devant la porte de cour des nouveaux mariés et ça commence à amener du train et cogner sus des baquets et des lames de disques, et ça crie «Charivari!» devant la porte des nouveaux mariés jusqu’à les nouveaux mariés invitent le monde de rentrer."
+        },
+        {
+            "English": "If the newlyweds don’t invite the people to come inside, the crowd’ll come back the next night and every night after that, making noise in front of the yard gate until they’re invited to enter the newlyweds’ house.",
+            "Cajun French": "Et si les nouveaux mariés invitent pas le monde de rentrer, le monde va revenir le lendemain au soir et tous les soirs après ça devant la porte de cour amener du train jusqu’à i soient invités pour rentrer dans la maison des nouveaux mariés."
+        },
+        {
+            "English": "That’s called a charivari.",
+            "Cajun French": "C’est ça on appelle un charivari."
+        },
+        {
+            "English": "That evening, when I went to a charivari at the home of Marcellus Augustin and Annette, Cousin Nénette’s daughter, when we arrived at Marcellus’s yard gate, someone shouted, “Charivari!” and another one answered, “For who?”",
+            "Cajun French": "Ce soir-là, quand j’avais été au charivari à Marcellus Augustin et Annette, la fille à cousine Nénette, quand on a arrivé devant la porte de cour à Marcellus, i n-a quelqu’un qui crie, «Charivari!» Et un autre qui répond, «Pour qui?»"
+        },
+        {
+            "English": "That’s when that troublemaker Leroy Martin answered, “It’s for the female cat and the tomcat in the barrel.”",
+            "Cajun French": "C’est là ce malfaicteur Leroy Martin, i répond, «C’est pour la chatte et le matou qu’est dans le baril.»"
+        },
+        {
+            "English": "Right about then, Marcellus opened the door of his house and came out on the front porch in the moonlight with his new wife Annette.",
+            "Cajun French": "Au même temps Marcellus a ouvert la porte de sa maison et il a sorti sus la galerie devant dans le clair de lune avec sa nouvelle femme Annette."
+        },
+        {
+            "English": "He had his arm around her waist.",
+            "Cajun French": "I la tenait à brasse-corps."
+        },
+        {
+            "English": "Then he told us, “Come in, my friends. It gives me great pleasure to introduce my dear little morsel Annette. She is as tender as May dew on cotton.”",
+            "Cajun French": "I nous dit, i dit, «Rentrez, mes amis. Ça me donne un gros plaisir de vous présenter mon cher ti gratin Annette. Alle est aussi tendre que de la rosée de mai sus du coton.»"
+        },
+        {
+            "English": "That’s when Marcellus turned to his new wife Annette and gave her a little tap on the left hip. Pow!",
+            "Cajun French": "C’est là Marcellus s’est tourné sus sa nouvelle femme Annette et y a foutu une tite tape sus la hanche gauche. Pow!"
+        },
+        {
+            "English": "Then he pinched her from below.",
+            "Cajun French": "Et i l’a pincé par en dessous."
+        },
+        {
+            "English": "Annette moved her leg sideways like a cow being milked. She said, “Yow!”",
+            "Cajun French": "Annette a envoyé sa jambe d’un bord manière comme une vache qui est après faire pied. A fait, «Ow!»"
+        },
+        {
+            "English": "She turned to Marcellus and whinnied, “Hee hee hee hee hee.”",
+            "Cajun French": "A s’est tournée sus Marcellus et alle a henni, a fait «Hi hi hi hi hi!»"
+        },
+        {
+            "English": "She said, “Don’t do that, chicken. Whenever you pinch me underneath like that, you make me tingle from the waist down.”",
+            "Cajun French": "A dit, «Fais pas ça, poulet. À chaque fois tu me pinces par en dessous comme ça, tu me donnes un frisson de la ceinture en bas.»"
+        },
+        {
+            "English": "Marcellus looked at her out of the corner of his eye, smiling.",
+            "Cajun French": "Marcellus a regardé Annette manière en biais. Il a souri."
+        },
+        {
+            "English": "He made a funny face like a mule eating briars. He sniffed and said, “Hmmm.”",
+            "Cajun French": "Il a fait des grimaces manière comme un mulet qui est après manger des éronces. Il a reniflé, i fait, «Hmmm!»"
+        },
+        {
+            "English": "He said, “Yaille ye yaille ye yaille, my dear little sweet potato!",
+            "Cajun French": "I fait, «Yaille ye yaille ye yaille, sa chère tite tatate.»"
+        },
+        {
+            "English": "I love her so much, yeah.",
+            "Cajun French": "Je l’aime gros, ouais!"
+        },
+        {
+            "English": "I could eat her with lettuce leaves.”",
+            "Cajun French": "Je pourrais la manger avec des feuilles de laitue."
+        },
+        {
+            "English": "That’s when Marcellus turned to his new wife, grabbed her, tilted her backwards and kissed her. Chack!",
+            "Cajun French": "C’est là Marcellus s’est retourné sus sa nouvelle femme, i l’a empoigné, i l’a renversé, et i l’a embrassé. Chiaque!"
+        },
+        {
+            "English": "When he kissed her, it sounded like when you wash dishes. Then he gave her another little tap on the hip. Pow!",
+            "Cajun French": "Quand i l’a embrassé, ça sonnait manière comme quand tu laves de la vaisselle. Là il y a foutu une autre tite tape sus la hanche. Pow!"
+        },
+        {
+            "English": "And he pinched her down below again.",
+            "Cajun French": "Et i l’a pincé par en dessous encore."
+        },
+        {
+            "English": "Annette moved her leg again like a cow being milked. Then she said, “Yow, yow!”",
+            "Cajun French": "Annette a envoyé sa jambe d’un bord encore comme une vache qui est apres faire pied. A fait, «Ow, ow!»"
+        },
+        {
+            "English": "That’s when that troublemaker Leroy Martin made a remark, “Hmmm...”",
+            "Cajun French": "C’est là ce malfaicteur Leroy Martin a passé la remarque, i fait, «Hmmm!»"
+        },
+        {
+            "English": "He said, “Marcellus must’ve pinched Annette where she’s sensitive. May lightning strike me down!”",
+            "Cajun French": "I dit, «Marcellus a dû pincer Annette où c’était sensible. Que le tonnerre m’écrase!»"
+        },
+        {
+            "English": "That was really something to see, Marcellus standing on the front porch in the moonlight with his new wife Annette, Cousin Nénette’s daughter.",
+            "Cajun French": "Ça c’était réellement un coup d’œil voir Marcellus planté sus la galerie devant dans le clair de lune avec sa nouvelle femme Annette, la fille à cousine Nénette."
+        },
+        {
+            "English": "Marcellus had a chaw of tobacco in the corner of his mouth about as big as my fist.",
+            "Cajun French": "Marcellus avait une chique de tabac dans le coin de la bouche à peu près gros comme mon poing."
+        },
+        {
+            "English": "He looked like a goat a chewing a greasy dishrag.",
+            "Cajun French": "I me faisait penser à un cabri qui est après chiquer sus une lavette grasse."
+        },
+        {
+            "English": "His new wife, Annette, was built like the frame of a chicken coop.",
+            "Cajun French": "Et sa nouvelle femme, Annette, alle était bâtie manière comme un reintier de poulailler."
+        },
+        {
+            "English": "She was chunky and short.",
+            "Cajun French": "Alle était tchonquée et bassette."
+        },
+        {
+            "English": "Her legs made me think of two mulberry posts. planted in clay soil.",
+            "Cajun French": "Ses jambes, ça me faisait penser à deux poteaux de murier plantés dans la terre grasse."
+        },
+        {
+            "English": "She had a waddle the size of a 25-cent coconut.",
+            "Cajun French": "Alle avait une fale de la grosseur d’un coco de 25 sous."
+        },
+        {
+            "English": "You could’ve hidden a pair of scissors in the folds a of her neck, because she was so fat, yeah, man.",
+            "Cajun French": "T’aurais pu bien cacher une paire de ciseaux dans les plis de son cou, force qu’alle était grasse, ouais, petit."
+        },
+        {
+            "English": "When we approached the porch, that troublemaker Leroy Martin said to Marcellus, “Marcellus, in your married life, you may have lacked for bread. But with your new wife, Annette, may lightning strike me down, there’s no danger that you’ll lack for meat.”",
+            "Cajun French": "Quand on a approché la galerie, ce malfaicteur Leroy Martin, i dit à Marcellus, i dit, «Marcellus, dans ta vie de à. mariage, t’as peut-être manqué du pain. Mais avec ta nouvelle femme, Annette, que le tonnerre m’écrase, i n-a pas de danger que tu vas manquer de la viande.»"
+        },
+        {
+            "English": "There is enough there for the whole neighborhood.",
+            "Cajun French": "T’en as assez là pour tout le voisinage."
+        },
+        {
+            "English": "And another thing, Marcellus, your new wife Annette, she’s got a plump bosom.",
+            "Cajun French": "Et une autre chose, Marcellus, ta nouvelle femme Annette, alle a sa poitrine un peu dépongée."
+        },
+        {
+            "English": "That should make you some good pillows to rest your dry ol’ head on every night.",
+            "Cajun French": "Ça devrait te faire des bons oreillers pour toi, te reposer ta vieille calotte sec dessus le soir."
+        },
+        {
+            "English": "And I want to warn you, coconut, y’all better not sleep on a feather mattress because, may lightning strike me down, if Annette puts one of her fat legs across your back during the night while you’re sleeping, she’ll crack your backbone like dry macaroni.",
+            "Cajun French": "Et je veux t’avertir, coco, vous-autres ferait mieux de pas se coucher sus un matelas de plumes parce que, tonnerre m’écrase, si Annette envoie une de ses grosses jambes en travers ton dos dans la nuit en dormant, a va te craquer les reins comme tu craques des macaronis secs."
+        },
+        {
+            "English": "She’ll leave the imprint of your body in the mattress.",
+            "Cajun French": "A va te laisser le patron de ton corps dans le matelas."
+        },
+        {
+            "English": "They’ll find you suffocated the next day, face down buried in the feathers.",
+            "Cajun French": "I vont te trouver étouffé, la tête en bas le lendemain matin enfoncée dans les plumes."
+        },
+        {
+            "English": "Marcellus glanced over. He smiled, he said, “Yaille, ye yaille ye yaille!”",
+            "Cajun French": "Marcellus a regardé Annette manière en biais. Il a souri, i fait, «yaille ye yaille ye yaille!»"
+        },
+        {
+            "English": "“This dear little dove,” he said, “I love her so much.”",
+            "Cajun French": "«Sa chère tite tourte,» i dit, «Je l’aime gros.»"
+        },
+        {
+            "English": "She’s as sweet as a persimmon in November.",
+            "Cajun French": "Alle est aussi douce qu’une plaquemine dans le mois de novembre.»"
+        },
+        {
+            "English": "That’s when Marcellus got all excited.",
+            "Cajun French": "C’est là Marcellus s’est tout excité."
+        },
+        {
+            "English": "He spat tobacco juice in the rose bush next to the steps.",
+            "Cajun French": "Il a foutu un crachat de tabac dans le rosier i n-avait collé de l’escalier."
+        },
+        {
+            "English": "It made a fog that wilted the roses.",
+            "Cajun French": "Ç’a fait un brouillard. Ç’a fait les roses faner."
+        },
+        {
+            "English": "He returned to his new wife.",
+            "Cajun French": "I s’est retourné sus sa nouvelle femme."
+        },
+        {
+            "English": "He gave her a little slap on the hip, “Pow!”",
+            "Cajun French": "Il y a foutu une petite tape sus la hanche, «Pow!»"
+        },
+        {
+            "English": "She said, “Yow!” And he pinched her underneath again.",
+            "Cajun French": "A fait, «Ow!» Et i l’a pincé par en dessous encore."
+        },
+        {
+            "English": "Annette moved her leg sideways like a cow being milked.",
+            "Cajun French": "Annette a envoyé sa jambe d’un bord manière comme une vache qui étais après faire pied."
+        },
+        {
+            "English": "She turned to Marcellus and whinnied, “Hee hee hee!”",
+            "Cajun French": "A s’est tournée sus Marcellus et alle a henni, a fait «Hi hi hi!»"
+        },
+        {
+            "English": "She said, “You shouldn’t do that, chicken. Whenever you pinch me underneath like that, you give me a thrill. from the waist down and you make my toenails curl up.”",
+            "Cajun French": "A dit, «Tu devrais pas faire ça, poulet. À chaque fois tu me pinces par en dessous comme ça, tu me donnes un frisson de la ceinture en bas. Et tu fais mes ongles d’orteil boucler.»"
+        },
+        {
+            "English": "And then the troublemaker Leroy Martin made the remark, “Hmmm...”",
+            "Cajun French": "Et là ce malfaicteur Leroy Martin a passé la remarque, i fait «Hmmm!»"
+        },
+        {
+            "English": "He said, “Marcellus must have pinched Annette again where she’s sensitive.”",
+            "Cajun French": "I dit, «Marcellus a dû pincer Annette encore où c’était sensible.»"
+        },
+        {
+            "English": "And then, Leroy Martin said to Annette, he says, “Annette,” he says, “You better pay attention to your old firecracker because Marcellus is a bit wild tonight.”",
+            "Cajun French": "Et là Leroy Martin, i dit à Annette, i dit «Annette,» i dit, «tu ferais mieux de faire attention avec ton vieux pétard Marcellus. Il est un peu bronque ce soir.»"
+        },
+        {
+            "English": "Annette giggled. She said “Hee hee hee hee... Don’t be afraid of that, Leroy.”",
+            "Cajun French": "Annette a henni. A fait, «Hi hi hi hi... Aie pas peur de ça, Leroy.»"
+        },
+        {
+            "English": "I already broke a donkey before. I think I can tame him too.",
+            "Cajun French": "J’ai déjà dompté un bourriquet avant. Je crois je peux le dompter lui aussi."
+        },
+        {
+            "English": "After we’re hitched together for three days, he’ll be shyer than a sheep with a migraine.",
+            "Cajun French": "Après que je vas être macornée avec pour trois jours i sera plus timide qu’un mouton qu’a la migraine."
+        },
+        {
+            "English": "And after I’ve a cinched him up for a week, I’ll have him so weakened that he’ll have neither the strength nor the courage to swat a fly that lands on the tip of his nose. I’ll wear him out.",
+            "Cajun French": "Et après que je l’auras de sanglé pour une semaine, il aura tellement la faiblesse qu’il aura pas la force ni le courage de battre une mouche qui se poserait sus le bout de son nez. Je vas l’amener au but."
+        },
+        {
+            "English": "Marcellus stood up.",
+            "Cajun French": "Marcellus s’est levé."
+        },
+        {
+            "English": "He clapped his hands, “Pa pa pa pa”.",
+            "Cajun French": "Il a tapé ses mains, «pa pa pa pa»"
+        },
+        {
+            "English": "He said, “Yaille ye yaille ye yaille, this dear little sweet potato, I love her like crazy.”",
+            "Cajun French": "I dit, «Yaille ye yaille ye yaille, chère tite tatate, je l’aime gros.»"
+        },
+        {
+            "English": "He shook his finger at his new wife, Annette.",
+            "Cajun French": "Il a escoué son doigt après sa nouvelle femme, Annette."
+        },
+        {
+            "English": "He said, “Don’t be so sure of that, chick.”",
+            "Cajun French": "I dit, «Sois pas si sûre de ça, poulette.»"
+        },
+        {
+            "English": "He said, “If you are going to wear me out like you  say, don’t forget, my dear, it’s like the old folks say, ‘Old oxen have hard horns’.”",
+            "Cajun French": "I dit, «Si tu vas m’affaiblir comme tu dis, oublie pas, ma chère, c’est comme les vieux dit, les vieux bœufs, i’s ont des cornes dures.»"
+        },
+        {
+            "English": "May lightning strike me down, it might disgust some folks to see Marcellus and Annette acting like geese on the porch.",
+            "Cajun French": "Que le tonnerre m’écrase, ça pourrait répugner quelqu’un, voir Marcellus et Annette après faire les oies sus la galerie."
+        },
+        {
+            "English": "Well, when they’d finished caressing and licking : each other on the porch, Marcellus said, “Come in, my friends.”",
+            "Cajun French": "Ma foi, quand ça a eu fini de se caresser et se licher sus la galerie, Marcellus nous dit, I dit, «Rentrez, mes amis!»"
+        },
+        {
+            "English": "He said, “I want to raise a ruckus.”",
+            "Cajun French": "I dit, «J’ai envie de faire failleroque.»"
+        },
+        {
+            "English": "The way I feel tonight, I have so much energy, I’m so fired up I could jump to the ceiling and click both my heels together.",
+            "Cajun French": "La manière je me sens ce soir, j’ai tellement d’énergie, j’sus tellement actif, que je pourrais m’envoyer dans le plafond et cogner mes deux talons ensemble."
+        },
+        {
+            "English": "When we walked into the front room, Marcellus grabbed his fiddle and tuned it.",
+            "Cajun French": "Quand on a rentré dans la chambre devant, Marcellus a attrapé son violon et i l’a accordé."
+        },
+        {
+            "English": "He said, “My friends, I composed two songs for the occasion of my marriage and I want to play them on the fiddle.”",
+            "Cajun French": "I nous dit, i dit, «Mes amis, jai composé deux chansons pour cette occasion, mon mariage, et j’aimerais les jouer sus le violon.»"
+        },
+        {
+            "English": "And the name of the songs I composed, there’s one named ‘The Owls’ Waltz’ and the other’s ‘Pouillou’s Reel’.",
+            "Cajun French": "Et le nom de ces chansons que j’ai composé moi-même, i n-a une c’est «La valse de les hiboux» et l’autre c’est «La reel à Pouillou»."
+        },
+        {
+            "English": "He started playing “The Owls’ Waltz” and “Pouillou’s Reel” on the fiddle.",
+            "Cajun French": "Il a commencé à jouer «La valse de les hiboux» et «La Reel à Pouillou» sus le violon."
+        },
+        {
+            "English": "Suddenly he began to show off, playing the violin behind his back, behind his neck, under his arms, between his legs; he lay on the ground; he rolled.",
+            "Cajun French": "Tout d’un coup il a commencé à faire le vanteur et i jouait son violon derrière son dos, derrière son cou, en dessous ses bras, entre ses jambes, i se couchait par terre, i se roulait."
+        },
+        {
+            "English": "He was still playing “The Owls’ Waltz” and “Pouillou’s Reel.”",
+            "Cajun French": "I jouait toujours «La valse de les hiboux» et «La Reel à Pouillou»."
+        },
+        {
+            "English": "That troublemaker Leroy Martin had sat on a bag of Irish potatoes in the corner of the room.",
+            "Cajun French": "Ce malfaicteur Leroy Martin s’avait assis sus un sac de patates anglaises i n-avait dans le coin de la chambre."
+        },
+        {
+            "English": "Leroy whispered into a my ear, “Hmmm, buddy.” a",
+            "Cajun French": "Leroy me dit dans mon oreille, i fait, «Hmmm, petit!»"
+        },
+        {
+            "English": "He said, “I can’t put up anymore with that animal showing off like that.”",
+            "Cajun French": "I dit, «Je peux pus endurer cet animal après faire le vanteur comme ça.»"
+        },
+        {
+            "English": "He said, “I prefer a thief to a show off.”",
+            "Cajun French": "I dit «J’aime mieux un voleur qu’un vanteur»"
+        },
+        {
+            "English": "Leroy put his hand in the bag of Irish potatoes that he was sitting on.",
+            "Cajun French": "Leroy a passé ses doigts dans le sac de patates anglaises il était assis dessus."
+        },
+        {
+            "English": "He pulled out a potato about as big as my fist.",
+            "Cajun French": "Il a sorti une manioc à peu près gros comme mon poing."
+        },
+        {
+            "English": "There were eyes on the potato.",
+            "Cajun French": "I n-avait des poreaux après la patate."
+        },
+        {
+            "English": "He threw the potato at Marcellus.",
+            "Cajun French": "Il a tiré la patate à Marcellus."
+        },
+        {
+            "English": "The potato hit the strings of his fiddle.",
+            "Cajun French": "La patate a frappé sus les cordes de son violon."
+        },
+        {
+            "English": "The potato slid on the strings. It went “Zing, Pow!”",
+            "Cajun French": "La patate a glissé sus les cordes. Ç’a fait, «Zing! Pow!>»"
+        },
+        {
+            "English": "The potato hit Marcellus right in the middle of the forehead.",
+            "Cajun French": "La patate a foutu Marcellus droite dans le milieu du front."
+        },
+        {
+            "English": "The potato exploded into a thousand pieces. It made a fog.",
+            "Cajun French": "La patate a fleuri en mille morceaux. Ç’a fait un brouillard."
+        },
+        {
+            "English": "Marcellus dropped his fiddle on the floor.",
+            "Cajun French": "Marcellus a échappé son violon par terre."
+        },
+        {
+            "English": "He fell sitting on it.",
+            "Cajun French": "Il a tombé assis dedans."
+        },
+        {
+            "English": "But, he had barely hit the floor when he was back on his feet again.",
+            "Cajun French": "Mais, il avait pas bien frappé le plancher, il était dessus ses pieds encore."
+        },
+        {
+            "English": "You talk about a guy who was angry, buddy.",
+            "Cajun French": "Tu parles d’un bougre qu’était en colère, ti."
+        },
+        {
+            "English": "He was biting iron because he wanted to fight so bad.",
+            "Cajun French": "I mordait le fer force qu’i voulait battre."
+        },
+        {
+            "English": "He said, “Hmmm, kid, kid, kid, kid.”",
+            "Cajun French": "I fait, «Hmmm, petit, petit, petit, petit!»"
+        },
+        {
+            "English": "He said, “I’d give twenty-five dollars to find out who threw that pi-ti-ti-ti in my face and gave me a bruise between my two eyes with that pi-ti-ti-tit.”",
+            "Cajun French": "I dit, «Je donnerait vingt-cinq piastres à çu-là qui aurait dit qui y avait foutu la pi-ti-ti-ti dans le front et qui y avait fait une brème entre les deux yeux with that pi-ti-ti-tit.»"
+        },
+        {
+            "English": "What he meant, the poor guy, was that he’d give twenty-five dollars to whoever told him who had thrown the potato at his forebead and had made a bruise between his eyes with it.",
+            "Cajun French": "Ça i voulait dire, le pauvre bête, qu’i donnerait vingt-cinq piastres à çu-là qui aurait dit qui y avait foutu la patate dans le front et qui y avait fait une brème entre les deux yeux avec la patate."
+        },
+        {
+            "English": "He was so angry, he was mixed up in his English.",
+            "Cajun French": "Force qu’il était en colère, i s’avait manière mêlé dans son anglais."
+        },
+        {
+            "English": "Rather than say potato, he said, “Pi-ti-ti-tit”.",
+            "Cajun French": "Plutôt de dire potato, il avait dit «pi-ti-ti-tit»."
+        },
+        {
+            "English": "But, he continued in French - and talk about a guy that was angry, buddy.",
+            "Cajun French": "Mais, il a continué en français - et tu parles d’un bougre qu’était en colère, ti."
+        },
+        {
+            "English": "He was chewing nails ‘cause he wanted to fight so bad.",
+            "Cajun French": "I mordait le fer force qu’i voulait battre."
+        },
+        {
+            "English": "He said, “Hmmmm, kid kid kid, if I only knew who the damn guy was who threw the potato at my forehead and gave me a bruise between the eyes...”",
+            "Cajun French": "I fait «Hmmmm, petit-petit-petit, si je connaîtrais ce maudit qui m’a foutu la patate dans le front et qui m’a fait une brème entre les deux yeux avec la patate."
+        },
+        {
+            "English": "May thunder crush me to a thousand barrels of dust, I wanna beat him up.",
+            "Cajun French": "Que le tonnerre m’écrase en mille barils de poussière, je voudrais le décroupioner."
+        },
+        {
+            "English": "I’d like to shut his mouth and cut out his windpipe and make a duck call out of it.",
+            "Cajun French": "Je voudrais lui fermer son bec et lui couper son gargana et et je voudrais faire un sifflet de canard avec."
+        },
+        {
+            "English": "I’d hang up his backbone on a forty-penny nail and give him a pair of punches so hard that even if I missed him, just the air from my fists would give him pneumonia.",
+            "Cajun French": "Je voudrais pendre son reintier sus un clou de quarante penny et je lui foutrais une paire de coups de poing tellement forts que quand-même je le manquerais, juste l’air de mes poings y donnerait une fluxion."
+        },
+        {
+            "English": "Talk about a guy that was angry, kid!",
+            "Cajun French": "Tu parles d’un bougre qui était en colère, ti."
+        },
+        {
+            "English": "Well, everyone drew around him and said, “Marcellus, you shouldn’t get angry like that, ol’ dog. It’s just a joke they played on you.”",
+            "Cajun French": "Ma foi, le monde entouré y a dit, «Marcellus, faut pas que tu te fâches comme ça, vieux chien. C’est juste une farce i’s ont joué sus toi.»"
+        },
+        {
+            "English": "He said, “Hmmm, kid, kid, kid!”",
+            "Cajun French": "I fait, «Hmmm, petit, petit, petit!»"
+        },
+        {
+            "English": "He said, “Joke or no joke, each one chews his own tobacco, and this is a big deal to me.",
+            "Cajun French": "I dit, «Farce ou pas farce, chacun chique son tabac et c’est gros de me prendre, ouais ça.»"
+        },
+        {
+            "English": "Having to put a poultice between my eyes on the first night of my wedding.",
+            "Cajun French": "Faire foutre un cataplasme entre les deux yeux sus le premier soir de mon mariage."
+        },
+        {
+            "English": "What do I look like? A fat-headed owl.",
+            "Cajun French": "De qui je ressemble? Un hibou à grosse tête."
+        },
+        {
+            "English": "To get hit by a potato on the forehead, it’s not pleasant at all, no.",
+            "Cajun French": "Faire foutre une patate dans le front, c’est pas plaisant du tout, non."
+        },
+        {
+            "English": "It’s a pill that’s harder to swallow than a dose of asafoetida and chicken gall.",
+            "Cajun French": "C’est une pilule qu’est plus gros à avaler qu’une dose de safétida mélé avec du fiel de poule."
+        },
+        {
+            "English": "If I knew, who the damn guy was, I’d have his backbone before the night was over.",
+            "Cajun French": "Si je connaîtrais ce maudit je vous aurais éreinté avant la nuit ait fini.»"
+        },
+        {
+            "English": "Well, once everyone decided to calm down a bit, that’s when he invited us to eat blackbird gumbo that they were serving in the kitchen.",
+            "Cajun French": "Ma foi, quand le monde a décidé de calmer un peu, c’est là i nous a invité pour aller manger du gombo de tchoc i’s étaient après servir dans la cuisine."
+        },
+        {
+            "English": "They had had two troublemakers, Harry Anselmi and Bob Curole, cook the blackbird gumbo.",
+            "Cajun French": "l’s avaient eu des deux malfaicteurs, Harry Anselmi et Bob Curole pour cuire du gombo de tchoc."
+        },
+        {
+            "English": "Just think, having two barbarians like that cook the gumbo!",
+            "Cajun French": "Pense donc! Avoir deux Ostrogoths comme ça pour cuire du gombo de tchoc!"
+        },
+        {
+            "English": "Harry Anselmi and Bob Curole are two drunks.",
+            "Cajun French": "Harry Anselmi et Bob Curole, c’est deux ivrognes."
+        },
+        {
+            "English": "They’re cheekier than a washboard.",
+            "Cajun French": "I sont plus éffrontés qu’un frottoir."
+        },
+        {
+            "English": "They’d been drinking wild cherry wine all afternoon.",
+            "Cajun French": "l’s avaient bu du vin de merise tout l’après-midi."
+        },
+        {
+            "English": "They were as drunk as robins that had eaten chinaball seeds.",
+            "Cajun French": "I’s étaient piqués comme des grives qu’avaient mangé des graines de lilas."
+        },
+        {
+            "English": "Harry Anselmi and Bob Curole took off the socks they had on their feet.",
+            "Cajun French": "Harry Anselmi et Bob Curole ont ôté leurs chaussons i’s avaient dessus leurs pieds."
+        },
+        {
+            "English": "They dropped their socks into the pot of blackbird gumbo.",
+            "Cajun French": "I’s ont échappé leurs chaussons dans la chaudière de gombo de tchoc."
+        },
+        {
+            "English": "Bob Curole whispered into my ear, he said “Eh, kid,” he says, “that’ll fix the gumbo, yeah.”",
+            "Cajun French": "Bob Curole me dit dans mon oreille, i dit, «Hé, petit», i dit «ça va arranger le gombo, ouais, ça.»"
+        },
+        {
+            "English": "He said, “The gumbo needs a little bit of seasoning in it.\"",
+            "Cajun French": "I dit, «Le gombo a besoin d’un ti brin de l’assaisonnement dedans.»"
+        },
+        {
+            "English": "At the same time, Harry Anselmi stuck his head out of the kitchen.",
+            "Cajun French": "En même temps, Harry Anselmi a sorti sa tête en dehors de la cuisine."
+        },
+        {
+            "English": "He shouts to the people that were there.",
+            "Cajun French": "I crie au monde qui était là."
+        },
+        {
+            "English": "He said, “Let’s mix the legs of mutton with the butts. I mean the gumbo.”",
+            "Cajun French": "I dit, «Let’s mêler des gigots with the gogos. I mean the gumbos.»"
+        },
+        {
+            "English": "Because, may lightning strike me, Harry Anselmi and Bob Curole, those are two firecrackers, yessiree.",
+            "Cajun French": "Que le tonnerre m’écrase, Harry Anselmi et Bob Curole, ça c’est deux pétards, ouais, ça."
+        },
+        {
+            "English": "They were so drunk they couldn’t hit the floor with their hats.",
+            "Cajun French": "I’s étaient tellement soûls, i pouviont pas frapper le plancher avec leurs chapeaux."
+        },
+        {
+            "English": "They fell on their faces in the kitchen. They didn’t move again because they were so drunk.",
+            "Cajun French": "I’s ont tombé sur leurs figures dans la cuisine, i’s ont pus grouiller force qu’i’s étaient soûls."
+        },
+        {
+            "English": "When everyone got up to go eat blackbird gumbo in the kitchen, that troublemaker Leroy Martin who was still sitting on the bag of Irish potatoes in the corner of the room, looking as innocent as a cat scratching in the ashes, whispered into my ear, \"Hmmm, kid!\"",
+            "Cajun French": "Quand le monde s’est levé pour aller manger du gombo de tchoc dans la cuisine, ce malfaicteur Leroy Martin qu’était toujours assis sus le sac de patates anglaises dans le coin de la chambre, avec l’air aussi innocent qu’un chat qui était après gratter dans la cendre, Leroy me dit dans mon oreille, «Hmmm, petit!»"
+        },
+        {
+            "English": "He said, “This party’s getting on my nerves.”",
+            "Cajun French": "I dit, «Cette partie après monter sus mes nerfs.»"
+        },
+        {
+            "English": "There’s not enough excitement around here tonight. I think I’ll put a bit of sour in the vinegar.",
+            "Cajun French": "I n-a pas assez de l’excitation icitte ce soir. Je crois que je vas mettre un ti brin du haigre dans le vinaigre."
+        },
+        {
+            "English": "There was a big yellow tomcat lying on the hearth in front of the fire, sleeping.",
+            "Cajun French": "I n-avait un gros matou jaune qui était couché dessus le a foyer devant le feu après sommeiller."
+        },
+        {
+            "English": "Leroy got up.",
+            "Cajun French": "Leroy s’est levé."
+        },
+        {
+            "English": "He picked up the cat.",
+            "Cajun French": "Il a ramassé le matou."
+        },
+        {
+            "English": "He stuffed it under his coat.",
+            "Cajun French": "I l’a fourré en dessous de son capot."
+        },
+        {
+            "English": "He went into the kitchen.",
+            "Cajun French": "Il a été dans la cuisine."
+        },
+        {
+            "English": "There was a bucket of corn cobs in front of the stove.",
+            "Cajun French": "I n-avait une baille de coton-maïs devant le réchaud."
+        },
+        {
+            "English": "He picked a yellow corncob out of the bucket.",
+            "Cajun French": "Il a choisi un coton-maïs jaune en dehors de la baïlle."
+        },
+        {
+            "English": "He went out on the little back porch.",
+            "Cajun French": "Il a été sus la tite galerie derrière."
+        },
+        {
+            "English": "He took the corncob.",
+            "Cajun French": "Il a pris le coton-maïs."
+        },
+        {
+            "English": "He rubbed the cat on the tail and below the tail with the corncob until it was raw above and below.",
+            "Cajun French": "Il a bien frotté la queue du matou, et en dessous la queue, avec le coton-mais jusqu’à le matou avait la queue crue, et en dessous la queue crue."
+        },
+        {
+            "English": "Leroy put his fingers into his vest pocket.",
+            "Cajun French": "Leroy a passé ses doigts dans sa poche de gilet."
+        },
+        {
+            "English": "He pulled out a bottle of turpentine.",
+            "Cajun French": "Il a sorti une bouteille de térébenthine."
+        },
+        {
+            "English": "He sprinkled the cat’s tail and under the tail with the turpentine.",
+            "Cajun French": "Il a bien arrosé la queue du matou et en dessous de la queue avec de la térébenthine."
+        },
+        {
+            "English": "He opened the door of the kitchen a little crack.",
+            "Cajun French": "Il a ouvert une tite craque dans la porte de cuisine."
+        },
+        {
+            "English": "He gave three finger-thumps to the cat’s left ear.",
+            "Cajun French": "Il a foutu trois pichenets à le matou sus l’oreille gauche."
+        },
+        {
+            "English": "He let it go among the folks who were eating their blackbird gumbo.",
+            "Cajun French": "I l’a lâché parmi le monde qui était après manger le gombo de tchoc."
+        },
+        {
+            "English": "May thunder crush me, I’ve never seen such a thing in my life!",
+            "Cajun French": "Cause, tonnerre m’écrase, j’ai jamais vu pareille chose dans ma vie."
+        },
+        {
+            "English": "That poor cat danced in the door for about three seconds.",
+            "Cajun French": "Ce pauvre matou là dansait dans la porte pour à peu près trois secondes."
+        },
+        {
+            "English": "It made just one little cry, “Meow, phfff.”",
+            "Cajun French": "Et il a fait un seul cri, i fait, «Miaou, phfff»."
+        },
+        {
+            "English": "Then it hit the ceiling of the kitchen and stuck there about two seconds.",
+            "Cajun French": "Et il a frappé le plafond de la cuisine. Il a resté collé pour à peu près deux secondes."
+        },
+        {
+            "English": "It began to run upside down on the ceiling.",
+            "Cajun French": "Il a commencé à courir à l’envers sus le plafond."
+        },
+        {
+            "English": "Poor cousin Dudley Bernard from Golden Meadow was sitting at the end of the table eating a bowl of blackbird gumbo.",
+            "Cajun French": "Pauvre cousin Dudley Bernard de Golden Meadows était assis au bout de la table après manger une assiettée de gombo de tchoc."
+        },
+        {
+            "English": "Poor cousin Dudley Bernard didn’t have much hair on his head.",
+            "Cajun French": "Et pauvre cousin Dudley Bernard avait pas beaucoup des cheveux sus la tête."
+        },
+        {
+            "English": "When that tomcat unhooked itself from the ceiling, it fell onto Dudley Bernard’s head.",
+            "Cajun French": "Quand le matou s’est décroché du plafond, il a tombé sus la tête à Dudley Bernard."
+        },
+        {
+            "English": "The tomcat gave him a scratch.",
+            "Cajun French": "Le matou y a foutu une grafignure."
+        },
+        {
+            "English": "It tore open a flap on his coconut head about the width of my finger.",
+            "Cajun French": "Il a arraché une babiche sus le coco de tête à peu près de la largeur de mon doigt."
+        },
+        {
+            "English": "Poor Dudley was bathed in blood.",
+            "Cajun French": "Pauvre Dudley, il en baignait dans le sang."
+        },
+        {
+            "English": "Dudley Bernard had a blackbird carcass in his plate of gumbo.",
+            "Cajun French": "Dudley Bernard avait une carcasse de tchoc dans son assiette de gombo."
+        },
+        {
+            "English": "When the cat slid down his head, it landed in his bowl of blackbird gumbo.",
+            "Cajun French": "Quand le matou a glissé en bas de sa tête, il a plongé dans son assiette de gombo de tchoc."
+        },
+        {
+            "English": "Smack dab in the gumbo bowl.",
+            "Cajun French": "Ça a frappé dans l’assiette."
+        },
+        {
+            "English": "The gumbo splashed all over.",
+            "Cajun French": "Là le gombo a épaillé tout partout."
+        },
+        {
+            "English": "It went “blume” when it landed in the bowl.",
+            "Cajun French": "Ça a fait «bloume» quand il a frappé dans l’assiette."
+        },
+        {
+            "English": "The blackbird carcass in the bowl flew to the other side of the table.",
+            "Cajun French": "La carcasse de tchoc il avait dans son assiette a volé à l’autre bord de la table."
+        },
+        {
+            "English": "It got hooked on Cousin Nénette’s glasses.",
+            "Cajun French": "A s’est accrochée après les lunettes à cousine Nénette."
+        },
+        {
+            "English": "Poor Cousin Nénette! She only hollered once.",
+            "Cajun French": "Pauvre cousine Nénette! Alle a fait un seul cri."
+        },
+        {
+            "English": "She fell backwards over her chair and her dress flew over her head.",
+            "Cajun French": "Alle a tombé en renversant dessus sa chaise et sa robe a volé en haut de sa tête."
+        },
+        {
+            "English": "She had a pair of bloomers made out of flour sacks.",
+            "Cajun French": "Alle avait une paire de pantelettes qui était fait avec des sacs de farine."
+        },
+        {
+            "English": "The name of the flour was \"Wolff\".",
+            "Cajun French": "Le nom de la farine, c’était du «Wolff»."
+        },
+        {
+            "English": "It was written in big red letters on the bottom, W-O-L-F-F.",
+            "Cajun French": "C’était écrit en grosses lettres rouges dans le fond, W-O-L-F-F."
+        },
+        {
+            "English": "The poor old thing. She was so afraid she fainted.",
+            "Cajun French": "La pauvre bête, force qu’alle a eu peur alle a tombé en faiblesse."
+        },
+        {
+            "English": "They had to wipe her face with well water to make her come to.",
+            "Cajun French": "I’s ont eu pour la débarbouiller à l’eau du puits pour la faire prendre ses sens."
+        },
+        {
+            "English": "The bride, Annette, had gone into the front room talking with the women who were there.",
+            "Cajun French": "La nouvelle mariée, Annette, alle était partie dans la chambre devant après parler avec des femmes qui étaient là."
+        },
+        {
+            "English": "She’d changed her dress.",
+            "Cajun French": "Alle avait changé de robe."
+        },
+        {
+            "English": "She’d put on a faded pink gabardine, pale blue color dress that dragged the floor.",
+            "Cajun French": "A s’avait mis une robe de gabardine rose déteint couleur bleu pale qui trainait le plancher."
+        },
+        {
+            "English": "Once the tomcat got untangled from Dudley Bernard’s bowl of gumbo, it jumped down from the table.",
+            "Cajun French": "Quand le matou s’est dépétri de l’assiette de gombo à Dudley Bernard sus la table, il a sauté en bas de la table."
+        },
+        {
+            "English": "It had its paws soaked with gumbo.",
+            "Cajun French": "Il avait les pattes trempes avec du gombo."
+        },
+        {
+            "English": "When it hit the floor, it slid the length of the room - “Voop!” - under Annette the new bride’s new dress.",
+            "Cajun French": "Quand il a frappé le plancher, il a glissé la longueur de la chambre - «Voup!» - en dessous de la nouvelle robe à la nouvelle mariée Annette."
+        },
+        {
+            "English": "May thunder crush me, I’ve never seen such a thing in my life.",
+            "Cajun French": "Que le tonnerre m’écrase! J’ai jamais vu pareille chose dans ma vie."
+        },
+        {
+            "English": "The poor tomcat clawed Annette twelve times around her legs under her dress.",
+            "Cajun French": "Le pauvre matou là a foutu douze pinces à Annette autour de ses jambes en dessous de sa robe."
+        },
+        {
+            "English": "It cut her dress into ribbons and even unlaced her corset.",
+            "Cajun French": "Il a mis sa robe en rubandelles il a jusqu’à délacé son corset."
+        },
+        {
+            "English": "She had one of those old corsets made of whalebone.",
+            "Cajun French": "Alle avait un de ces vieux corsets à baleines."
+        },
+        {
+            "English": "Her corset fell standing upright on her shoes.",
+            "Cajun French": "Son corset a tombé debout sus ses souliers."
+        },
+        {
+            "English": "She looked like she was behind a little picket fence.",
+            "Cajun French": "A ressemblait comme alle était derrière une petite barrière de piquets."
+        },
+        {
+            "English": "Well, once Annette was able to extricate herself from this tomcat under her dress, she fainted.",
+            "Cajun French": "Ma foi, quand Annette a réussi de dépétrir de ce matou en dessous de sa robe, alle a tombé en faiblesse."
+        },
+        {
+            "English": "It took five men to lift her off the floor to carry her into the bedroom. She was that heavy.",
+            "Cajun French": "Ça a pris cinq hommes pour la relever du plancher pour la porter dans la chambre à coucher, force qu’alle était lourde."
+        },
+        {
+            "English": "That troublemaker, Leroy Martin, had tied cowbells to the bed springs under the bed.",
+            "Cajun French": "Ce malfaicteur Leroy Martin avait amarré des cloches de vache après les springs du lit."
+        },
+        {
+            "English": "When they threw Annette into the bed, the cowbells started ringing under the bed.",
+            "Cajun French": "Quand i’s ont jeté Annette dans le lit, les cloches de vache a commencé à sonner en bas du lit."
+        },
+        {
+            "English": "It was the biggest racket I ever heard in my life.",
+            "Cajun French": "C’était le plus gros sérail que j’ai déjà attendu de ma vie."
+        },
+        {
+            "English": "It sounded like there was a herd of cows passing through the house with bells around their necks.",
+            "Cajun French": "Ça sonnait comme s’i’s avaient une bande de vaches qui était après passer en travers de la maison avec des cloches autour de le cou."
+        },
+        {
+            "English": "At the same time, her husband Marcellus had come running with a jar of mutton tallow to spread on her scratches.",
+            "Cajun French": "En même temps, son mari Marcellus a couru avec une jarre de suif de mouton pour lui passer sus ses grafignures."
+        },
+        {
+            "English": "I was told that from the waist down there wasn’t a spot on her skin that you could cover with a dime that wasn’t covered with a scratch.",
+            "Cajun French": "I m’ont dit de la ceinture en bas qu’i n-avait pas une place sus sa peau que t’aurais pu couverre avec un dix sous, si t’aurais pas couvert une grafignure."
+        },
+        {
+            "English": "That’s what I was told.",
+            "Cajun French": "C’est ça i m’ont dit, mais moi, j’ai pas vu."
+        },
+        {
+            "English": "Me, I didn’t see it because I find that it’s not polite to look at an undressed woman.",
+            "Cajun French": "Parce que je trouve pas que c’est poli regarder une femme qui est déshabille."
+        },
+        {
+            "English": "And then her husband Marcellus got really mad.",
+            "Cajun French": "Et là son mari Marcellus s’est foutu en colère."
+        },
+        {
+            "English": "Talk about a guy who was angry, eh kid.",
+            "Cajun French": "Tu parles d’un bougre qu’était en colère, ti."
+        },
+        {
+            "English": "He was chewing nails he wanted to fight so bad.",
+            "Cajun French": "I mordait le fer force i voulait battre."
+        },
+        {
+            "English": "He said, “Hmmm, kid, kid, kid, since y’all arrived I’ve been getting madder.",
+            "Cajun French": "I fait, «Hmmm, petit, petit, petit. Depuis vous-autres a arrivé icitte, j’sus après manger mon fiel.»"
+        },
+        {
+            "English": "When they got here, they hit me in the forehead with a potato.",
+            "Cajun French": "En arrivant i m’ont foutu une patate dans le front."
+        },
+        {
+            "English": "And look what they did to my dear little doll.",
+            "Cajun French": "Et ‘gardez donc qui i’s ont fait avec ma chère tite catin."
+        },
+        {
+            "English": "She has so many scratches that she looks like she passed through a pine knothole sideways.",
+            "Cajun French": "Alle a tellement des grafignures jusqu’à a ressemble comme alle a passé en travers un nœud de bois gras à l’envers."
+        },
+        {
+            "English": "I can’t take it anymore.",
+            "Cajun French": "Je peux pus le prendre."
+        },
+        {
+            "English": "It’s time to clean house around here.",
+            "Cajun French": "C’est temps faire place nette ici."
+        },
+        {
+            "English": "Talk about a guy who was angry.",
+            "Cajun French": "Tu parles d’un bougre qui était en colère."
+        },
+        {
+            "English": "He got up from the bed.",
+            "Cajun French": "I s’est levé du lit."
+        },
+        {
+            "English": "He grabbed his shotgun he’d hung on the antlers of a deer on the wall.",
+            "Cajun French": "Il a attrapé son fusil qui était accroché après les cornes ji de chevreuil i n-avait sus le mur."
+        },
+        {
+            "English": "He fired three shots into the ceiling of the house.",
+            "Cajun French": "Il a foutu trois coups de fusil dans le plafond de la maison."
+        },
+        {
+            "English": "May thunder crush me! It made a hole in the ceiling almost as big as my head.",
+            "Cajun French": "Que le tonnerre m’écrase! Ça a fait un trou dans le plafond à peu près gros comme ma tête."
+        },
+        {
+            "English": "He had a barrel of salted meat that was in the attic just above his bedroom.",
+            "Cajun French": "Il avait un baril de viande salée qu’était sous le grenier juste en haut de sa chambre à coucher."
+        },
+        {
+            "English": "I think the buckshot hit the bottom of the barrel because salt water began to drip onto the bed where Annette was passed out.",
+            "Cajun French": "Mon idée, les postes a dû frapper dans le fond du baril parce qu’i n-a de l’eau salée qu’a commencé à dégoutter sus le lit où Annette était en faiblesse."
+        },
+        {
+            "English": "All of a sudden, the bottom of the barrel gave way and a pig’s head fell into the bed next to Annette.",
+            "Cajun French": "Tout d’un coup, le fond du baril s’est échappé et i n-a une tête de cochon qu’a tombé dans le lit à côté d’Annette."
+        },
+        {
+            "English": "When that troublemaker Leroy Martin saw it, he said, “Well, kid, a pig quarter for tomorrow. It’s time to pack up here.”",
+            "Cajun French": "Quand ce malfaicteur Leroy Martina vu ça, i dit, «Hé petit, un quartier pour demain. C’est temps de plier bagage d’ici.»"
+        },
+        {
+            "English": "Leroy jumped out the window. Me, I went through the kitchen.",
+            "Cajun French": "Leroy a sauté par la fenêtre. Moi, j’ai passé entravers de la cuisine"
+        },
+        {
+            "English": "I ran around the house and jumped out the yard gate.",
+            "Cajun French": "J’ai couru autour de la maison et sauté de la porte de cour."
+        },
+        {
+            "English": "I started to run down the gravel road.",
+            "Cajun French": "J’ai commencé à courir dessus le chemin de gravois."
+        },
+        {
+            "English": "The tomcat with the turpentine under its tail was in the tall grass in the yard rubbing its tail in the dew.",
+            "Cajun French": "Le matou qu’avait de la térébenthine en dessous de la queue, il était dans les grandes herbes dans la cour après rafroiser sa queue dans la rosée."
+        },
+        {
+            "English": "When Leroy cut across the yard, he stumbled over the tomcat.",
+            "Cajun French": "Quand Leroy a coupé en travers de la cour, il a rebuté sus le matou."
+        },
+        {
+            "English": "He fell into the fence and took out a whole section of it.",
+            "Cajun French": "Il a plongé dans la barrière et Il a défrichi une pagée."
+        },
+        {
+            "English": "At the same time, I ran by along the gravel road where Leroy was tangled up in the fence.",
+            "Cajun French": "Au même temps, moi, j’ai passé en courant sus le chemin de gravois où Leroy était empétri dans la barrière."
+        },
+        {
+            "English": "I said, “Charivari, Leroy!”",
+            "Cajun French": "J’ai dit, «Charivari, Leroy!»"
+        },
+        {
+            "English": "He said, “Wait for me, damn you! I’m coming behind you.”",
+            "Cajun French": "I dit, «Espère-moi, mon maudit! i dit, je m’en viens derrière toi.»"
+        },
+        {
+            "English": "You talk about two fellows who hauled it out of there.",
+            "Cajun French": "Hé, tu parles de deux bougres qui s’est halés de là."
+        },
+        {
+            "English": "We ran so fast on the gravel road that if we had stopped short we would have strangled ourselves with the heels of our shoes.",
+            "Cajun French": "On courait tellement vite sus le chemin de gravois jusqu’à si on aurait arrêté carrés, on se serait étranglés avec nos talons de soulier."
+        },
+        {
+            "English": "We ran for six miles until we got to Jerry Mitchell’s dance hall, way back in the reeds behind Golden Meadow.",
+            "Cajun French": "On a couru pour six milles jusqu’à on a arrivé à la salle de danse à Jerry Mitchell qui sort dans les roseaux derrière Golden Meadows."
+        },
+        {
+            "English": "When we appeared in the door, Jerry Mitchell says, “Look here, look here at what the vultures dropped here.”",
+            "Cajun French": "Quand on a apparu dans la porte, Jerry Mitchell, i dit, «‘Gardez donc, ‘gardez donc qui que les carencros a échappé ici.»"
+        },
+        {
+            "English": "He said, “Well, it’s Marion Marcotte and Leroy Martin.”",
+            "Cajun French": "I dit, «C’est Marion Marcotte et Leroy Martin.»"
+        },
+        {
+            "English": "He said, “How are you, my altar boys?”",
+            "Cajun French": "I dit, «Comment ça va, mes enfants de chœur?»"
+        },
+        {
+            "English": "You guys look a little rumpled.",
+            "Cajun French": "Vous-autres est un peu chiffonnés."
+        },
+        {
+            "English": "You guys look like you’ve been playing hide-and-seek with a bunch of raccoons in the palmettos.",
+            "Cajun French": "Vous-autres ressemble comme vous-autres sort de jouer cache-et-faite avec une boîte de chaouis dans les lataniers.»"
+        },
+        {
+            "English": "When we sidled up to the bar, we were all exhausted and breathless.",
+            "Cajun French": "Quand on a approché la bar, on était tout exhaustés et essoufflés."
+        },
+        {
+            "English": "Leroy Martin said to Jerry Mitchell, “Jerry, pay for the drinks and I’ll pay for the cigars.”",
+            "Cajun French": "Leroy Martin, i dit à Jerry Mitchell, i dit «Jerry», i dit «Paie à boire et je vas payer les cigares.»"
+        },
+        {
+            "English": "May thunder crush me. That evening, I swore I’d go sell lightning rods before I’d go back to a party with those troublemakers, Harry Anselmi, Bob Curole, and that damn Leroy Martin.",
+            "Cajun French": "Que le tonnerre m’écrase. Ce soir-là, j’ai fait serment que j’aurai été vendre des paratonnerres avant je retournerais à une partie avec ces malfaicteurs Harry Anselmi, Bob Curoke, et ce maudit Leroy Martin."
+        },
+        {
+            "English": "My friends, I want to tell you a little story about what happened to me when I went to play music at Rosélia’s wedding.",
+            "Cajun French": "Mes amis, j’aimerais vous raconter une tite histoire qui m’a arrivé quand j’avais été jouer la musique à la noce à Rosélia."
+        },
+        {
+            "English": "That was a party, Rosélia’s wedding. Just think of it!",
+            "Cajun French": "Ça c’était une partie ça, la noce à Rosélia. Pense donc!"
+        },
+        {
+            "English": "At the reception, they served garfish balls, grosbeaks, and persimmons.",
+            "Cajun French": "Quand i’s ont passé à la collation, i’s ont servi des boulettes de poisson armé, des grosbecs et des plaquemines."
+        },
+        {
+            "English": "After I ate that, I got real thirsty.",
+            "Cajun French": "Après que j’ai mangé ça, c’est là la soif m’a pris."
+        },
+        {
+            "English": "I went into the yard and drank a big mug of water from the well.",
+            "Cajun French": "J’ai sorti dans la cour et j’ai bu une grosse moque d’eau du puits."
+        },
+        {
+            "English": "Well, that well water began to ferment the garfish balls in my stomach. It almost killed me.",
+            "Cajun French": "Manière cette eau du puits a commencé à fermenter avec les boulettes dans mon estomac, ça a manqué de me tuer."
+        },
+        {
+            "English": "Man, talk about a guy who was sick - that was me.",
+            "Cajun French": "Tu parles d’un bougre qui était malade, mais ça, c’était moi."
+        },
+        {
+            "English": "I went back into the house. That’s when I was introduced to Rosélia and her husband called Lil’ Valéry.",
+            "Cajun French": "Quand j’ai rentré dans la maison encore, c’est là j’ai été introduit à Rosélia et son mari qui s’appelle Ti-Valéry."
+        },
+        {
+            "English": "That was a pair, Rosélia and Lil’ Valéry!",
+            "Cajun French": "Ça c’était une paire, ça, Rosélia et Ti-Valéry!"
+        },
+        {
+            "English": "Rosélia reminded me of a screech owl with its tail feathers pulled out.",
+            "Cajun French": "Rosélia me faisait penser manière à une chouette qu’avait la queue arrachée."
+        },
+        {
+            "English": "And her husband, Lil’ Valéry, he had such a big nose that it reminded looked like one of those snake birds (anhingas).",
+            "Cajun French": "Et son mari, Ti-Valéry, il avait tellement un grand nez jusqu’à i me faisait penser à un de ces becs-à-lancettes."
+        },
+        {
+            "English": "Yeah, man, they were a pair.",
+            "Cajun French": "Ouais, mon vieux, ça c’était une paire."
+        },
+        {
+            "English": "I found myself in a very awkward situation with that new bride. Imagine!",
+            "Cajun French": "J’étais bien embarrassé avec cette nouvelle mariée. Pense jl. donc!"
+        },
+        {
+            "English": "She’d just gotten married that afternoon, and, after she’d had a few glasses of wine, she stood right in front of me and began to wiggle like a caterpillar on an ant hill.",
+            "Cajun French": "A s’avait juste mariée dans l’après-midi et après qu’allea pris plusieurs filets de vin, a s’est plantée droite devant moi, alle a commencé à se tordre manière comme une chenille dans un nid de fromis."
+        },
+        {
+            "English": "From time to time, she’d give me a wink when her husband wasn’t watching.",
+            "Cajun French": "À tout moment a me faisait un clin d’œil quand son mari la guettait pas."
+        },
+        {
+            "English": "Then she whispered in my ear.",
+            "Cajun French": "Là a m’a soufflé dans mon oreille."
+        },
+        {
+            "English": "She said, “Eh, my dear little grouch,” she said, “I sure do like you.”",
+            "Cajun French": "A dit, «hé, mon cher ti bourreau», a dit, «je t’aime gros, ouais.»"
+        },
+        {
+            "English": "She said, “I’d really like to go blackberry-picking with you.",
+            "Cajun French": "A dit, «j’aurais grand’ envie d’aller aux mûres avec toi, ouais.»"
+        },
+        {
+            "English": "“But,” she said, “I want to warn you if you pick blackberries with me and you get scratched, it won’t be by briars.”",
+            "Cajun French": "«Mais, a dit, je veux t’avertir que si tu vas aux mûres avec moi et tu te fais grafigner, ça sera pas proche par les éronces.»"
+        },
+        {
+            "English": "And she said, “And another thing - you can hang your clothes on my clothesline any day of the week you want.”",
+            "Cajun French": "Et alle a dit, «et une autre chose, tu pourrais pendre ton linge sus ma corde à linge n’importe qui jour tu veux dans la semaine.»"
+        },
+        {
+            "English": "Talk about a guy who was in a bind, that was me.",
+            "Cajun French": "Tu parles d’un bougre qui était embarrassé, mais ça c’était moi."
+        },
+        {
+            "English": "Because if her husband Lil’ Valéry had heard that, a war would have broken out.",
+            "Cajun French": "Parce que si son mari Ti-Valéry aurait attendu ça, la guerre aurait pris."
+        },
+        {
+            "English": "Because they told me that her husband Lil’ Valéry is worse than a wildcat that’s sniffed pepper.",
+            "Cajun French": "Parce qu’i m’ont dit que son mari Ti-Valéry est plus mauvais qu’un chat-tigre qu’a reniflé du poivre."
+        },
+        {
+            "English": "I’ll tell you the holy truth, my friends: these aren’t people to get mixed up with. They aren’t civilized.",
+            "Cajun French": "Je vas vous dire la sainte vérité, mes amis, c’est pas du monde pour s’emmêler avec. I sont pas civilisés."
+        },
+        {
+            "English": "This was about the same time that that troublemaker Florian Guillot stuck a knife into Rosélia’s feather mattress and emptied six gallons of syrup on the feathers.",
+            "Cajun French": "C’est là en même temps que ce malfaicteur Florian Guillot, il a foutu un coup de couteau dans le matelas de plumes à Rosélia et il a vidé six gallons de sirop dans les plumes."
+        },
+        {
+            "English": "By thunder! There were feathers and syrup up to the ceiling of the house.",
+            "Cajun French": "Que le tonnerre mes chiens! I n-avait des plumes et du sirop jusqu’à dans le plafond de la maison."
+        },
+        {
+            "English": "That’s why I stayed so late at the wedding, my friends, because I had to put them all to bed.",
+            "Cajun French": "C’est pour ça j’ai resté à la noce aussi tard, mes amis, parce que j’ai eu pour les mettre tous couchés."
+        },
+        {
+            "English": "They were all as drunk as a bunch of pigs.",
+            "Cajun French": "l’s étaient tous soûls comme une bande de cochons."
+        },
+        {
+            "English": "After I got home, I decided to sit on the foot of my bed with my guitar and write a song, “When I Went to Rosélia’s Wedding.”",
+            "Cajun French": "Après que je m’ai retourné à la maison, c’est là j’ai décidé de m’assir sur mon pied de mon lit avec ma guitare et écrire une chanson, «Quand j’avais été à la noce à Rosélia.»"
+        },
+        {
+            "English": "When I went to Rosélia’s wedding, I was very surprised when they brought out the reception food.",
+            "Cajun French": "Quand j’ai été à la noce à Rosélia et j’ai beaucoup été surpris quand i’s ont passé leur collation."
+        },
+        {
+            "English": "I’m gonna tell you what they served: garfish balls, grosbeaks and persimmons and boiled cabbage and cabbage stuffed with crawfish.",
+            "Cajun French": "Je vas vous dire qu’i’s ont servi: des boulettes de poisson armé, et des grosbecs et des plaquemines et des choux bouillis et des choux farcis avec des écrevisses."
+        },
+        {
+            "English": "When we finished eating supper, I got really thirsty and went outside to the well and I drank well water.",
+            "Cajun French": "Quand on a eu fini de souper, i n-a une soif qui m’a pris et j’ai sorti dehors alors jusqu’au j’ai bu de l’eau du puits."
+        },
+        {
+            "English": "But I began to feel bad in the bottom of my stomach, and I regret very much that I went to Rosélia’s wedding.",
+            "Cajun French": "Mais j’ai commencé à me faire du mal dans le creux de mon estomac, et je regrette beaucoup j’avais été là à la noce à Rosélia."
+        },
+        {
+            "English": "When I went back inside, introduced myself to Rosélia and her husband who was named Lil’ Valérie.",
+            "Cajun French": "Quand je rentre dedans encore, je m’ai introduit à Rosélia et son mari qui s’appelle Ti-Valéry."
+        },
+        {
+            "English": "He looked like a snakebird, as for her, she looked like a sidewalk.",
+            "Cajun French": "I ressemble un bec-à-lancette. Elle, a ressemble une banquette."
+        },
+        {
+            "English": "I never saw a woman like that, like Madame Rosélia.",
+            "Cajun French": "J’ai jamais vu une femme comme ça, comme Madame Rosélia."
+        },
+        {
+            "English": "She began to flirt with me like a squirrel.",
+            "Cajun French": "Alle a commencé à me charmer comme un écureuil."
+        },
+        {
+            "English": "When her husband wasn’t watching, she was winking at me.",
+            "Cajun French": "Quand son mari guettait pas, a me faisait des de clins d’œil."
+        },
+        {
+            "English": "I was really in a fix with this new bride.",
+            "Cajun French": "J’étais bien embarrassé avec cette nouvelle mariée."
+        },
+        {
+            "English": "I never saw an uproar like Rosélia’s wedding.",
+            "Cajun French": "J’ai jamais vu un sassaquoi comme la noce à Rosélia."
+        },
+        {
+            "English": "She said, “Mr. Marcotte, why don’t you dance with me?”",
+            "Cajun French": "A m’a dit «M. Marcotte, pourquoi que tu danses pas avec moi?»"
+        },
+        {
+            "English": "You’re the only one in the place who hasn’t acted like a pig.",
+            "Cajun French": "C’est toi le seul dans la place qu’a pas fait le cochon."
+        },
+        {
+            "English": "My old husband’s all out of breath.",
+            "Cajun French": "Mon vieux mari s’est bien essoufflé."
+        },
+        {
+            "English": "I like to repeat stories.",
+            "Cajun French": "J’aime répéter des arcontés."
+        },
+        {
+            "English": "That’s the reason that I stayed so late at the wedding, to take care of Rosélia.",
+            "Cajun French": "C’est pour ça j’ai resté à la noce si tard, soigner Rosélia."
+        }
+    ]
+}

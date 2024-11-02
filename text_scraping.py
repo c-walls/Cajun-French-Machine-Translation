@@ -3,7 +3,7 @@ import os
 import sys
 import pytesseract
 from tqdm import tqdm
-from PIL import Image
+from PIL import Image, ImageFilter, ImageEnhance
 from corpus_alignment_tool import create_editor
 
 # Configure Tesseract path
@@ -12,15 +12,27 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 def ocr_image(image_path, language):
     try:
         image = Image.open(image_path)
-        return "<><page-start><>" + pytesseract.image_to_string(image, lang=language) + "<><page-end><>"
+        return "<><page-start><>" + pytesseract.image_to_string(image, lang=language, config='--psm 6') + "<><page-end><>"
     except Exception as e:
         print(f"Error processing {image_path}: {e}")
         return ""
+
+def preprocess_images(input_folder):
+    files = sorted(os.listdir(input_folder))
+     
+    for image in tqdm(files, desc="Preprocessing images"):
+        im = Image.open(os.path.join(input_folder, image))
+        im = im.filter(ImageFilter.MedianFilter())
+        enhancer = ImageEnhance.Contrast(im)
+        im = enhancer.enhance(2)
+        im = im.convert('1')
+        im.save(os.path.join(input_folder, image))
 
 def process_images(input_folder):
     english_text = []
     cajun_french_text = []
     files = sorted(os.listdir(input_folder))
+    
     for i, image in enumerate(tqdm(files, desc="Processing images")):
         image_path = os.path.join(input_folder, image)
         if image.lower().endswith((".png", ".jpg", ".jpeg")):
@@ -52,6 +64,7 @@ if __name__ == "__main__":
         sys.exit(1)
     
     input_folder = sys.argv[1]
+    # preprocess_images(input_folder) -- folder only needs to be preprocessed once
     english_text, cajun_french_text = process_images(input_folder)
 
     english_text = [sentence_splitter(page) for page in english_text]
