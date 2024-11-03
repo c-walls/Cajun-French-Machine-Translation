@@ -18,15 +18,21 @@ def ocr_image(image_path, language):
         return ""
 
 def preprocess_images(input_folder):
-    files = sorted(os.listdir(input_folder))
-     
-    for image in tqdm(files, desc="Preprocessing images"):
-        im = Image.open(os.path.join(input_folder, image))
-        im = im.filter(ImageFilter.MedianFilter())
-        enhancer = ImageEnhance.Contrast(im)
-        im = enhancer.enhance(2)
-        im = im.convert('1')
-        im.save(os.path.join(input_folder, image))
+    if not os.path.exists(os.path.join(input_folder, "preprocessed_images")):
+        preprocessed_folder = os.path.join(input_folder, "preprocessed_images")
+        os.makedirs(preprocessed_folder, exist_ok=True)
+        
+        files = sorted([f for f in os.listdir(input_folder) if f.lower().endswith('.jpg')])
+        for image in tqdm(files, desc="Preprocessing images"):
+            im = Image.open(os.path.join(input_folder, image))
+            im = im.convert('L') # Convert to grayscale
+            enhancer = ImageEnhance.Contrast(im)
+            im = enhancer.enhance(2)
+            im = im.filter(ImageFilter.MedianFilter(size=3)) # Denoise
+            im = im.convert('1') # Convert to black and white
+            im.save(os.path.join(preprocessed_folder, image))
+    else:
+        print("\nUsing existing preprocessed images")
 
 def process_images(input_folder):
     english_text = []
@@ -36,7 +42,7 @@ def process_images(input_folder):
     for i, image in enumerate(tqdm(files, desc="Processing images")):
         image_path = os.path.join(input_folder, image)
         if image.lower().endswith((".png", ".jpg", ".jpeg")):
-            if i % 2 == 0:
+            if i % 2 != 0:
                 english_text.append(ocr_image(image_path, "eng"))
             else:
                 cajun_french_text.append(ocr_image(image_path, "fra"))
@@ -55,19 +61,28 @@ def sentence_splitter(text):
     text = re.split(r"(?<=[»”.!?])\s*(?=[—«“A-ZÇÀÉ])", text)  # Split text into sentences based on punctuation and capitalized words or specific characters
     return text
 
+
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python text-scraping.py <path_to_input_folder>")
+    if len(sys.argv) < 2 or len(sys.argv) > 3:
+        print("Usage: python text_scraping.py <path_to_input_folder> [-P (Use preprocessed images - optional)]")
         sys.exit(1)
     elif not os.path.isdir(sys.argv[1]):
         print(f"Error: {sys.argv[1]} is not a valid directory")
         sys.exit(1)
     
     input_folder = sys.argv[1]
-    # preprocess_images(input_folder) -- folder only needs to be preprocessed once
-    english_text, cajun_french_text = process_images(input_folder)
+    use_preprocessed = len(sys.argv) == 3 and sys.argv[2] == '-P'
+    
+    if use_preprocessed:
+        preprocess_images(input_folder)
+        image_folder = os.path.join(input_folder, "preprocessed_images")
+    else:
+        image_folder = input_folder
+    
+    english_text, cajun_french_text = process_images(image_folder)
 
     english_text = [sentence_splitter(page) for page in english_text]
     cajun_french_text = [sentence_splitter(page) for page in cajun_french_text]
 
+    print("\nCreating editor...")
     create_editor(english_text, cajun_french_text)
