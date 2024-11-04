@@ -33,6 +33,7 @@ def parse_text_entries(entry_string):
     pronunciation = ""
     value = ""
     locales = ""
+    def_segments = []
     extracted_french_texts = []
     extracted_english_texts = []
 
@@ -52,21 +53,38 @@ def parse_text_entries(entry_string):
         elif value.count('<Loc:') > 1:
             print(f"\nMultilple locale arrays: {full_entry}")
         
-        if value.count(r'%%%') > 0 and value.count(r'%%%') % 3 == 0:
-            pattern = re.compile(r'%%%(.+?)%%%(.+?)%%%')
-            matches = pattern.findall(value)
-            for match in matches:
-                extracted_french_texts.append(match[0].strip())
-                extracted_english_texts.append(match[1].strip())
-        elif value.count(r'%%%') > 0 and value.count(r'%%%') % 3 != 0:
-            print(f"\nInvalid translation delimiter count for '{key}': {value.count(r'%%%')}")
+        #### Defs
+        def_segments = re.split(r'(?<=\))\s', value)
+        def_segments = [seg.strip() for seg in def_segments if re.search(r'\((?=.*[A-Z]).*?\)', seg)]
+        
+        def remove_irrelevant_info(seg):
+            words = seg.split()
+            segmentation_index = 0
+            for i, word in enumerate(words):
+                if word[-1] == ">":
+                    segmentation_index = i + 1
+                if word.count('.') > 1:
+                    segmentation_index = i + 1
 
+            for i, word in enumerate(words):
+                if word[0].isupper() and i >= segmentation_index and word not in ['I', "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]:
+                    segmentation_index = i
+                    break
+                
+            return ' '.join(words[segmentation_index:])
+        
+        def_segments = [remove_irrelevant_info(seg) for seg in def_segments]
+
+
+                #extracted_french_texts.append(match[0].strip())
+                #extracted_english_texts.append(match[1].strip())
+        ####
     else:
         print(f"\nInvalid entry error - cannot parse: {full_entry}\n\n This entry will need to be added manually in the JSON file\n")
 
     entry_dict = {
             'Pronunciation': pronunciation,
-            'Definitions': value,
+            'Entry Segments': def_segments,
             'Locales': locales,
             'Extracted French Texts': extracted_french_texts,
             'Extracted English Texts': extracted_english_texts,
@@ -145,15 +163,27 @@ def create_manual_editor(text, name="Manual Text Editor"):
     text_widget = tk.Text(root, wrap='word', font=('Bookman Old Style', 11), padx=10, pady=10, undo=True, autoseparators=True)
     text_widget.pack(expand=True, fill='both')
     text_widget.tag_configure("bold", font=('Bookman Old Style', 11, 'bold'))
+    text_widget.tag_configure("low-conf", foreground="red")
     edited_text = tk.StringVar()
 
     # Insert the text and apply the bold tag to words preceded by two line breaks
     for entry in text:
         if entry.strip():
             words = entry.split()
+            
             if words:
-                text_widget.insert(tk.END, words[0], "bold")
-                text_widget.insert(tk.END, ' ' + ' '.join(words[1:]) + '\n\n')
+                if words[0].startswith('%<>%'):
+                    word = words[0].replace('%<>%', '')
+                    text_widget.insert(tk.END, word, ("low-conf", "bold"))
+                else:
+                    text_widget.insert(tk.END, words[0], "bold")
+                for word in words[1:]:
+                    if word.startswith('%<>%'):
+                        word = word.replace('%<>%', '')
+                        text_widget.insert(tk.END, ' ' + word, "low-conf")
+                    else:
+                        text_widget.insert(tk.END, ' ' + word)
+                text_widget.insert(tk.END, '\n\n')
             else:
                 text_widget.insert(tk.END, '\n\n')
         else:
@@ -264,14 +294,51 @@ def page_segment(images):
         img_spliced = cv2.vconcat([left_half, right_half])
 
         # OCR the spliced image
-        text = pytesseract.image_to_string(img_spliced, lang='fra')
-        text = re.sub(r'-\n', '', text)
-        text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text)
+        ocr_data = pytesseract.image_to_data(img_spliced, lang='fra', output_type=pytesseract.Output.DICT)
+        
+        # Extract text and confidence levels
+        text_with_confidence = []
+        for i in range(len(ocr_data['text'])):
+            word = ocr_data['text'][i]
+            confidence = ocr_data['conf'][i]
+            text_with_confidence.append((word, confidence))
+
+        # Frequent OCR errors
+        frequent_errors = ['X', 'T', '1', "Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", '//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'Jl', 'IT', '/l', '{1s', '//s', 'J{s', '{{s', '/{s', 'Jls']
+
+        for i in range(len(text_with_confidence)):
+            word, conf = text_with_confidence[i]
+            conf = 74 if conf >= 75 and word in frequent_errors else conf
+            if conf < 75 and conf != -1:
+                word = word if not word.startswith("*") else word.replace("*", "")
+                if word in ['X', 'T', '1']:
+                    text_with_confidence[i] = ('%<>%' + 'I', conf)
+                elif word in ["Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm"]:
+                    text_with_confidence[i] = ('%<>%' + "I'm", conf)
+                elif word in ['//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'IT', '/l', 'Jl']:
+                    text_with_confidence[i] = ('%<>%' + 'Il', conf)
+                elif word in ['{1s', '//s', 'J{s', '{{s', '/{s', 'Jls']:
+                    text_with_confidence[i] = ('%<>%' + 'Ils', conf)
+                else:
+                    text_with_confidence[i] = ('%<>%' + word, conf)
+
+        text_concat = ' '.join([data[0] for data in text_with_confidence]).strip()
+        text = re.sub('   ', '\n\n', text_concat)
+        text = re.sub('  ', '\n', text)
+        text = re.sub(r'\n{4,}', '', text)
+        text = re.sub(r'-\n', '', text) # fix hyphenated words
+        text = re.sub(r'(?<!\s)%<>%', '', text) # remove extra confidence markers
+        text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text) # replace single line breaks with spaces
+        text = re.sub(r'(<Loc:[^>]*>) +(?!\n)', r'\1\n\n', text) # add line breaks after locale arrays as needed
         text = text.strip().split('\n\n')
+
+        if text[0] and text[0].count('see') == 0 and text[0].count('[') == 0:
+            text[0] = '@' + text[0]
+
         edited_text = create_manual_editor(text, image_path.split("\\")[-1])
         edited_text = edited_text.strip().split('\n\n')
+        
         save_page(edited_text)
-
         os.remove(image_path)
         cv2.destroyAllWindows()
 
@@ -339,7 +406,7 @@ def main():
             exit(1)
 
     output_path = os.path.join(base_dir, "Preprocessed_Images")
-    potential_outputs = [output for output in os.listdir(base_dir) if output.endswith(".csv")]
+    potential_outputs = [output for output in os.listdir(base_dir) if output.endswith(".json")]
     
     if len(potential_outputs) > 1:
         print("\nMultiple JSON files found in the selected directory. Please remove or consolidate all but one JSON file before running the script again.\n")
