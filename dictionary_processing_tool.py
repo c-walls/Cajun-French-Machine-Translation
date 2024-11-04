@@ -53,10 +53,6 @@ def parse_text_entries(entry_string):
         elif value.count('<Loc:') > 1:
             print(f"\nMultilple locale arrays: {full_entry}")
         
-        #### Defs
-        def_segments = re.split(r'(?<=\))\s', value)
-        def_segments = [seg.strip() for seg in def_segments if re.search(r'\((?=.*[A-Z]).*?\)', seg)]
-        
         def remove_irrelevant_info(seg):
             words = seg.split()
             segmentation_index = 0
@@ -70,15 +66,15 @@ def parse_text_entries(entry_string):
                 if word[0].isupper() and i >= segmentation_index and word not in ['I', "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]:
                     segmentation_index = i
                     break
-                
+                elif len(word) > 1 and not word[0].isalpha() and word[1].isupper() and i >= segmentation_index:
+                    words[i] = word[1:]
+                    segmentation_index = i
+                    break
             return ' '.join(words[segmentation_index:])
         
+        def_segments = re.split(r'(?<=\))\s', value)
+        def_segments = [seg.strip() for seg in def_segments if re.search(r'\((?=.*[A-Z]).*?\)', seg)]
         def_segments = [remove_irrelevant_info(seg) for seg in def_segments]
-
-
-                #extracted_french_texts.append(match[0].strip())
-                #extracted_english_texts.append(match[1].strip())
-        ####
     else:
         print(f"\nInvalid entry error - cannot parse: {full_entry}\n\n This entry will need to be added manually in the JSON file\n")
 
