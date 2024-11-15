@@ -12,17 +12,13 @@ from pdf2image import convert_from_path
 # Set the path to the Tesseract executable
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-# Blobal text array to store the dictionary entries
+# Global text array to store the dictionary entries
 entries = []
 
 def save_page(text):
     if text[0][0] == '@' and entries:
         entries[-1] += text[0][1:]
         text = text[1:]
-        if entries[-1].count(r'%%%') > 0 and entries[-1].count(r'%%%') % 3 != 0:
-            print(f"\nInvalid translation delimiter count for '{entries[-1][0]}': {entries[-1].count(r'%%%')} -- Fixing in manual editor")
-            updated_text = create_manual_editor([entries[-1]], "Manual Text Editor")
-            entries[-1] = updated_text.strip()
 
     entries.extend(text)
 
@@ -34,8 +30,7 @@ def parse_text_entries(entry_string):
     value = ""
     locales = ""
     def_segments = []
-    extracted_french_texts = []
-    extracted_english_texts = []
+    extracted_translations = []
 
     if '[' in full_entry or 'see' in full_entry:
         key, value = re.split(r'(?=\[)|(?=see)', full_entry, maxsplit=1)
@@ -51,7 +46,7 @@ def parse_text_entries(entry_string):
             value = value.strip()
             locales = locales.strip()
         elif value.count('<Loc:') > 1:
-            print(f"\nMultilple locale arrays: {full_entry}")
+            print(f"\nMultilple locale arrays in:\n{full_entry}\n\nThis entry will need to be fixed manually.\n")
         
         def remove_irrelevant_info(seg):
             words = seg.split()
@@ -75,6 +70,38 @@ def parse_text_entries(entry_string):
         def_segments = re.split(r'(?<=\))\s', value)
         def_segments = [seg.strip() for seg in def_segments if re.search(r'\((?=.*[A-Z]).*?\)', seg)]
         def_segments = [remove_irrelevant_info(seg) for seg in def_segments]
+
+        #Extract French and English texts
+        for seg in def_segments:
+            # Get the location code for this translation segment
+            if seg.count('(') > 0:
+                seg_location = seg[seg.rfind('('):].strip()
+            else:
+                seg_location = ""
+                print(f"\nFIX MANUALLY: No segment location found in segment: {seg} for entry {key}\n")
+
+            # Find the middle punctuation mark to split French and English texts
+            punctuation_array = [m.start() for m in re.finditer(r'[.!?;]', seg)]
+            punctuation_count = len(punctuation_array)
+
+            while punctuation_count % 2 != 0:
+                new_string = create_manual_editor(seg, "Manual Text Editor - Fix Punctuation Count Error")
+                punctuation_array = [m.start() for m in re.finditer(r'[.!?;]', new_string)]
+                punctuation_count = len(punctuation_array)
+
+            if punctuation_count > 0:
+                french_seg = seg[:punctuation_array[(punctuation_count // 2) - 1] + 1].strip()
+                english_seg = seg[punctuation_array[(punctuation_count // 2) - 1] + 1:punctuation_array[punctuation_count - 1] + 1].strip()
+
+                translation_dict = {
+                    "English": english_seg,
+                    "Cajun French": french_seg,
+                    "Location": seg_location
+                }
+
+                extracted_translations.append(translation_dict)
+            else:
+                print(f"\nNo segmentable punctuation in segment: {seg}")
     else:
         print(f"\nInvalid entry error - cannot parse: {full_entry}\n\n This entry will need to be added manually in the JSON file\n")
 
@@ -82,8 +109,7 @@ def parse_text_entries(entry_string):
             'Pronunciation': pronunciation,
             'Entry Segments': def_segments,
             'Locales': locales,
-            'Extracted French Texts': extracted_french_texts,
-            'Extracted English Texts': extracted_english_texts,
+            'Extracted Translations': extracted_translations,
             'Full Entry': full_entry
         }
         
@@ -111,32 +137,8 @@ def save_to_file(entry_array, file_path):
         return f"{key}^{match_count + 1}"
 
     # Append full entries to the JSON data
-    for entry in entry_array[:-1]:
+    for entry in entry_array:
         key, entry_dict = parse_text_entries(entry)
-        key = key if key not in json_data['Data'] else handle_duplicate_key(key)
-        json_data['Data'][key] = entry_dict
-
-    # Handle partial last entry
-    while entry_array[-1].count(r'<Loc:') > 1 and (entry_array[-1].count(r'[') != 0 or entry_array[-1].count(r'see') != 0):
-        print(f"\nMultiple locale arrays in entry '{entry_array[-1][0]}' OR Invalid entry (No '[' or 'see') -- Fixing in manual editor")
-        new_string = create_manual_editor([entry_array[-1]], "Manual Text Editor")
-        entry_array[-1] = new_string
-
-    if entry_array[-1].count(r'%%%') > 0 and entry_array[-1].count(r'%%%') % 3 != 0:
-        key, value = re.split(r'(?=\[)|(?=see)', entry_array[-1], maxsplit=1)
-        partial_entry_dict = {
-            'Pronunciation': "",
-            'Definitions': "",
-            'Locales': "",
-            'Extracted French Texts': [],
-            'Extracted English Texts': [],
-            'Full Entry': value
-        }
-
-        key = key if key not in json_data['Data'] else handle_duplicate_key(key)
-        json_data['Data'][key] = partial_entry_dict
-    else:
-        key, entry_dict = parse_text_entries(entry_array[-1])
         key = key if key not in json_data['Data'] else handle_duplicate_key(key)
         json_data['Data'][key] = entry_dict
 
@@ -146,7 +148,7 @@ def save_to_file(entry_array, file_path):
         json.dump(json_data, json_file, ensure_ascii=False, indent=4)
 
 
-def create_manual_editor(text, name="Manual Text Editor"):
+def create_manual_editor(text, name="Manual Text Editor", type="simple"):
     root = tk.Tk()
     root.title(name)
     
@@ -162,38 +164,36 @@ def create_manual_editor(text, name="Manual Text Editor"):
     text_widget.tag_configure("low-conf", foreground="red")
     edited_text = tk.StringVar()
 
-    # Insert the text and apply the bold tag to words preceded by two line breaks
-    for entry in text:
-        if entry.strip():
-            words = entry.split()
-            
-            if words:
-                if words[0].startswith('%<>%'):
-                    word = words[0].replace('%<>%', '')
-                    text_widget.insert(tk.END, word, ("low-conf", "bold"))
-                else:
-                    text_widget.insert(tk.END, words[0], "bold")
-                for word in words[1:]:
-                    if word.startswith('%<>%'):
-                        word = word.replace('%<>%', '')
-                        text_widget.insert(tk.END, ' ' + word, "low-conf")
+    # Insert the text (For OCR Array: apply special formatting)
+    if type == "simple":
+        text_widget.insert(tk.END, text)
+
+    elif type == "corpus":
+        for entry in text:
+            if entry.strip():
+                words = entry.split()
+                
+                if words:
+                    if words[0].startswith('%<>%'):
+                        word = words[0].replace('%<>%', '')
+                        text_widget.insert(tk.END, word, ("low-conf", "bold"))
                     else:
-                        text_widget.insert(tk.END, ' ' + word)
-                text_widget.insert(tk.END, '\n\n')
+                        text_widget.insert(tk.END, words[0], "bold")
+                    for word in words[1:]:
+                        if word.startswith('%<>%'):
+                            word = word.replace('%<>%', '')
+                            text_widget.insert(tk.END, ' ' + word, "low-conf")
+                        else:
+                            text_widget.insert(tk.END, ' ' + word)
+                    text_widget.insert(tk.END, '\n\n')
+                else:
+                    text_widget.insert(tk.END, '\n\n')
             else:
                 text_widget.insert(tk.END, '\n\n')
-        else:
-            text_widget.insert(tk.END, '\n\n')
 
-    # Remove the last two line breaks and add edit separators for undo/redo
-    text_widget.edit_separator()
-    text_widget.delete("end-3c", "end-1c")
-    text_widget.edit_separator()
-
-    def insert_translation_delimiter(event=None):
-        text_widget.mark_set(tk.INSERT, f"@{event.x},{event.y}")
+        # Remove the last two line breaks and add edit separators for undo/redo
         text_widget.edit_separator()
-        text_widget.insert(tk.INSERT, '%%%')
+        text_widget.delete("end-3c", "end-1c")
         text_widget.edit_separator()
 
     def close_editor(event=None):
@@ -203,25 +203,33 @@ def create_manual_editor(text, name="Manual Text Editor"):
     def save_and_close(event=None):
         widget_text = text_widget.get("1.0", tk.END)
         
-        text_check_array = widget_text.strip().split('\n\n')
-        for entry in text_check_array[1:]:
-            entry_word = entry.split()[0]
-            if entry.count(r'[') == 0 and entry.count(r'see') == 0 and entry.count(r'@') == 0:
-                messagebox.showerror("Invalid Entry Error", f"Cannot save: {entry_word} -- cannot separate at '[' or 'see' -- Fix before saving")
-                return
-            if entry.count(r'<Loc:') > 1:
-                messagebox.showerror("Multiple Locale Arrays Error", f"Multiple locale arrays in entry '{entry_word}' -- Fix before saving")
-                return
-            if entry.count(r'%%%') > 0 and entry.count(r'%%%') % 3 != 0:
-                messagebox.showerror("Invalid Translation Delimiter Error", f"Invalid translation delimiter count in entry '{entry_word}': {entry.count(r'%%%')} -- Fix before saving")
-                return
-                
-        edited_text.set(widget_text)
+        if type == "simple":
+            edited_text.set(widget_text.strip())
+        
+        elif type == "corpus":
+            text_check_array = widget_text.strip().split('\n\n')
+            for entry in text_check_array:
+                entry_word = entry.split()[0]
+                if entry.count(r'[') == 0 and entry.count(r'see') == 0 and entry.count(r'@') == 0:
+                    messagebox.showerror("Invalid Entry Error", f"Cannot save: {entry_word} -- cannot separate at '[' or 'see' or '@' -- Fix before saving")
+                    return
+                if entry.count(r'[') > 0 and entry.count(r']') == 0:
+                    messagebox.showerror("Missing Closing Bracket Error", f"Missing closing bracket in pronunciation section of entry: '{entry_word}' -- Fix before saving")
+                    return
+                if entry.count(r'<Loc:') > 1:
+                    messagebox.showerror("Multiple Locale Arrays Error", f"Multiple locale arrays in entry '{entry_word}' -- Fix before saving")
+                    return
+                if entry.count(r'see') > 0 and entry.count(r'<Loc:') > 0:
+                    if entry.count(r'[') == 0 or (entry.index(r'see') < entry.index(r'[')):
+                        messagebox.showerror("Invalid Entry Split Error", f"Cannot save: {entry_word} -- splits at 'see' but contains <Loc:> tag -- Fix before saving")
+                        return
+                    
+            edited_text.set(widget_text)
+
         root.destroy()
     
     text_widget.bind("<Control-y>", lambda event: text_widget.edit_redo())
     text_widget.bind("<Control-z>", lambda event: text_widget.edit_undo())
-    text_widget.bind("<Control-Button-1>", insert_translation_delimiter)
     root.bind("<Escape>", close_editor)
     root.bind("<Control-s>", save_and_close)
     root.mainloop()
@@ -300,7 +308,7 @@ def page_segment(images):
             text_with_confidence.append((word, confidence))
 
         # Frequent OCR errors
-        frequent_errors = ['X', 'T', '1', "Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", '//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'Jl', 'IT', '/l', '{1s', '//s', 'J{s', '{{s', '/{s', 'Jls']
+        frequent_errors = ['X', 'T', '1', "Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", "lm", "1m", '//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'Jl', 'IT', '/l', '{1s', '//s', 'J{s', '{{s', '/{s', 'Jls']
 
         for i in range(len(text_with_confidence)):
             word, conf = text_with_confidence[i]
@@ -309,7 +317,7 @@ def page_segment(images):
                 word = word if not word.startswith("*") else word.replace("*", "")
                 if word in ['X', 'T', '1']:
                     text_with_confidence[i] = ('%<>%' + 'I', conf)
-                elif word in ["Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm"]:
+                elif word in ["Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", "lm", "1m"]:
                     text_with_confidence[i] = ('%<>%' + "I'm", conf)
                 elif word in ['//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'IT', '/l', 'Jl']:
                     text_with_confidence[i] = ('%<>%' + 'Il', conf)
@@ -331,7 +339,7 @@ def page_segment(images):
         if text[0] and text[0].count('see') == 0 and text[0].count('[') == 0:
             text[0] = '@' + text[0]
 
-        edited_text = create_manual_editor(text, image_path.split("\\")[-1])
+        edited_text = create_manual_editor(text, image_path.split("\\")[-1], type="corpus")
         edited_text = edited_text.strip().split('\n\n')
         
         save_page(edited_text)
@@ -390,15 +398,15 @@ def convert_to_parallel_corpus(json_file):
 def main():
     base_dir = os.environ.get("PROCESSING_DIR")
     if not base_dir:
-        print("\nError: 'PROCESSING_DIR' environment variable not set.\nUse the 'set' command to set the variable. (i.e. set PROCESSING_DIR='" + r"C:\path\to\directory" + "')\n")
+        print("\nError: 'PROCESSING_DIR' environment variable not set.\nSet the variable from the terminal first. (Temp variable assignment in powershell -> $env:PROCESSING_DIR='" + r"C:\path\to\directory" + "')\n")
         exit(1)
     elif not os.path.exists(base_dir):
-        print("\nError: Directory does not exist.\nPlease check the path and try again.\n Reset the 'PROCESSING_DIR' environment using the 'set' command. (i.e. set PROCESSING_DIR='" + r"C:\path\to\directory" + "')\n")
+        print("\nError: Directory does not exist.\nPlease check the path and try again.\n Reset the variable from the terminal first. (Temp variable assignment in powershell -> $env:PROCESSING_DIR='" + r"C:\path\to\directory" + "')\n")
         exit(1)
     else:
         confirmation = input(f"Would you like to continue processing:\n'{base_dir}'\n([Y]/n)")
         if confirmation.lower() != 'y' and confirmation.lower() != 'yes' and confirmation != '':
-            print("\nUse the 'set' command to change the 'PROCESSING_DIR' environment variable. (i.e. set PROCESSING_DIR='" + r"C:\path\to\directory" + "')\n")
+            print("\nChange the variable from the terminal before running. (Temp variable assignment in powershell -> $env:PROCESSING_DIR='" + r"C:\path\to\directory" + "')\n")
             exit(1)
 
     output_path = os.path.join(base_dir, "Preprocessed_Images")
@@ -450,3 +458,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
