@@ -85,8 +85,8 @@ def parse_text_entries(entry_string):
             punctuation_count = len(punctuation_array)
 
             while punctuation_count % 2 != 0:
-                new_string = create_manual_editor(seg, "Manual Text Editor - Fix Punctuation Count Error")
-                punctuation_array = [m.start() for m in re.finditer(r'[.!?;]', new_string)]
+                seg = create_manual_editor(seg, f"Manual Text Editor - Fix Punctuation Count Error - {key}")
+                punctuation_array = [m.start() for m in re.finditer(r'[.!?;]', seg)]
                 punctuation_count = len(punctuation_array)
 
             if punctuation_count > 0:
@@ -141,6 +141,17 @@ def save_to_file(entry_array, file_path):
         key, entry_dict = parse_text_entries(entry)
         key = key if key not in json_data['Data'] else handle_duplicate_key(key)
         json_data['Data'][key] = entry_dict
+
+    # Print corpus metrics
+    entry_count = len(json_data['Data'].keys())
+    segment_count = 0
+    translation_count = 0
+    for key in json_data['Data'].keys():
+        segment_count += len(json_data['Data'][key]['Entry Segments'])
+        translation_count += len(json_data['Data'][key]['Extracted Translations'])
+    
+    print(f"\nEntries: {entry_count}\nTotal Segments: {segment_count}\nTotal Translation Count: {translation_count}\n")
+
 
     # Write the updated JSON back to the file
     json_data['LastModified'] = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S")
@@ -219,8 +230,8 @@ def create_manual_editor(text, name="Manual Text Editor", type="simple"):
                 if entry.count(r'<Loc:') > 1:
                     messagebox.showerror("Multiple Locale Arrays Error", f"Multiple locale arrays in entry '{entry_word}' -- Fix before saving")
                     return
-                if entry.count(r'see') > 0 and entry.count(r'<Loc:') > 0:
-                    if entry.count(r'[') == 0 or (entry.index(r'see') < entry.index(r'[')):
+                if entry.count(r'see ') > 0 and entry.count(r'<Loc:') > 0:
+                    if (entry.count(r'[') == 0 and entry.count(r'@') == 0) or (entry.index(r'see ') < entry.index(r'[')):
                         messagebox.showerror("Invalid Entry Split Error", f"Cannot save: {entry_word} -- splits at 'see' but contains <Loc:> tag -- Fix before saving")
                         return
                     
@@ -308,20 +319,25 @@ def page_segment(images):
             text_with_confidence.append((word, confidence))
 
         # Frequent OCR errors
-        frequent_errors = ['X', 'T', '1', "Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", "lm", "1m", '//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'Jl', 'IT', '/l', '{1s', '//s', 'J{s', '{{s', '/{s', 'Jls']
+        frequent_errors = ['X', 'T', '1', "Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", "lm", "1m", '//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/7', '/1', 'Jl', 'IT', '/l', '{1s', '//s', 'J{s', '{{s', '/{s', 'Jls', '{ls']
 
         for i in range(len(text_with_confidence)):
             word, conf = text_with_confidence[i]
-            conf = 74 if conf >= 75 and word in frequent_errors else conf
+            if conf >= 75 and (word in frequent_errors or re.search(r'[.!?](?=["”\'’])', word) or re.search(r'^(?!["\'(\[{<‘“])\W+[a-zA-Z]', word) or re.search(r'["\']', word)):
+                conf = 74 # Frequent Errors, Characters after EOS punctuation, Leading punctuation or other symbols in front of words, and any word that contains straight quotes 
             if conf < 75 and conf != -1:
-                word = word if not word.startswith("*") else word.replace("*", "")
+                word = word if not word.startswith("*") else word.replace("*", "*(XX) %<>%")
                 if word in ['X', 'T', '1']:
                     text_with_confidence[i] = ('%<>%' + 'I', conf)
                 elif word in ["Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", "lm", "1m"]:
                     text_with_confidence[i] = ('%<>%' + "I'm", conf)
-                elif word in ['//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'IT', '/l', 'Jl']:
+                elif word in ["l'd"]:
+                    text_with_confidence[i] = ('%<>%' + "I'd", conf)
+                elif word in ["l've"]:
+                    text_with_confidence[i] = ('%<>%' + "I've", conf)
+                elif word in ['//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'IT', '/l', 'Jl', '/7']:
                     text_with_confidence[i] = ('%<>%' + 'Il', conf)
-                elif word in ['{1s', '//s', 'J{s', '{{s', '/{s', 'Jls']:
+                elif word in ['{1s', '//s', 'J{s', '{{s', '/{s', 'Jls', '{ls']:
                     text_with_confidence[i] = ('%<>%' + 'Ils', conf)
                 else:
                     text_with_confidence[i] = ('%<>%' + word, conf)
@@ -377,6 +393,7 @@ def handle_cleanup(output_path):
         print(f"\nSaving the remaining {len(os.listdir(output_path))} images for processing later.\n")
 
 def convert_to_parallel_corpus(json_file):
+    # Needs to be updated to single 'Extracted Translations' dictionary
     french_texts = []
     english_texts = []
     
