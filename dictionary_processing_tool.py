@@ -7,6 +7,7 @@ import datetime
 import pytesseract
 import tkinter as tk
 from tkinter import messagebox
+from PIL import Image, ImageTk
 from pdf2image import convert_from_path
 
 # Set the path to the Tesseract executable
@@ -70,6 +71,7 @@ def parse_text_entries(entry_string):
         def_segments = re.split(r'(?<=\))\s', value)
         def_segments = [seg.strip() for seg in def_segments if re.search(r'\((?=.*[A-Z]).*?\)', seg)]
         def_segments = [remove_irrelevant_info(seg) for seg in def_segments]
+        def_segments = [seg for seg in def_segments if not seg.endswith("*(XX)")]
 
         #Extract French and English texts
         for seg in def_segments:
@@ -106,11 +108,11 @@ def parse_text_entries(entry_string):
         print(f"\nInvalid entry error - cannot parse: {full_entry}\n\n This entry will need to be added manually in the JSON file\n")
 
     entry_dict = {
+            'Full Entry': full_entry,
             'Pronunciation': pronunciation,
-            'Entry Segments': def_segments,
             'Locales': locales,
-            'Extracted Translations': extracted_translations,
-            'Full Entry': full_entry
+            'Entry Segments': def_segments,
+            'Extracted Translations': extracted_translations
         }
         
     return key, entry_dict
@@ -207,6 +209,28 @@ def create_manual_editor(text, name="Manual Text Editor", type="simple"):
         text_widget.delete("end-3c", "end-1c")
         text_widget.edit_separator()
 
+    elif type == "ocr_compare":
+        text_data = text[0]
+        img = text[1]
+        images = []
+
+        for i in range(len(text_data)):
+            idx, word, _, bbox, is_fixed_error = text_data[i]
+
+            cropped_img = img[bbox[1]:bbox[3], bbox[0]:bbox[2]]
+            pil_img = Image.fromarray(cv2.cvtColor(cropped_img, cv2.COLOR_BGR2RGB))
+            pil_img.resize((pil_img.width * 2, pil_img.height * 2))
+            tk_img = ImageTk.PhotoImage(pil_img)
+
+            if not i == 0 and idx < text_data[i - 1][0]:
+                text_widget.insert(tk.END, '_' * 75 + '\n\n')
+
+            text_widget.insert(tk.END, str(idx) + ':\t\t'  + word + '\t\t')
+            text_widget.image_create(tk.END, image=tk_img)
+            text_widget.insert(tk.END, '\t\t' + str(is_fixed_error) + '\n\n')
+            images.append(tk_img)
+                
+
     def close_editor(event=None):
         root.destroy()
         sys.exit(0)
@@ -233,10 +257,31 @@ def create_manual_editor(text, name="Manual Text Editor", type="simple"):
                 if entry.count(r'see ') > 0 and entry.count(r'<Loc:') > 0:
                     if (entry.count(r'[') == 0 and entry.count(r'@') == 0) or (entry.index(r'see ') < entry.index(r'[')):
                         messagebox.showerror("Invalid Entry Split Error", f"Cannot save: {entry_word} -- splits at 'see' but contains <Loc:> tag -- Fix before saving")
-                        return
-                    
+                        return      
             edited_text.set(widget_text)
+        
+        elif type == "ocr_compare":
+            error_text = widget_text.strip()
 
+            if error_text.count('||||') > 0 and error_text.count('~~~~') == 0:
+                messagebox.showerror("Invalid Entry Error", "Remove excess '|' or '~' characters before saving")
+                return
+
+            error_array = error_text.split('\n\n')
+            error_array = [re.sub(r'\t{3,}', '\t\t', line) for line in error_array if not line.startswith('___')]
+            error_array = [line.split('\t\t') for line in error_array]
+
+            filtered_errors = []
+            for i in range(len(error_array)):
+                idx = error_array[i][0].strip()
+                word = error_array[i][1].strip()
+                is_fixed_error = error_array[i][2].strip() if len(error_array[i]) > 2 else None
+                
+                if is_fixed_error in ['True', 'False']:
+                    filtered_errors.append(idx[:-1] + "||||" + word)
+                
+            edited_text.set("~~~~".join(filtered_errors))
+                    
         root.destroy()
     
     text_widget.bind("<Control-y>", lambda event: text_widget.edit_redo())
@@ -263,7 +308,7 @@ def page_segment(images):
         cv2.line(img, (width // 2, 0), (width // 2, height), (0, 0, 255), 2)
 
         # Draw outer segmentation lines
-        header_line = int(height * 0.075)
+        header_line = int(height * 0.07)
         footer_line = int(height * 0.94)
         left_margin = int(width * 0.1)
         right_margin = int(width * 0.9)
@@ -283,7 +328,7 @@ def page_segment(images):
         key = cv2.waitKey(0)
         if key == 27: # 'Esc' key to stop processing images completely
             break
-        elif key == ord('t'): # 'T' key to terminate the process
+        elif key == ord('t'): # 'T' key to trash the current image
             os.remove(image_path)
             cv2.destroyAllWindows()
             continue
@@ -310,39 +355,79 @@ def page_segment(images):
 
         # OCR the spliced image
         ocr_data = pytesseract.image_to_data(img_spliced, lang='fra', output_type=pytesseract.Output.DICT)
-        
+
         # Extract text and confidence levels
-        text_with_confidence = []
+        text_data = []
         for i in range(len(ocr_data['text'])):
+            left = ocr_data['left'][i]
+            top = ocr_data['top'][i]
+            right = left + ocr_data['width'][i]
+            bottom = top + ocr_data['height'][i]
+
             word = ocr_data['text'][i]
             confidence = ocr_data['conf'][i]
-            text_with_confidence.append((word, confidence))
+            bbox = [left, top, right, bottom]
+
+            text_data.append([word, confidence, bbox])
 
         # Frequent OCR errors
-        frequent_errors = ['X', 'T', '1', "Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", "lm", "1m", '//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/7', '/1', 'Jl', 'IT', '/l', '{1s', '//s', 'J{s', '{{s', '/{s', 'Jls', '{ls']
+        frequent_errors = {
+            'I': ['X', 'T', '1'],
+            "I'm": ["Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", "lm", "1m"],
+            "I'd": ["l'd"],
+            "I've": ["l've", "l’ve", "Y've", "Y’ve"],
+            'Il': ['//', '}}', '/!', '/{', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'IT', '/l', 'Jl', '/7'],
+            'Ils': ['{1s', '//s', 'J{s', '{{s', '/{s', 'Jls', '{ls']
+        }
+        word_errors = []
 
-        for i in range(len(text_with_confidence)):
-            word, conf = text_with_confidence[i]
-            if conf >= 75 and (word in frequent_errors or re.search(r'[.!?](?=["”\'’])', word) or re.search(r'^(?!["\'(\[{<‘“])\W+[a-zA-Z]', word) or re.search(r'["\']', word)):
-                conf = 74 # Frequent Errors, Characters after EOS punctuation, Leading punctuation or other symbols in front of words, and any word that contains straight quotes 
+        for i in range(len(text_data)):
+            word, conf, bbox = text_data[i]
+
+            # Check for common issues
+            is_frequent_error = any(word in errors for errors in frequent_errors.values())
+            has_eos_punc_error = re.search(r'[.!?](?=["”\'’])', word)
+            has_prepended_symbol = re.search(r'^(?!["\'(\[{<‘“])\W+[a-zA-Z]', word)
+            contains_straight_quotes = re.search(r'["\']', word)
+            
+            if conf >= 75 and (any([is_frequent_error, has_eos_punc_error, has_prepended_symbol, contains_straight_quotes])):
+                conf = 74
+
             if conf < 75 and conf != -1:
-                word = word if not word.startswith("*") else word.replace("*", "*(XX) %<>%")
-                if word in ['X', 'T', '1']:
-                    text_with_confidence[i] = ('%<>%' + 'I', conf)
-                elif word in ["Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", "lm", "1m"]:
-                    text_with_confidence[i] = ('%<>%' + "I'm", conf)
-                elif word in ["l'd"]:
-                    text_with_confidence[i] = ('%<>%' + "I'd", conf)
-                elif word in ["l've"]:
-                    text_with_confidence[i] = ('%<>%' + "I've", conf)
-                elif word in ['//', '}}', '/!', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'IT', '/l', 'Jl', '/7']:
-                    text_with_confidence[i] = ('%<>%' + 'Il', conf)
-                elif word in ['{1s', '//s', 'J{s', '{{s', '/{s', 'Jls', '{ls']:
-                    text_with_confidence[i] = ('%<>%' + 'Ils', conf)
-                else:
-                    text_with_confidence[i] = ('%<>%' + word, conf)
+                
+                if re.match(r'^([*+])', word):
+                    if word in frequent_errors.keys() or any(word[1:] in errors for errors in frequent_errors.values()):
+                        word = word[1:]
+                    else:
+                        word = word[0] + "(XX) " + word[1:]
+                    text_data[i] = [word, conf, bbox]
 
-        text_concat = ' '.join([data[0] for data in text_with_confidence]).strip()
+                for key in frequent_errors.keys():
+                    if word in frequent_errors[key]:
+                        word = key
+                        text_data[i] = [word, conf, bbox]
+                        
+                is_fixed_error = True if word in frequent_errors.keys() else False
+                word_errors.append([i, word, conf, bbox, is_fixed_error])
+
+        # Manually check low confidence words
+        word_errors = sorted(word_errors, key=lambda x: x[4], reverse=True)
+        filtered_errors = create_manual_editor([word_errors, img_spliced], name="Manual Text Editor - Low Confidence Words", type="ocr_compare")
+        filtered_errors = [error.split("||||") for error in filtered_errors.split("~~~~")]
+        
+        # Print check
+        for error in filtered_errors:
+            idx, word = error
+            if text_data[int(idx)][0] != word:
+                text_data[int(idx)] = ([word, 75, None])
+            else:
+                text_data[int(idx)][1] = 75
+
+        for data in text_data:
+            if data[1] < 75 and data[1] != -1:
+                data[0] = '%<>%' + data[0]
+
+        text_concat = ' '.join([data[0] for data in text_data]).strip()
         text = re.sub('   ', '\n\n', text_concat)
         text = re.sub('  ', '\n', text)
         text = re.sub(r'\n{4,}', '', text)
@@ -354,6 +439,7 @@ def page_segment(images):
 
         if text[0] and text[0].count('see') == 0 and text[0].count('[') == 0:
             text[0] = '@' + text[0]
+
 
         edited_text = create_manual_editor(text, image_path.split("\\")[-1], type="corpus")
         edited_text = edited_text.strip().split('\n\n')
