@@ -29,7 +29,8 @@ def corpus_builder(file_paths):
     print(f"Corpus contains {len(corpus_dict['data'])} entries")
 
 
-corpus_file_paths = os.listdir("Data")
+corpus_file_paths = [file for file in os.listdir("Data") if file != "corpus.json"]
 
 if corpus_file_paths:
+    print("\nBuilding corpus from the following files:\n", corpus_file_paths)
     corpus_builder(corpus_file_paths)
