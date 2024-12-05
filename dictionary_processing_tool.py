@@ -62,6 +62,9 @@ def parse_text_entries(entry_string):
                 if word[0].isupper() and i >= segmentation_index and word not in ['I', "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]:
                     segmentation_index = i
                     break
+                elif len(word) > 1 and word[1].isupper() and word[0] in ('“', '‘', '"') and i >= segmentation_index:
+                    segmentation_index = i
+                    break
                 elif len(word) > 1 and not word[0].isalpha() and word[1].isupper() and i >= segmentation_index:
                     words[i] = word[1:]
                     segmentation_index = i
@@ -83,15 +86,27 @@ def parse_text_entries(entry_string):
                 print(f"\nFIX MANUALLY: No segment location found in segment: {seg} for entry {key}\n")
 
             # Find the middle punctuation mark to split French and English texts
-            punctuation_array = [m.start() for m in re.finditer(r'[.!?;]', seg)]
+            punctuation_array = [m.start() for m in re.finditer(r'(?<!\bMr)(?<!\bMrs)[.!?;]', seg)]
             punctuation_count = len(punctuation_array)
 
             while punctuation_count % 2 != 0:
                 seg = create_manual_editor(seg, f"Manual Text Editor - Fix Punctuation Count Error - {key}")
-                punctuation_array = [m.start() for m in re.finditer(r'[.!?;]', seg)]
+                punctuation_array = [m.start() for m in re.finditer(r'(?<!\bMr)(?<!\bMrs)[.!?;]', seg)]
                 punctuation_count = len(punctuation_array)
 
-            if punctuation_count > 0:
+            if punctuation_count > 0 and seg[punctuation_array[(punctuation_count // 2) - 1] + 1] in ['"', '”', '’']:
+                french_seg = seg[:punctuation_array[(punctuation_count // 2) - 1] + 2].strip()
+                english_seg = seg[punctuation_array[(punctuation_count // 2) - 1] + 2:punctuation_array[punctuation_count - 1] + 2].strip()
+                
+                translation_dict = {
+                    "English": english_seg,
+                    "Cajun French": french_seg,
+                    "Location": seg_location
+                }
+
+                extracted_translations.append(translation_dict)
+            
+            elif punctuation_count > 0:
                 french_seg = seg[:punctuation_array[(punctuation_count // 2) - 1] + 1].strip()
                 english_seg = seg[punctuation_array[(punctuation_count // 2) - 1] + 1:punctuation_array[punctuation_count - 1] + 1].strip()
 
@@ -177,7 +192,7 @@ def create_manual_editor(text, name="Manual Text Editor", type="simple"):
     text_widget.tag_configure("low-conf", foreground="red")
     edited_text = tk.StringVar()
 
-    # Insert the text (For OCR Array: apply special formatting)
+    # Insert the text (Apply special 'corpus' formatting if receiving OCR data)
     if type == "simple":
         text_widget.insert(tk.END, text)
 
@@ -243,9 +258,9 @@ def create_manual_editor(text, name="Manual Text Editor", type="simple"):
         
         elif type == "corpus":
             text_check_array = widget_text.strip().split('\n\n')
-            for entry in text_check_array:
+            for i, entry in enumerate(text_check_array):
                 entry_word = entry.split()[0]
-                if entry.count(r'[') == 0 and entry.count(r'see') == 0 and entry.count(r'@') == 0:
+                if entry.count(r'[') == 0 and entry.count(r'see ') == 0 and entry.count(r'@') == 0:
                     messagebox.showerror("Invalid Entry Error", f"Cannot save: {entry_word} -- cannot separate at '[' or 'see' or '@' -- Fix before saving")
                     return
                 if entry.count(r'[') > 0 and entry.count(r']') == 0:
@@ -255,9 +270,13 @@ def create_manual_editor(text, name="Manual Text Editor", type="simple"):
                     messagebox.showerror("Multiple Locale Arrays Error", f"Multiple locale arrays in entry '{entry_word}' -- Fix before saving")
                     return
                 if entry.count(r'see ') > 0 and entry.count(r'<Loc:') > 0:
-                    if (entry.count(r'[') == 0 and entry.count(r'@') == 0) or (entry.index(r'see ') < entry.index(r'[')):
+                    if (entry.count(r'[') == 0 and entry.count(r'@') == 0) or (entry.count(r'[') > 0 and entry.index(r'see ') < entry.index(r'[')):
                         messagebox.showerror("Invalid Entry Split Error", f"Cannot save: {entry_word} -- splits at 'see' but contains <Loc:> tag -- Fix before saving")
-                        return      
+                        return
+                if entry.count(r'@') > 0 and i == 0:
+                    if entry[entry.index(r'@') + 1] != ' ':
+                        messagebox.showerror("Invalid first entry", f"Cannot save: {entry_word}. Make sure to include a space after '@' character for proper concatenation")
+                        return 
             edited_text.set(widget_text)
         
         elif type == "ocr_compare":
@@ -372,12 +391,30 @@ def page_segment(images):
 
         # Frequent OCR errors
         frequent_errors = {
-            'I': ['X', 'T', '1'],
-            "I'm": ["Y'm", "1'm", "Y’m", "1’m", "T’m", "l’m", "T'm", "l'm", "lm", "1m"],
-            "I'd": ["l'd"],
-            "I've": ["l've", "l’ve", "Y've", "Y’ve"],
-            'Il': ['//', '}}', '/!', '/{', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', '7!', 'J!', 'J1', '/1', 'IT', '/l', 'Jl', '/7'],
-            'Ils': ['{1s', '//s', 'J{s', '{{s', '/{s', 'Jls', '{ls']
+            'I': ['X', 'T', '1', 'x'],
+            "I’m": ["Y’m", "1’m", "T’m", "l’m", "lm", "1m", "V’m"],
+            "I’d": ["l’d", "1’d"],
+            "I’ve": ["l’ve", "Y’ve", "1’ve", "T’ve"],
+            'Il': ['//', '}}', '{{', '17', '/!', 'I!', '/{', '11', '{1', '1]', '1l', '1!', '/]', 'I7', 'Z/', 'Z!', 'Zl', '7!', 'J!', 'J1', '/1', 'IT', '/l', 'Jl', '/7', '{!'],
+            'Ils': ['{1s', '//s', 'J{s', '{{s', '/{s', '/!s', '11s', '/}s', 'Jls', 'J!s', 'J1s', '{ls', '/ls', '/1s'],
+            'v.tr.': ['v.fr', 'v.tr', 'v.fr.', 'v.tr:', 'v1r', 'v.1r', 'v.1r:', 'v.#r:.', 'v.fr:', 'v#:', 'w#r', 'w#:', 'vtr', 'v.#r', 'v.sr:', 'v./r:', 'vs:', 'v.#r:', 'v.#r.', 'v.#7', 'v.#:'],
+            'n.m.': ['n.m', '7.m.'],
+            'it’s': ['its'],
+            'It’s': ['Its', 'Ws'],
+            'LF,': ['LE,', 'LE', 'LF'],
+            '(LF)': ['(LE)'],
+            'LF>': ['LE>'],
+            "He’ll": ['He’II', 'He’Il', 'He’lI'],
+            "he’ll": ['he’II', 'he’Il', 'he’lI'],
+            "You’ll": ['You’II', 'You’Il', 'You’lI'],
+            "you’ll": ['you’II', 'you’Il', 'you’lI'],
+            "We’ll": ['We’II', 'We’Il', 'We’lI'],
+            "we’ll": ['we’II', 'we’Il', 'we’lI'],
+            "She’ll": ['She’II', 'She’Il', 'She’lI'],
+            "she’ll": ['she’II', 'she’Il', 'she’lI'],
+            "They’ll": ['They’II', 'They’Il', 'They’lI'],
+            "they’ll": ['they’II', 'they’Il', 'they’lI'],
+            "I’ll": ['I’II', 'I’Il', 'I’lI', 'l’ll', 'l’Il', 'l’lI']
         }
         word_errors = []
 
@@ -389,13 +426,17 @@ def page_segment(images):
             has_eos_punc_error = re.search(r'[.!?](?=["”\'’])', word)
             has_prepended_symbol = re.search(r'^(?!["\'(\[{<‘“])\W+[a-zA-Z]', word)
             contains_straight_quotes = re.search(r'["\']', word)
+            contains_double_dot_i = re.search(r'ï', word)
+            contains_dash_z = re.search(r'-z|z-', word)
             
-            if conf >= 75 and (any([is_frequent_error, has_eos_punc_error, has_prepended_symbol, contains_straight_quotes])):
+            if conf >= 75 and (any([is_frequent_error, has_eos_punc_error, has_prepended_symbol, contains_straight_quotes, contains_double_dot_i, contains_dash_z])):
                 conf = 74
 
             if conf < 75 and conf != -1:
+
+                word = re.sub(r"(?<=[A-Za-z])'", "’", word)
                 
-                if re.match(r'^([*+])', word):
+                if re.match(r'^([*+«])', word):
                     if word in frequent_errors.keys() or any(word[1:] in errors for errors in frequent_errors.values()):
                         word = word[1:]
                     else:
@@ -431,15 +472,26 @@ def page_segment(images):
         text = re.sub('   ', '\n\n', text_concat)
         text = re.sub('  ', '\n', text)
         text = re.sub(r'\n{4,}', '', text)
-        text = re.sub(r'-\n', '', text) # fix hyphenated words
+        text = re.sub(r'-\n+', '', text) # fix hyphenated words
         text = re.sub(r'(?<!\s)%<>%', '', text) # remove extra confidence markers
         text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text) # replace single line breaks with spaces
-        text = re.sub(r'(<Loc:[^>]*>) +(?!\n)', r'\1\n\n', text) # add line breaks after locale arrays as needed
+        text = re.sub(r'(<Loc:[^<>]*>) +(?!\n)', r'\1\n\n', text) # add line breaks after locale arrays as needed
         text = text.strip().split('\n\n')
 
-        if text[0] and text[0].count('see') == 0 and text[0].count('[') == 0:
-            text[0] = '@' + text[0]
+        # Add '@' symbol to any incomplete first entries at the top of the page
+        if text[0] and (text[0].count('<Loc:') > 0 and text[0].count('[') == 0):
+            text[0] = '@ ' + text[0]
 
+        # remove mis-OCR'd characters from subscripts on some entry terms
+        for i, entry in enumerate(text):
+            words = entry.split()
+            if words[0].endswith(',') or words[0].endswith('-') or words[0].endswith(';'):
+                if len(words[0]) > 2 and not words[0][-2].isalpha():
+                    words[0] = words[0][:-2] + words[0][-1]
+                    text[i] = ' '.join(words)
+            elif not words[0][-1].isalpha() and len(words[0]) > 1:
+                words[0] = words[0][:-1]
+                text[i] = ' '.join(words)
 
         edited_text = create_manual_editor(text, image_path.split("\\")[-1], type="corpus")
         edited_text = edited_text.strip().split('\n\n')
@@ -479,24 +531,65 @@ def handle_cleanup(output_path):
         print(f"\nSaving the remaining {len(os.listdir(output_path))} images for processing later.\n")
 
 def convert_to_parallel_corpus(json_file):
-    # Needs to be updated to single 'Extracted Translations' dictionary
-    french_texts = []
-    english_texts = []
+    corpus_dict = {
+        "metadata": {
+            "file_name": "DLF2010_extracts",
+            "source": "Dictionary of Louisiana French: As Spoken in Cajun, Creole, and American Indian Communities (Valdman 2010)",
+            "last_modified": "",
+            "total_lines": 0,
+            "segmentation_details": "Dictionary Terms",
+            "segmentation_index": {}
+        },
+        "data": []
+    }
     
     with open(json_file, 'r', encoding='utf-8') as file:
         json_data = json.load(file)
 
-    file_name = json_data['FileName']
-    source = json_data['Source']
-    Seg_details = json_data['SegmentationDetails']
     data = json_data['Data']
+    missing_translations = 0
+    corpus_dict['metadata']['last_modified'] = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S")
 
-    for key in data.keys():
-        french_texts.extend(data[key]['Extracted French Texts'])
-        english_texts.extend(data[key]['Extracted English Texts'])
+    for key, value in data.items():
+        parallel_translations = value['Extracted Translations']
+        if parallel_translations:
+            corpus_dict['metadata']['total_lines'] += len(parallel_translations)
+            corpus_dict['metadata']['segmentation_index'][key] = len(corpus_dict['data'])
+        for translation in parallel_translations:
+            eng = translation.get('English', '')
+            caj = translation.get('Cajun French', '')
+            if eng == '' or caj == '':
+                missing_translations += 1
+            else:
+                translation_dict = {
+                    "English": eng,
+                    "Cajun French": caj
+                }
+                corpus_dict['data'].append(translation_dict)
+        
+    if missing_translations > 0:
+        print(f"\n{missing_translations} translations were missing and not added to the parallel corpus.")
+    print(f"\nCorpus successfully processed -- It contains {corpus_dict['metadata']['total_lines']} total parallel tranlation pairs\n")
 
-    print(f"\nLength of French Texts: {len(french_texts)}\nLength of English Texts: {len(english_texts)}\n")
+    output_file = "Data\\DLF2010_extracts.json"
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    with open(output_file, 'w', encoding='utf-8') as file:
+        json.dump(corpus_dict, file, ensure_ascii=False, indent=4)
 
+def clean_json_file(json_file):
+    with open(json_file, 'r', encoding='utf-8') as file:
+        json_data = json.load(file)
+
+    count = 0
+    for key, value in json_data['Data'].items():
+        for translation in value['Extracted Translations']:
+            english_text = translation['English']
+            french_text = translation['Cajun French']
+            if re.search(r'\b\w*[A-Z]+\w*[a-z]+\w*\b', english_text) or re.search(r'\b\w*[A-Z]+\w*[a-z]+\w*\b', french_text):
+                print(f"\n{key}:\n{english_text}\n{french_text}\n")
+                count += 1
+    
+    print(f"\n{count} entries contain words with capitalization errors\n")
 
 def main():
     base_dir = os.environ.get("PROCESSING_DIR")
@@ -527,6 +620,9 @@ def main():
     #Helper function to convert the JSON file to a parallel corpus
     if len(sys.argv) > 1 and sys.argv[1] == "convert":
         convert_to_parallel_corpus(json_file)
+        exit(0)
+    elif len(sys.argv) > 1 and sys.argv[1] == "clean":
+        clean_json_file(json_file)
         exit(0)
 
     if os.path.exists(output_path):
