@@ -6,19 +6,19 @@
         "total_lines": 138,
         "segmentation_details": "13 Songs: Allons Boire un Coup, Whiskey C'est Mon Ami, Mon Bon Vieux Mari, La Bouteille a Ruiné Ma Vie, La Valse du Bambocheur, Si J’aurias des Ailes, Drunkard’s Dream, La Table Ronde, Pine Grove Blues, La Jog a Plombeau, Blues de Saoulard, Quand J’étais Vaillante, Parlez-Nous à Boire",
         "segmentation_index": {
-            "Page 1": 12,
-            "Page 2": 6,
-            "Page 3": 20,
-            "Page 4": 13,
-            "Page 5": 19,
-            "Page 6": 12,
-            "Page 7": 7,
-            "Page 8": 6,
-            "Page 9": 11,
-            "Page 10": 10,
-            "Page 11": 5,
-            "Page 12": 12,
-            "Page 13": 5
+            "Song 1": 12,
+            "Song 2": 6,
+            "Song 3": 20,
+            "Song 4": 13,
+            "Song 5": 19,
+            "Song 6": 12,
+            "Song 7": 7,
+            "Song 8": 6,
+            "Song 9": 11,
+            "Song 10": 10,
+            "Song 11": 5,
+            "Song 12": 12,
+            "Song 13": 5
         }
     },
     "data": [
