@@ -32,7 +32,7 @@ def corpus_builder(file_paths):
     print(f"Corpus contains {len(corpus_dict['data'])} entries")
 
 
-corpus_file_paths = [file for file in os.listdir("Data") if file not in ["corpus.json", "corpus_initial.csv"]]
+corpus_file_paths = [file for file in os.listdir("Data") if file not in ["corpus.json", "corpus_initial.csv", "corpus_test.csv", "corpus_train.csv"]]
 
 if corpus_file_paths:
     print("\nBuilding corpus from the following files:\n", corpus_file_paths)
