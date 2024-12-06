@@ -1,5 +1,6 @@
 import os
 import json
+import random
 
 
 def corpus_builder(file_paths):
@@ -22,6 +23,8 @@ def corpus_builder(file_paths):
                 else:
                     duplicate_count += 1
     
+    random.shuffle(corpus_dict['data'])
+
     with open("Data/corpus.json", 'w', encoding='utf-8') as file:
         json.dump(corpus_dict, file, ensure_ascii=False, indent=4)
 
@@ -29,7 +32,7 @@ def corpus_builder(file_paths):
     print(f"Corpus contains {len(corpus_dict['data'])} entries")
 
 
-corpus_file_paths = [file for file in os.listdir("Data") if file != "corpus.json"]
+corpus_file_paths = [file for file in os.listdir("Data") if file not in ["corpus.json", "corpus_initial.csv"]]
 
 if corpus_file_paths:
     print("\nBuilding corpus from the following files:\n", corpus_file_paths)
