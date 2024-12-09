@@ -11,7 +11,7 @@ def corpus_builder(file_paths):
     }
     
     for file_path in file_paths:
-        with open(os.path.join("Data", file_path), 'r', encoding='utf-8') as file:
+        with open(os.path.join("..", "Data", file_path), 'r', encoding='utf-8') as file:
             file_data = json.load(file)
 
             if file_data:
@@ -25,14 +25,15 @@ def corpus_builder(file_paths):
     
     random.shuffle(corpus_dict['data'])
 
-    with open("Data/corpus.json", 'w', encoding='utf-8') as file:
+    output_file = os.path.join("..", "Data", "corpus.json")
+    with open(output_file, 'w', encoding='utf-8') as file:
         json.dump(corpus_dict, file, ensure_ascii=False, indent=4)
 
     print(f"\nCorpus built with {duplicate_count} duplicates removed")
     print(f"Corpus contains {len(corpus_dict['data'])} entries")
 
-
-corpus_file_paths = [file for file in os.listdir("Data") if file not in ["corpus.json", "corpus_initial.csv", "corpus_test.csv", "corpus_train.csv"]]
+data_dir = os.path.join("..", "Data")
+corpus_file_paths = [file for file in os.listdir(data_dir) if file not in ["corpus.json", "corpus_initial.csv", "corpus_test.csv", "corpus_train.csv"]]
 
 if corpus_file_paths:
     print("\nBuilding corpus from the following files:\n", corpus_file_paths)
