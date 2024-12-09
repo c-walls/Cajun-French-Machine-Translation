@@ -576,21 +576,6 @@ def convert_to_parallel_corpus(json_file):
     with open(output_file, 'w', encoding='utf-8') as file:
         json.dump(corpus_dict, file, ensure_ascii=False, indent=4)
 
-def clean_json_file(json_file):
-    with open(json_file, 'r', encoding='utf-8') as file:
-        json_data = json.load(file)
-
-    count = 0
-    for key, value in json_data['Data'].items():
-        for translation in value['Extracted Translations']:
-            english_text = translation['English']
-            french_text = translation['Cajun French']
-            if re.search(r'\b\w*[A-Z]+\w*[a-z]+\w*\b', english_text) or re.search(r'\b\w*[A-Z]+\w*[a-z]+\w*\b', french_text):
-                print(f"\n{key}:\n{english_text}\n{french_text}\n")
-                count += 1
-    
-    print(f"\n{count} entries contain words with capitalization errors\n")
-
 def main():
     base_dir = os.environ.get("PROCESSING_DIR")
     if not base_dir:
