@@ -1,11 +1,11 @@
 ## Louisiana French Language Preservation
-This project explores the use of AI language models to help preserve the unique French dialect of South Louisiana.
+This project explored the use of AI language models to help preserve Louisiana French.
 
 ### Overview
-- Compiled a parallel corpus of Louisiana French and English text
+- Compiled a parallel corpus of roughly 18K Louisiana French and English sentences
 - Evaluated the feasibility of training a translation model on the corpus
-- Designed a system architecture to integrate the language model into a preservation platform
-- Developed a prototype interface for testing the initial translation capabilities
+- Designed a system architecture to integrate the language model into a public-facing application
+- Developed a prototype to serve as a proof-of-concept and to use for testing the initial translation model's capabilities
 
 ### Prototype
 A simple prototype interface built with Gradio is made available at the following link to serve as a proof of concept:
