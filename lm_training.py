@@ -75,18 +75,16 @@ def data_generator(dataset, tokenizer, batch_size=32):
         yield batch_data
 
 
-def eval_model(model, tokenizer, data, batch_size, max_tests=300):
-    test_generator = data_generator(data, tokenizer, batch_size)
+def eval_model(model, tokenizer, test_data, batch_size):
+    model.eval()
+    eval_generator = data_generator(test_data, tokenizer, batch_size)
 
-    eval_loss = []
-    for batch_idx, batch in enumerate(test_generator):
-        input_ids, target_ids = batch
-
-        if (batch_idx * batch_size) > max_tests:
-            break
-
-        model_output = model(input_ids, labels=target_ids)
-        eval_loss.append(model_output.loss.item())
+    with torch.no_grad():
+        eval_loss = []
+        for batch in eval_generator:
+            input_ids, target_ids = batch
+            loss = model(input_ids, labels=target_ids).loss
+            eval_loss.append(loss.item())
 
     return np.mean(eval_loss)
 
@@ -98,8 +96,9 @@ testing_data = corpus_data[:1000]
 training_data = corpus_data[1000:]
 mt5_tokenizer, mt5_model = load_model('google/mt5-small', True)
 
-epochs = 12
-batch_size = 8
+
+epochs = 1
+batch_size = 6
 learning_rate = 5e-4
 n_batches = len(corpus_data) // batch_size
 
@@ -109,6 +108,7 @@ optimizer = torch.optim.AdamW(mt5_model.parameters(), lr=learning_rate)
 scheduler = get_linear_schedule_with_warmup(optimizer, warmup_steps, total_steps)
 
 train_loss = []
+eval_loss = []
 for epoch_idx in range(epochs):
     train_generator = data_generator(training_data, mt5_tokenizer, batch_size=batch_size)
 
@@ -131,7 +131,12 @@ for epoch_idx in range(epochs):
 
     # Evaluate progress on the test set
     test_loss = eval_model(mt5_model, mt5_tokenizer, testing_data, batch_size)
+    eval_loss.append(test_loss)
     print(f'Epoch: {epoch_idx},  Test Loss: {test_loss:.3f}')
 
 # Save the model
-torch.save(mt5_model.state_dict(), 'Models/mt5_model.pt')
+torch.save(mt5_model.state_dict(), 'mt5_small_model1.pt')
+
+import numpy as np
+np.save('train_loss.npy', train_loss)
+np.save('test_loss.npy', eval_loss)
