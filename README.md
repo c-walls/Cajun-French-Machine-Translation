@@ -15,3 +15,5 @@ A simple prototype interface built with Gradio is made available at the followin
 ### **Note - My inference endpoint shuts down after 15 minutes of disuse making the translation model inaccessible. Will fix this tonight by setting-up a trigger to restart the endpoint when the app launches.
 
 This prototype showcases the basic translation functionality that could be further developed. Translations are produced by the custom NLLB-200 model trained on the corpus compiled for this project. The learning path interface serves only as a mock-up of potential functionality. Lastly, the chatbot is currently powered by Zepher-7B, which is much smaller than the frontier models typically used for this kind of task, as a result, it is not nearly as effective as those larger models for facilitating learning-centric interactions.
+
+If you have trouble accessing or using the interface above, then use this [GOOGLE COLAB NOTEBOOK](https://colab.research.google.com/drive/1raMg-TpSXWfhNMLUl8XIkanC7wcEFQW6?usp=sharing) as an even simpler way to run inference on the model and test it's translation abilities.
